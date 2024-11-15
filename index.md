@@ -7,7 +7,7 @@ Diese Seite enthält verschiedene Materialien für meine Inf-Einf-Labs.
 ## Labs
 
 -   [Passwort](./password)
--   [Snackbar](./snackbar)
+-   [Kiosk](./snackbar)
 
 ## Tools
 
