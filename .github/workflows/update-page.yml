@@ -1,0 +1,59 @@
+# Updates the page repository (with a pull request) when this repository's main branch changes
+name: Update page
+
+on:
+    workflow_dispatch:
+
+    # Trigger when there are new commits to the main branch
+    push:
+        branches:
+            - main
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Set up environment
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.SYNC_TOKEN }}
+
+            # Get the latest commit hash
+            - name: Get commit hash
+              run: |
+                  # Get the current commit hash
+                  echo "latest_commit=$(git log --pretty=format:"%h" -n 1)" >> $GITHUB_ENV
+
+            # Clone the parent repository
+            - name: Clone parent Repository
+              run: |
+                  git clone https://github.com/inf-lab-dev/page.git update-target
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+            # Update submodule in page repository
+            - name: Update Content
+              run: |
+                  cd update-target
+                  git submodule update --remote --merge
+                  git add .
+                  if [ -z "$(git status --porcelain)" ]; then
+                    echo "No updates to content. Exiting."
+                    exit 0
+                  fi
+                  git commit -m "Update content to latest commit from labs/main: ${{ env.latest_commit }}"
+
+            # Create a PR
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v5
+              with:
+                  token: ${{ secrets.SYNC_TOKEN }}
+                  delete-branch: true
+                  path: './update-target'
+                  branch: update-content/${{ env.latest_commit }}
+                  title: 'Update content to ${{ env.latest_commit }}'
+                  base: main
+                  body: |
+                      The content has been updated to the latest commit `${{ env.latest_commit }}` from the labs repository.
