@@ -17,6 +17,7 @@ jobs:
               with:
                   repository: 'inf-lab-dev/page'
                   ref: main
+                  submodules: 'recursive'
                   token: ${{ secrets.SYNC_TOKEN }}
 
             - name: Update git user
