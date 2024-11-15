@@ -11,6 +11,8 @@ pdf:
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich
 > zu Übungszwecken!
 
+## Teilaufgabe 1
+
 Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine
 begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
 
@@ -20,12 +22,12 @@ erste ist `add_items`, die mindestens die ersten vier Artikel der Beach Burger S
 vervollständigst du `get_cost`, die einen **linearen Suchalgorithmus** implementiert, um die Preise der ausgewählten
 Artikel zu ermitteln und zurückzugeben.
 
-## Hinweise
+### Hinweise
 
 - Du kannst die Menüartikel und Preise in der Funktion `add_items` fest codieren.
 - Es gibt eine Funktion in `strings.h`, die hier nützlich sein könnte. _Welche ist das?_
 
-## Details
+### Details
 
 Die `main`-Funktion ist bereits fertiggestellt. Nachdem sie `add_items` aufgerufen hat, um das Menüarray zu
 initialisieren, werden die Gerichte und ihre Preise ausgegeben. Anschließend wird der Nutzer aufgefordert, Artikel
@@ -37,6 +39,6 @@ Deine Aufgabe ist es nun zwei Funktionen zu vervollständigen:
 2. `get_cost`: Gibt die Kosten für einen Artikel zurück- Debei muss ein **linearer Suchalgorithmus** verwendet werden.
    Dabei muss nicht zwischen Groß- und Kleinschreibung unterschieden werden.
 
-## Denkfrage
+### Denkfrage
 
 Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
