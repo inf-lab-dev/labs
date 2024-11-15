@@ -25,7 +25,7 @@ Artikel zu ermitteln und zurückzugeben.
 ### Hinweise
 
 - Du kannst die Menüartikel und Preise in der Funktion `add_items` fest codieren.
-- Es gibt eine Funktion in `strings.h`, die hier nützlich sein könnte. _Welche ist das?_
+- Es gibt eine Funktion in [`strings.h`](https://manual.cs50.io/#strings.h), die hier nützlich sein könnte. _Welche ist das?_
 
 ### Details
 
