@@ -1,3 +1,7 @@
+---
+home: true
+---
+
 # inf-einf-labs
 
 Diese Seite enthält verschiedene Materialien für meine Inf-Einf-Labs.
