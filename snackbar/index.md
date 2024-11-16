@@ -1,4 +1,4 @@
 # Kiosk
 
--   [Aufgabenstellung](./material/public/task)
+-   [Aufgabenstellung](./material/task)
 -   [Material herunterladen](./material)
