@@ -34,3 +34,11 @@ Deine Aufgabe ist es nun eine `struct` und zwei Funktionen zu vervollständigen:
 ### Denkfrage
 
 Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
+
+## Teilaufgabe: prozentualer Rabatt
+
+## Teilaufgabe: Mehrwertsteuer berechnen
+
+## Teilaufgabe: Anzahl der Gerichte mit angebbar
+
+## Teilaufgabe: Binäre Suche mit ids
