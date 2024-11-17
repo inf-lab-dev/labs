@@ -9,13 +9,19 @@ pdf:
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
 
-## Teilaufgabe 1
-
 Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
 
-Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen. Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren. 
+Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen. 
 
-Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert. Außerdem soll die Funktion `get_cost` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt. Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. Kann ein angegebenes Gericht nicht gefunden werden, so soll `Das angegeben Gericht konnte nicht gefunden werden.` auf der Console ausgegeben werden. Schließlich soll die `main`-Funktion implementiert werden, sodass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. Der Preis dieses Gerichts wird dann mit `get_cost` ermittelt und die Eingabe solange wiederholt, bis der Nutzer keine weiteren Gerichte mehr auswählt (Abbruch durch Drücken von _Enter_). Sobald die Eingabe beendet wird, gibt die Funktion den Gesamtpreis aller ausgewählten Gerichte aus. Die Ausgabe soll folgendermaßen formatiert sein: `Die Bestellung kostet 1.23 €\n`.
+## Teilaufgabe 1
+
+Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren. 
+
+Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert. 
+
+Außerdem soll die Funktion `get_cost` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt. Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. Kann ein angegebenes Gericht nicht gefunden werden, so soll `The provided dish wasn't found.` auf der Console ausgegeben werden. 
+
+Schließlich soll die `main`-Funktion implementiert werden, sodass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. Der Preis dieses Gerichts wird dann mit `get_cost` ermittelt und die Eingabe solange wiederholt, bis der Nutzer keine weiteren Gerichte mehr auswählt (Abbruch durch Drücken von _Enter_). Sobald die Eingabe beendet wird, gibt die Funktion den Gesamtpreis aller ausgewählten Gerichte aus. Die Ausgabe soll folgendermaßen formatiert sein: `The order costs 1.23 €\n`.
 
 ### Hinweise
 
@@ -50,15 +56,22 @@ Erweitere die Funktionalität des existierenden Programms, sodass der letztendli
 
 ## Teilaufgabe 3
 
+Das Lager im Kiosk ist sehr begrenzt. Somit können nicht viele Gerichte vorrätig gelagert werden. Es kommt also immer wieder vor, dass Kunden ein Gericht bestellen, dieses aber nicht verkauft werden kann, da es nicht auf Lager ist.
 In dieser Teilaufgabe sollst du die `struct` und die Funktionen erweitern, um die Verfügbarkeit von Gerichten zu verwalten und zu überprüfen, ob die angeforderte Menge eines Gerichts bestellt werden kann.
 
-Erweitere die `struct` `menu_item`, indem du ein neues Feld `quantity` hinzufügst, das die verfügbare Anzahl jedes Gerichts speichert. Implementiere eine neue Funktion `find_item_by_name`, die eine **lineare Suche** durchführt, um ein Gericht anhand seines Namens zu finden, und den Index des entsprechenden Gerichts zurückgibt. Kann das angegebene Gericht nicht gefunden werden, so kann `-1` zurückgegeben werden. Refactore anschließend die Funktion `get_cost`, sodass sie den _Index_ des Gerichts von `find_item_by_name` erhält und die Menge überprüft. Berücksichtige, dass `find_item_by_name` den Wert `-1` zurück gibt, wenn das Gericht nicht gefunden wurde.
+### Aufgabe
 
-Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem Fall hier `-1`) abgezogen und der Preis entsprechend berechnet. Sind nicht genügend Gerichte verfügbar, werden alle verbleibenden Einheiten verkauft, und der Nutzer mit der Nachricht `Nicht genügend Gerichte verfügbar.` darauf hingewiesen, dass die gewünschte Menge nicht vollständig geliefert werden konnte. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten klare Informationen erhält.
+1. Ergänze die bestehende `struct` um eine Möglichkeit, die verfügbare Menge der Gerichte zu speichern.
+2. Implementiere eine Funktion, die es ermöglicht, ein Gericht anhand seines Namens zu finden und den `index` dieses Gerichts in der List zurückzugeben. _Wie könnte man den Fall, dass ein Gericht nicht gefunden wird entsprechend behandeln?_
+3. Überarbeite die bestehende `get_cost`-Funktion so, dass sie den `index` des Gerichts verwendet.
 
+Erweitere die `struct` `menu_item`, indem du ein neues Feld `quantity` hinzufügst, das die verfügbare Anzahl jedes Gerichts speichert. Implementiere eine neue Funktion `find_item_by_name`, die eine **lineare Suche** durchführt, um ein Gericht anhand seines Namens zu finden, und den Index des entsprechenden Gerichts zurückgibt. Kann das angegebene Gericht nicht gefunden werden, so kann `-1` zurückgegeben werden. Refactore anschließend die Funktion `get_cost`, sodass sie den _Index_ des Gerichts von `find_item_by_name` erhält und die Menge überprüft. Berücksichtige, dass `find_item_by_name` den Wert `-1` zurück gibt, wenn das Gericht nicht gefunden wurde. Überprüfe dabei, ob die angeforderte Menge verfügbar ist, und behandle Fälle, in denen die Menge nicht ausreicht oder das Gericht nicht existiert.
+
+Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem Fall hier `-1`) von den verfügbaren Gerichten abgezogen und der Preis entsprechend berechnet. Sind nicht genügend Gerichte verfügbar, werden alle verbleibenden Einheiten verkauft, und der Nutzer mit der Nachricht `Not enough dishes available. X dishes were sold.` darauf hingewiesen, dass die gewünschte Menge nicht vollständig geliefert werden konnte. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten klare Informationen erhält.
 
 ## Teilaufgabe 4
 
+Kunden bestellen erfahrungsgemäß nicht nur ein Gericht für sich selbst, sondern auch mehrere Portionen desselben Gerichts für Freunde oder Familie.
 Erweitere die `main`-Funktion, sodass der Nutzer neben dem Namen des Gerichts auch die gewünschte Anzahl (`amount`) eingeben kann. Übergib den `amount` anschließend an die `get_cost`-Funktion, die überprüfen soll, ob die gewünschte Menge vorrätig ist.
 
 Die `get_cost`-Funktion muss dabei folgende Schritte durchführen:
@@ -66,4 +79,4 @@ Die `get_cost`-Funktion muss dabei folgende Schritte durchführen:
 1. **Verfügbare Menge prüfen:** Wenn die verfügbare Menge (`quantity`) des gewählten Gerichts ausreicht, wird die gewünschte Anzahl abgezogen, und der Preis wird basierend auf der eingegebenen Menge berechnet.
 2. **Nicht ausreichende Menge behandeln:** Falls die gewünschte Menge die Verfügbarkeit übersteigt, sollen alle noch vorrätigen Gerichte verkauft werden, und der Preis für die verbleibende Anzahl wird berechnet. Zusätzlich soll eine Meldung ausgegeben werden, die den Nutzer darauf hinweist, dass die gewünschte Menge nicht vollständig verfügbar war.
 
-Der von get_cost zurückgegebene Preis (einschließlich der korrekt berücksichtigten Menge) wird anschließend in der `main`-Funktion verarbeitet und zum Gesamtpreis addiert. Achte darauf, dass die Logik sauber implementiert ist und fehlerhafte Eingaben, wie negative oder nicht-numerische Werte, entsprechend behandelt werden.
+Der von `get_cost` zurückgegebene Preis (einschließlich der korrekt berücksichtigten Menge) wird anschließend in der `main`-Funktion verarbeitet und zum Gesamtpreis addiert. Achte darauf, dass die Logik sauber implementiert ist und fehlerhafte Eingaben, wie negative oder nicht-numerische Werte, entsprechend behandelt werden.

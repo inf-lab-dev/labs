@@ -3,7 +3,7 @@
 Um das Aufgabenmeterial für [Kiosk](../) herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
 ```
-wget -O - https://inf-lab.dev/kiosk/material/public/scripts/setup.sh | bash
+wget -O - https://inf-lab.dev/snackbar/material/scripts/setup.sh | bash
 ```
 
 <details>
