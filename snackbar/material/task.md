@@ -45,7 +45,7 @@ Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
 
 Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer angegeben. 
 In dieser Teilaufgabe sollst du die Berechnung der Mehrwertsteuer in die Funktionalität integrieren. 
-Die Mehrwertsteuer beträgt **19%** und wird mithilfe der Konstante `TAX_RATE` definiert.
+Die Mehrwertsteuer beträgt **19%** und wird mithilfe der Konstante `VAT_RATE` definiert.
 
 ## Aufgabe
 
@@ -53,7 +53,7 @@ Erweitere die Funktionalität des existierenden Programms, sodass der letztendli
 
 ## Hinweis
 
-- Definiere die Mehrwertsteuer als Konstante
+- Definiere die Mehrwertsteuer als Konstante.
 - Achte darauf, dass der berechnete Preis korrekt gerundet wird, falls nötig.
 - Überlege, an welcher Stelle die Berechnung der Mehrwertsteuer am sinnvollsten ist.
 
