@@ -15,12 +15,6 @@ URL="https://inf-lab.dev/snackbar/material/lab-snackbar.zip"
 # the name of the zip file that has been downloaded
 ZIP_FILE="lab-snackbar.zip"
 
-# Failsafe check to not brick the local environment
-if [ -f "../../private/guide.md" ]; then
-  echo -e "${RED}⚠️  Failsafe triggered! Cannot run in local environment. Exiting script.${RESET}"
-  exit 1
-fi
-
 # Hello World, I guess...
 echo -e "${CYAN}${BOLD}👋 Welcome!${RESET} Let's get your files ready to go! 🚀"
 
@@ -36,6 +30,8 @@ echo -e "${GREEN}✅ Unzipping complete!${RESET}"
 # Display further instructions
 echo -e "${YELLOW}👉 To continue, run the following commands:${RESET}"
 echo -e "${BOLD}   cd lab-snackbar${RESET}"
+echo -e "${BOLD}   touch snackbar.c${RESET}"
+echo -e "${BOLD}   code snackbar.c${RESET}"
 
 # End the script
 echo -e "${GREEN}✅ Goodbye! 👋${RESET}"

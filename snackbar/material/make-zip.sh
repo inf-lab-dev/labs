@@ -4,4 +4,4 @@ if [ -f lab-snackbar.zip ]; then
 fi
 
 # And recreate
-zip -j lab-snackbar.zip ./task.pdf ./snackbar.c
+zip -j lab-snackbar.zip ./task.pdf

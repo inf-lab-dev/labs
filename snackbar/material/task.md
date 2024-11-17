@@ -11,6 +11,16 @@ pdf:
 
 Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
 
+Im Kiosk werden folgende Gerichte angeboten:
+
+Name | Preis
+-----|---
+Burger|5.99
+Pizza|7.49
+Salad|4.99
+Fries|2.99
+Soda|1.99
+
 Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen. 
 
 ## Teilaufgabe 1
