@@ -20,7 +20,7 @@ Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst
 Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert.
 Außerdem soll die Funktion `get_cost` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt.
 Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. 
-Schließlich soll die `main`-Funktion implementiert werden, so dass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. 
+Schließlich soll die `main`-Funktion implementiert werden, sodass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. 
 Der Preis dieses Gerichts wird dann mit `get_cost` ermittelt und die Eingabe solange wiederholt, bis der Nutzer keine weiteren Gerichte mehr auswählt (Abbruch durch Drücken von _Enter_). 
 Sobald die Eingabe beendet wird, gibt die Funktion den Gesamtpreis aller ausgewählten Gerichte aus.
 
@@ -41,6 +41,20 @@ Deine Aufgabe ist es nun eine `struct` und zwei Funktionen zu implementieren:
 
 Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
 
-## Teilaufgabe: Mehrwertsteuer berechnen
+## Teilaufgabe 2
+
+Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer angegeben. 
+In dieser Teilaufgabe sollst du die Berechnung der Mehrwertsteuer in die Funktionalität integrieren. 
+Die Mehrwertsteuer beträgt **19%** und wird mithilfe der Konstante `TAX_RATE` definiert.
+
+## Aufgabe
+
+Erweitere die Funktionalität des existierenden Programms, sodass der letztendlich ausgegebene Preis inklusive **19%** Mehrwertsteuer ist.
+
+## Hinweis
+
+- Definiere die Mehrwertsteuer als Konstante
+- Achte darauf, dass der berechnete Preis korrekt gerundet wird, falls nötig.
+- Überlege, an welcher Stelle die Berechnung der Mehrwertsteuer am sinnvollsten ist.
 
 ## Teilaufgabe: Anzahl der Gerichte mit angebbar
