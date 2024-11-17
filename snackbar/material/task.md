@@ -59,8 +59,6 @@ Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem
 
 ## Teilaufgabe 4
 
-## Aufgabe
-
 Erweitere die `main`-Funktion, sodass der Nutzer neben dem Namen des Gerichts auch die gewünschte Anzahl (`amount`) eingeben kann. Übergib den `amount` anschließend an die `get_cost`-Funktion, die überprüfen soll, ob die gewünschte Menge vorrätig ist.
 
 Die `get_cost`-Funktion muss dabei folgende Schritte durchführen:
