@@ -11,18 +11,11 @@ pdf:
 
 ## Teilaufgabe 1
 
-Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine
-begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
+Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
 
-Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen.
-Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren. 
+Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen. Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren. 
 
-Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert.
-Außerdem soll die Funktion `get_cost` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt.
-Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. 
-Schließlich soll die `main`-Funktion implementiert werden, sodass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. 
-Der Preis dieses Gerichts wird dann mit `get_cost` ermittelt und die Eingabe solange wiederholt, bis der Nutzer keine weiteren Gerichte mehr auswählt (Abbruch durch Drücken von _Enter_). 
-Sobald die Eingabe beendet wird, gibt die Funktion den Gesamtpreis aller ausgewählten Gerichte aus.
+Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert. Außerdem soll die Funktion `get_cost` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt. Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. Schließlich soll die `main`-Funktion implementiert werden, sodass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. Der Preis dieses Gerichts wird dann mit `get_cost` ermittelt und die Eingabe solange wiederholt, bis der Nutzer keine weiteren Gerichte mehr auswählt (Abbruch durch Drücken von _Enter_). Sobald die Eingabe beendet wird, gibt die Funktion den Gesamtpreis aller ausgewählten Gerichte aus.
 
 ### Hinweise
 
@@ -43,18 +36,24 @@ Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
 
 ## Teilaufgabe 2
 
-Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer angegeben. 
-In dieser Teilaufgabe sollst du die Berechnung der Mehrwertsteuer in die Funktionalität integrieren. 
-Die Mehrwertsteuer beträgt **19%** und wird mithilfe der Konstante `VAT_RATE` definiert.
+Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer angegeben. In dieser Teilaufgabe sollst du die Berechnung der Mehrwertsteuer in die Funktionalität integrieren. Die Mehrwertsteuer beträgt **19%** und wird mithilfe der Konstante `VAT_RATE` definiert.
 
-## Aufgabe
+### Aufgabe
 
 Erweitere die Funktionalität des existierenden Programms, sodass der letztendlich ausgegebene Preis inklusive **19%** Mehrwertsteuer ist.
 
-## Hinweis
+### Hinweis
 
 - Definiere die Mehrwertsteuer als Konstante.
 - Achte darauf, dass der berechnete Preis korrekt gerundet wird, falls nötig.
 - Überlege, an welcher Stelle die Berechnung der Mehrwertsteuer am sinnvollsten ist.
 
-## Teilaufgabe: Anzahl der Gerichte mit angebbar
+## Teilaufgabe 3
+
+In dieser Teilaufgabe sollst du die `struct` und die Funktionen erweitern, um die Verfügbarkeit von Gerichten zu verwalten und zu überprüfen, ob die angeforderte Menge eines Gerichts bestellt werden kann.
+
+### Aufgabe
+
+Erweitere die `struct` `menu_item`, indem du ein neues Feld `quantity` hinzufügst, das die verfügbare Anzahl jedes Gerichts speichert. Passe außerdem die `main`-Funktion an, sodass der Nutzer zusätzlich die Anzahl der Gerichte angeben kann, die er bestellen möchte. Implementiere eine neue Funktion `find_item_by_name`, die eine **lineare Suche** durchführt, um ein Gericht anhand seines Namens zu finden, und den Index des entsprechenden Gerichts zurückgibt. Refactore anschließend die Funktion `get_cost`, sodass sie den _Index_ des Gerichts von `find_item_by_name` erhält und die Menge überprüft.
+
+Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl abgezogen und der Preis entsprechend berechnet. Sind nicht genügend Gerichte verfügbar, werden alle verbleibenden Einheiten verkauft, und der Nutzer wird darauf hingewiesen, dass die gewünschte Menge nicht vollständig geliefert werden konnte. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten klare Informationen erhält.
