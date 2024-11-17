@@ -52,8 +52,11 @@ Erweitere die Funktionalität des existierenden Programms, sodass der letztendli
 
 In dieser Teilaufgabe sollst du die `struct` und die Funktionen erweitern, um die Verfügbarkeit von Gerichten zu verwalten und zu überprüfen, ob die angeforderte Menge eines Gerichts bestellt werden kann.
 
-### Aufgabe
+Erweitere die `struct` `menu_item`, indem du ein neues Feld `quantity` hinzufügst, das die verfügbare Anzahl jedes Gerichts speichert. Implementiere eine neue Funktion `find_item_by_name`, die eine **lineare Suche** durchführt, um ein Gericht anhand seines Namens zu finden, und den Index des entsprechenden Gerichts zurückgibt. Refactore anschließend die Funktion `get_cost`, sodass sie den _Index_ des Gerichts von `find_item_by_name` erhält und die Menge überprüft.
 
-Erweitere die `struct` `menu_item`, indem du ein neues Feld `quantity` hinzufügst, das die verfügbare Anzahl jedes Gerichts speichert. Passe außerdem die `main`-Funktion an, sodass der Nutzer zusätzlich die Anzahl der Gerichte angeben kann, die er bestellen möchte. Implementiere eine neue Funktion `find_item_by_name`, die eine **lineare Suche** durchführt, um ein Gericht anhand seines Namens zu finden, und den Index des entsprechenden Gerichts zurückgibt. Refactore anschließend die Funktion `get_cost`, sodass sie den _Index_ des Gerichts von `find_item_by_name` erhält und die Menge überprüft.
+Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem Fall hier `-1`) abgezogen und der Preis entsprechend berechnet. Sind nicht genügend Gerichte verfügbar, werden alle verbleibenden Einheiten verkauft, und der Nutzer wird darauf hingewiesen, dass die gewünschte Menge nicht vollständig geliefert werden konnte. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten klare Informationen erhält.
 
-Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl abgezogen und der Preis entsprechend berechnet. Sind nicht genügend Gerichte verfügbar, werden alle verbleibenden Einheiten verkauft, und der Nutzer wird darauf hingewiesen, dass die gewünschte Menge nicht vollständig geliefert werden konnte. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten klare Informationen erhält.
+
+## Teilaufgabe 4
+
+##
