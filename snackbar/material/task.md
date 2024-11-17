@@ -73,9 +73,7 @@ In dieser Teilaufgabe sollst du die `struct` und die Funktionen erweitern, um di
 
 1. Ergänze die bestehende `struct` um eine Möglichkeit, die verfügbare Menge der Gerichte zu speichern.
 2. Implementiere eine Funktion, die es ermöglicht, ein Gericht anhand seines Namens zu finden und den `index` dieses Gerichts in der List zurückzugeben. _Wie könnte man den Fall, dass ein Gericht nicht gefunden wird entsprechend behandeln?_
-3. Überarbeite die bestehende `get_cost`-Funktion so, dass sie den `index` des Gerichts verwendet.
-
-Erweitere die `struct` `menu_item`, indem du ein neues Feld `quantity` hinzufügst, das die verfügbare Anzahl jedes Gerichts speichert. Implementiere eine neue Funktion `find_item_by_name`, die eine **lineare Suche** durchführt, um ein Gericht anhand seines Namens zu finden, und den Index des entsprechenden Gerichts zurückgibt. Kann das angegebene Gericht nicht gefunden werden, so kann `-1` zurückgegeben werden. Refactore anschließend die Funktion `get_cost`, sodass sie den _Index_ des Gerichts von `find_item_by_name` erhält und die Menge überprüft. Berücksichtige, dass `find_item_by_name` den Wert `-1` zurück gibt, wenn das Gericht nicht gefunden wurde. Überprüfe dabei, ob die angeforderte Menge verfügbar ist, und behandle Fälle, in denen die Menge nicht ausreicht oder das Gericht nicht existiert.
+3. Überarbeite die bestehende `get_cost`-Funktion so, dass sie den `index` des Gerichts verwendet und basierend darauf prüft, ob genügend Gerichte vorrätig sind.
 
 Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem Fall hier `-1`) von den verfügbaren Gerichten abgezogen und der Preis entsprechend berechnet. Sind nicht genügend Gerichte verfügbar, werden alle verbleibenden Einheiten verkauft, und der Nutzer mit der Nachricht `Not enough dishes available. X dishes were sold.` darauf hingewiesen, dass die gewünschte Menge nicht vollständig geliefert werden konnte. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten klare Informationen erhält.
 
