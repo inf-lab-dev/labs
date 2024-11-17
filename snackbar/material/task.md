@@ -59,4 +59,13 @@ Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem
 
 ## Teilaufgabe 4
 
-##
+## Aufgabe
+
+Erweitere die `main`-Funktion, sodass der Nutzer neben dem Namen des Gerichts auch die gewünschte Anzahl (`amount`) eingeben kann. Übergib den `amount` anschließend an die `get_cost`-Funktion, die überprüfen soll, ob die gewünschte Menge vorrätig ist.
+
+Die `get_cost`-Funktion muss dabei folgende Schritte durchführen:
+
+1. **Verfügbare Menge prüfen:** Wenn die verfügbare Menge (`quantity`) des gewählten Gerichts ausreicht, wird die gewünschte Anzahl abgezogen, und der Preis wird basierend auf der eingegebenen Menge berechnet.
+2. **Nicht ausreichende Menge behandeln:** Falls die gewünschte Menge die Verfügbarkeit übersteigt, sollen alle noch vorrätigen Gerichte verkauft werden, und der Preis für die verbleibende Anzahl wird berechnet. Zusätzlich soll eine Meldung ausgegeben werden, die den Nutzer darauf hinweist, dass die gewünschte Menge nicht vollständig verfügbar war.
+
+Der von get_cost zurückgegebene Preis (einschließlich der korrekt berücksichtigten Menge) wird anschließend in der `main`-Funktion verarbeitet und zum Gesamtpreis addiert. Achte darauf, dass die Logik sauber implementiert ist und fehlerhafte Eingaben, wie negative oder nicht-numerische Werte, entsprechend behandelt werden.
