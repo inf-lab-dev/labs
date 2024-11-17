@@ -13,13 +13,13 @@ Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk
 
 Im Kiosk werden folgende Gerichte angeboten:
 
-Name | Preis
------|---
-Burger|5.99
-Pizza|7.49
-Salad|4.99
-Fries|2.99
-Soda|1.99
+| Name   | Preis |
+| ------ | ----- |
+| Burger | 5.99  |
+| Pizza  | 7.49  |
+| Salad  | 4.99  |
+| Fries  | 2.99  |
+| Soda   | 1.99  |
 
 Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen. 
 
@@ -58,7 +58,7 @@ Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer ang
 
 Erweitere die Funktionalität des existierenden Programms, sodass der letztendlich ausgegebene Preis inklusive **19%** Mehrwertsteuer ist.
 
-### Hinweis
+### Hinweise
 
 - Definiere die Mehrwertsteuer als Konstante.
 - Achte darauf, dass der berechnete Preis korrekt gerundet wird, falls nötig.
