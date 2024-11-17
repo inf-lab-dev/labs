@@ -14,31 +14,33 @@ pdf:
 Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine
 begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
 
-Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen. Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen implementieren. Die erste ist `add_items`, die mindestens die ersten vier Artikel der Beach Burger Shack-Speisekarte hinzufügen soll. Dann vervollständigst du `get_cost`, die einen **linearen Suchalgorithmus** implementiert, um die Preise der ausgewählten Artikel zu ermitteln und zurückzugeben.
+Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mithilfe eines Algorithmus lösen.
+Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren. 
+
+Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert.
+Außerdem soll die Funktion `get_cost` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt.
+Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. 
+Schließlich soll die `main`-Funktion implementiert werden, so dass sie den Nutzer auffordert, den Namen eines Gerichts einzugeben. 
+Der Preis dieses Gerichts wird dann mit `get_cost` ermittelt und die Eingabe solange wiederholt, bis der Nutzer keine weiteren Gerichte mehr auswählt (Abbruch durch Drücken von _Enter_). 
+Sobald die Eingabe beendet wird, gibt die Funktion den Gesamtpreis aller ausgewählten Gerichte aus.
 
 ### Hinweise
 
-- Du kannst die Menüartikel und Preise in der Funktion `add_items` fest codieren.
-- Es gibt eine Funktion in [`strings.h`](https://manual.cs50.io/#strings.h), die hier nützlich sein könnte. _Welche ist das?_
+- Die Namen und Preise der Gerichte können fest codiert werden.
+- Es gibt eine Funktion in [`strings.h`](https://manual.cs50.io/#strings.h), die für die `get_cost`-Funktion hier nützlich sein könnte. _Welche ist das?_
 
 ### Details
 
-Die `main`-Funktion ist bereits fertiggestellt. Nachdem sie `add_items` aufgerufen hat, um das Menüarray zu initialisieren, werden die Gerichte und ihre Preise ausgegeben. Anschließend wird der Nutzer aufgefordert, Artikel auszuwählen, bis er `Enter` drückt.
+Deine Aufgabe ist es nun eine `struct` und zwei Funktionen zu implementieren:
 
-Deine Aufgabe ist es nun eine `struct` und zwei Funktionen zu vervollständigen:
-
-1. Lege eine `struct` namens `menu_item` an. Die `struct` soll einen `string item` und ein `float price` enthalten.
-2. `add_items`: Fügt mindestens die ersten vier Gerichte des Menüs hinzu.
-3. `get_cost`: Gibt die Kosten für einen Artikel zurück- Debei muss ein **linearer Suchalgorithmus** verwendet werden. Dabei muss nicht zwischen Groß- und Kleinschreibung unterschieden werden.
+1. Die `struct` `menu_item`, welche die Gerichte und Preise repräsentiert.
+2. Die Funktion `main`, um die Nutzereingaben zu verarbeiten und den Gesamtpreis zu berechnen.
+3. Die Funktion `get_cost`, die den Preis eines Gerichts anhand des Namens ermittelt.
 
 ### Denkfrage
 
 Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
 
-## Teilaufgabe: prozentualer Rabatt
-
 ## Teilaufgabe: Mehrwertsteuer berechnen
 
 ## Teilaufgabe: Anzahl der Gerichte mit angebbar
-
-## Teilaufgabe: Binäre Suche mit ids
