@@ -28,6 +28,7 @@ Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mith
 Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren.
 
 Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert.
+Zusätzlich musst du noch die Funktion `add_items` erstellen, welche die `menu_item`s _erstellt_.
 
 Außerdem soll die Funktion `purchase` implementiert werden, die mithilfe eines **linearen Suchalgorithmus** den Preis eines ausgewählten Gerichts ermittelt und zurückgibt. Dabei soll die Suche nicht zwischen Groß- und Kleinschreibung unterscheiden. Kann ein angegebenes Gericht nicht gefunden werden, so soll `The provided dish wasn't found.` auf der Konsole ausgegeben werden.
 
@@ -54,11 +55,12 @@ The order costs 5.99 €
 
 ### Details
 
-Deine Aufgabe ist es nun eine `struct` und zwei Funktionen, wie oben spezifiziert, zu implementieren:
+Deine Aufgabe ist es nun eine `struct` und drei Funktionen, wie oben spezifiziert, zu implementieren:
 
 1. Die `struct` `menu_item`, welche die Gerichte und Preise repräsentiert.
-2. Die Funktion `main`, um die Nutzereingaben zu verarbeiten und den Gesamtpreis zu berechnen.
-3. Die Funktion `purchase`, die den Preis eines Gerichts anhand des Namens ermittelt.
+2. Die Funktion `add_items`, die `menu_item`s entsprechend der Angabe erstellt.
+3. Die Funktion `main`, um die Nutzereingaben zu verarbeiten und den Gesamtpreis zu berechnen.
+4. Die Funktion `purchase`, die den Preis eines Gerichts anhand des Namens ermittelt.
 
 ### Denkfrage
 
@@ -95,7 +97,7 @@ In dieser Teilaufgabe sollst du die `struct` und die Funktionen erweitern, um di
 
 ### Aufgabe
 
-1. Ergänze die bestehende `struct` um eine Möglichkeit, die verfügbare Menge der Gerichte zu speichern. Passe hierbei auch das `menu` Array an.
+1. Ergänze die bestehende `struct` um eine Möglichkeit, die verfügbare Menge der Gerichte zu speichern. Passe hierbei auch die `add_items` Funktion an.
 2. Implementiere eine Funktion, die es ermöglicht, ein Gericht anhand seines Namens zu finden und den _Array-Index_ dieses Gerichts in der Liste zurückzugeben. _Wie könnte man den Fall, dass ein Gericht nicht gefunden wird entsprechend behandeln?_ _Warum benötigen wir diese Funktion?_
 3. Überarbeite die bestehende `purchase`-Funktion so, dass sie den `index` des Gerichts verwendet und basierend darauf prüft, ob genügend Gerichte vorrätig sind.
 
