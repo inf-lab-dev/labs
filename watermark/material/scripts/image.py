@@ -86,13 +86,13 @@ def convert_to_bmp(input_file, output_file):
             # Save as 24-bit uncompressed BMP
             img.save(output_file, format='BMP')
 
-            success(f'Successfully converted "{output_file}" to BMP!')
+            success(f'Successfully converted "{output_file}"!')
     except Exception as e:
-        error(f'Could not convert "{output_file}" to BMP: {e}')
+        error(f'Could not convert "{output_file}": {e}')
 
 
 def main():
-    print(f'{TERMINAL_BLUE}🎉 Convert images to BMP!\n{TERMINAL_RESET}')
+    print(f'{TERMINAL_BLUE}🎉 Download images as BMP!\n{TERMINAL_RESET}')
 
     while True:
         # ask the user for input
