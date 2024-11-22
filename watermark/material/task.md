@@ -49,8 +49,8 @@ Alternativ kannst du auch einfach die mitgelieferte `uni.bmp` Datei verwenden.
 
 Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `check50` zu überprüfen.
 
--   **Teilaufgabe 1:** `check50 -l inf-lab-dev/check/watermark/a1`
--   **Teilaufgabe 1:** `check50 -l inf-lab-dev/check/watermark/a2`
+-   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/watermark/a2`
+-   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/watermark/a3`
 
 ### Style
 
