@@ -26,6 +26,8 @@ Betrachte deshalb den gesamten vorgegebenen Code und beantworte insbesondere die
 
 ## Teilaufgabe 2
 
+> ℹ️ Verwende bei dieser und allen folgenden Teilaufgaben die CS50 Bibliothek **nicht mehr**. Nutze stattdessen die C Bibliotheken wie `stdbool.h` oder `stdlib.h` direkt!
+
 In dieser Teilaufgabe wird der bereits vorhandene Code in `watermark.c` vervollständigt. An einigen Stellen hat der Programmierer Lücken gelassen. Zum Glück hat er aber _TODO_ Kommentare im Code hinterlassen, die uns sagen, was wir tun sollen.
 
 Beginnen wir also und vervollständigen das Codegerüst! Vergiss nicht, abgeschlossene _TODO-Kommentare_ auch aus dem Code zu entfernen.
@@ -33,7 +35,18 @@ Beginnen wir also und vervollständigen das Codegerüst! Vergiss nicht, abgeschl
 ## Teilaufgabe 3
 
 In der dritten und letzten Teilaufgabe soll schließlich das Wasserzeichen aus der Datei `overlay.bmp` **unten links** in das Eingabebild eingefügt werden.
-Nutze hierzu die nun fertiggestellte Funktion `open_image` um die Datei `overlay.bmp` zu öffnen und kopiere die Pixel an die passende Stelle im Orginalbild. Speichere das veränderte Bild dann unter dem übergebenen `OUTPUT` ab.
+Nutze hierzu die nun fertiggestellte Funktion `open_image` um die Datei `overlay.bmp` zu öffnen und kopiere die Pixel an die passende Stelle im Orginalbild `INPUT`. Speichere das veränderte Bild dann unter dem übergebenen `OUTPUT` ab.
+
+Das Programm soll schließlich wie im folgenden Beispiel gezeigt, verwendet werden können. Sowohl `INPUT` als auch `OUTPUT` sind BMP-Dateien (muss nicht überprüft werden!).
+Achte zusätzlich darauf, dass das Programm keinen Speicher leckt (also keine Memory-Leaks hat).
+
+```
+./watermark INPUT OUTPUT
+```
+
+```
+./watermark uni.bmp uni-watermark.bmp
+```
 
 ## Testen
 

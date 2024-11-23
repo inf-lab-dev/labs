@@ -34,7 +34,7 @@ def error(message):
 
 
 def info(message):
-    print(f'{TERMINAL_BLUE}ℹ️ {message}{TERMINAL_RESET}')
+    print(f'{TERMINAL_BLUE}ℹ️  {message}{TERMINAL_RESET}')
 
 
 def download_image(url, filename):
