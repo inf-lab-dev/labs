@@ -14,3 +14,4 @@ Diese Seite enthält verschiedene Materialien für meine Inf-Einf-Labs.
 
 -   [Passwort](./password)
 -   [Kiosk](./snackbar)
+-   [Wasserzeichen](./watermark)
