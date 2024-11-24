@@ -106,38 +106,44 @@ def main():
     os.makedirs(BMP_DIRECTORY, exist_ok=True)
 
     while True:
-        # Ask the user for input
-        target = input(
-            f'{TERMINAL_YELLOW}👉 Enter URL (press Enter to quit): {TERMINAL_RESET}\n   ')
+        try:
+            # Ask the user for input
+            target = input(
+                f'{TERMINAL_YELLOW}👉 Enter URL (press Enter to quit): {TERMINAL_RESET}\n   ')
 
-        if len(target.strip()) == 0:
-            print(f'{TERMINAL_BLUE}👋  Goodbye!{TERMINAL_RESET}')
-            break
+            if len(target.strip()) == 0:
+                break
 
-        # if input is a URL
-        if target.startswith('data:image/') or target.startswith('http'):
-            temp_file = download_image(target)
+            # if input is a URL
+            if target.startswith('data:image/') or target.startswith('http'):
+                temp_file = download_image(target)
 
-            if not temp_file:
+                if not temp_file:
+                    continue
+
+                # define BMP filename
+                filename = target.split('/')[-1].split('?')[0]
+                bmp_filename = os.path.join(
+                    BMP_DIRECTORY, f'{os.path.splitext(filename)[0]}.bmp')
+
+                # convert the temporary file to BMP
+                convert_to_bmp(temp_file, bmp_filename)
+
+                # remove the temporary file
+                os.remove(temp_file)
+
+            # otherwise
+            else:
+                error(
+                    'Could not determine what you want to download or convert, please try again.')
+
                 continue
 
-            # define BMP filename
-            filename = target.split('/')[-1].split('?')[0]
-            bmp_filename = os.path.join(
-                BMP_DIRECTORY, f'{os.path.splitext(filename)[0]}.bmp')
+        except KeyboardInterrupt:
+            print()  # add an empty line so outputs match for both abort modes
+            break
 
-            # convert the temporary file to BMP
-            convert_to_bmp(temp_file, bmp_filename)
-
-            # remove the temporary file
-            os.remove(temp_file)
-
-        # otherwise
-        else:
-            error(
-                'Could not determine what you want to download or convert, please try again.')
-
-            continue
+    print(f'{TERMINAL_BLUE}👋  Goodbye!{TERMINAL_RESET}')
 
 
 if __name__ == '__main__':
