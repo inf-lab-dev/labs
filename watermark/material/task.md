@@ -35,23 +35,23 @@ Beginnen wir also und vervollständigen das Codegerüst! Vergiss nicht, abgeschl
 ## Teilaufgabe 3
 
 In der dritten und letzten Teilaufgabe soll schließlich das Wasserzeichen aus der Datei `overlay.bmp` **unten links** in das Eingabebild eingefügt werden.
-Nutze hierzu die nun fertiggestellte Funktion `open_image` um die Datei `overlay.bmp` zu öffnen und kopiere die Pixel an die passende Stelle im Orginalbild `INPUT`. Speichere das veränderte Bild dann unter dem übergebenen `OUTPUT` ab.
+Nutze hierzu die nun fertiggestellte Funktion `open_image` um die Datei `overlay.bmp` zu öffnen und kopiere die Pixel an die passende Stelle im Originalbild `INPUT`. Speichere das veränderte Bild dann unter dem übergebenen `OUTPUT` ab.
 
 Das Programm soll schließlich wie im folgenden Beispiel gezeigt, verwendet werden können. Sowohl `INPUT` als auch `OUTPUT` sind BMP-Dateien (muss nicht überprüft werden!).
-Achte zusätzlich darauf, dass das Programm keinen Speicher leckt (also keine Memory-Leaks hat).
+Achte zusätzlich darauf, dass das Programm keinen Speicherlecks (also keine Memory-Leaks) hat.
 
 ```
 ./watermark INPUT OUTPUT
 ```
 
 ```
-./watermark uni.bmp uni-watermark.bmp
+./watermark uni.bmp overlay.bmp
 ```
 
 ## Testen
 
 Um das Programm auch mit Bildern aus dem Internet testen zu können, kann das mitgelieferte Skript `image.py` verwendet werden.
-Verwende dazu `python3 image.py`, du wirst nun dazu aufgefordert den Link zu einem Bild einzugeben, nach dem drücken von <kbd>Enter</kbd> wird das Bild heruntergeladen und als _BMP_ Datei gespeichert.
+Verwende dazu `python3 image.py`. Du wirst nun dazu aufgefordert den Link zu einem Bild einzugeben. Nach dem drücken von <kbd>Enter</kbd> wird das Bild heruntergeladen und als _BMP_ Datei gespeichert.
 Um das Skript zu verlassen, drücke einfach <kbd>Enter</kbd> ohne einen Link einzugeben.
 
 Alternativ kannst du auch einfach die mitgelieferte `uni.bmp` Datei verwenden.
