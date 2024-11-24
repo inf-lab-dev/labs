@@ -38,6 +38,7 @@ In der dritten und letzten Teilaufgabe soll schließlich das Wasserzeichen aus d
 Nutze hierzu die nun fertiggestellte Funktion `open_image` um die Datei `overlay.bmp` zu öffnen und kopiere die Pixel an die passende Stelle im Originalbild `INPUT`. Speichere das veränderte Bild dann unter dem übergebenen `OUTPUT` ab.
 
 Das Programm soll schließlich wie im folgenden Beispiel gezeigt, verwendet werden können. Sowohl `INPUT` als auch `OUTPUT` sind BMP-Dateien (muss nicht überprüft werden!).
+Es muss sichergestellt sein, dass das Wasserzeichen-Bild kleiner ist als das Eingabebild, damit es korrekt eingefügt werden kann. Das heißt, dass das Wasserzeichen-Bild weniger Pixel in der Breite und Höhe haben muss als das Eingabebild.
 Achte zusätzlich darauf, dass das Programm keinen Speicherlecks (also keine Memory-Leaks) hat.
 
 ```
