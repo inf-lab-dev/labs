@@ -46,7 +46,7 @@ Achte zusätzlich darauf, dass das Programm keinen Speicherlecks (also keine Mem
 ```
 
 ```
-./watermark uni.bmp overlay.bmp
+./watermark uni.bmp uni_overlay.bmp
 ```
 
 ## Testen
