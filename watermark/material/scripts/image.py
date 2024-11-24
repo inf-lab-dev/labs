@@ -9,9 +9,9 @@
 #
 
 import os
-import base64
 import urllib.request
 import http.cookiejar
+import tempfile
 from PIL import Image
 
 # ANSI color codes for use on the terminal
@@ -23,6 +23,9 @@ TERMINAL_RESET = '\033[0m'
 
 # some decently new user agent to not get blocked by CDNs
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+
+# directory for BMP files
+BMP_DIRECTORY = "./images"
 
 
 def success(message):
@@ -37,94 +40,104 @@ def info(message):
     print(f'{TERMINAL_BLUE}ℹ️  {message}{TERMINAL_RESET}')
 
 
-def download_image(url, filename):
+def save_to_tempfile(data, suffix):
+    try:
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
+        temp_file.write(data)
+        temp_file.close()
+
+        return temp_file.name
+
+    except Exception as e:
+        error(f'Failed to create temporary file: {e}')
+
+        return None
+
+
+def download_image(url):
     try:
         # user probably copied something off google images directly
         if url.startswith('data:image/'):
-            info(f'Downloading from data URL...')
+            error(
+                f'Cannot download data urls, please pass some url starting with "http"!')
 
-            # get actual base64 encoded data
-            data = url.split(',')[1]
-            image = base64.b64decode(data)
-
-            with open(filename, 'wb') as f:
-                f.write(image)
-
-            success(f'Downloaded data URL as "{filename}"')
+            return None
 
         # user did pass an actual url
         else:
             info(f'Downloading from "{url}"...')
-
             request = urllib.request.Request(url)
 
-            # support cookies to not get blocked by some image CDNs
+            # Support cookies to avoid being blocked
             cookie_jar = http.cookiejar.CookieJar()
             opener = urllib.request.build_opener(
                 urllib.request.HTTPCookieProcessor(cookie_jar))
-
-            # use user-agent to not get blocked by cdns
             request.add_header('User-Agent', USER_AGENT)
 
             with opener.open(request) as response:
-                with open(filename, 'wb') as f:
-                    f.write(response.read())
-
-            success(f'Downloaded URL as "{filename}"')
+                return save_to_tempfile(response.read(), '.img')
 
     except Exception as e:
         error(f'Could not download image at "{url}": {e}')
 
+        return None
+
 
 def convert_to_bmp(input_file, output_file):
     try:
-        # open the input image file
+        # Open the input image file
         with Image.open(input_file) as img:
-            # ensure the image is in RGB mode (24-bit)
+            # Ensure the image is in RGB mode (24-bit)
             img = img.convert('RGB')
 
             # Save as 24-bit uncompressed BMP
             img.save(output_file, format='BMP')
 
-            success(f'Successfully converted "{output_file}"!')
+            success(f'Successfully converted to BMP: "{output_file}"')
+
     except Exception as e:
-        error(f'Could not convert "{output_file}": {e}')
+        error(f'Could not convert to BMP: {e}')
 
 
 def main():
     print(f'{TERMINAL_BLUE}🎉 Download images as BMP!\n{TERMINAL_RESET}')
 
+    # Ensure the BMP directory exists
+    os.makedirs(BMP_DIRECTORY, exist_ok=True)
+
     while True:
-        # ask the user for input
+        # Ask the user for input
         target = input(
-            f'{TERMINAL_YELLOW}👉 Enter URL (press Enter to quit): {TERMINAL_RESET}\n')
+            f'{TERMINAL_YELLOW}👉 Enter URL (press Enter to quit): {TERMINAL_RESET}\n   ')
 
         if len(target.strip()) == 0:
-            print(f'{TERMINAL_BLUE}👋  Godbye!{TERMINAL_RESET}')
+            print(f'{TERMINAL_BLUE}👋  Goodbye!{TERMINAL_RESET}')
             break
 
         # if input is a URL
         if target.startswith('data:image/') or target.startswith('http'):
+            temp_file = download_image(target)
 
-            # get filename from url if it has query parameters
-            filename = './images/' + target.split('/')[-1].split('?')[0]
+            if not temp_file:
+                continue
 
-            download_image(target, filename)
+            # define BMP filename
+            filename = target.split('/')[-1].split('?')[0]
+            bmp_filename = os.path.join(
+                BMP_DIRECTORY, f'{os.path.splitext(filename)[0]}.bmp')
+
+            # convert the temporary file to BMP
+            convert_to_bmp(temp_file, bmp_filename)
+
+            # remove the temporary file
+            os.remove(temp_file)
 
         # otherwise
         else:
             error(
                 'Could not determine what you want to download or convert, please try again.')
+
             continue
-
-        # convert the filename to bmp
-        bmp_filename = filename.rsplit('.', 1)[0] + '.bmp'
-
-        # convert the actual file to BMP
-        convert_to_bmp(filename, bmp_filename)
-
-        # remove the converted fil
-        os.remove(filename)
 
 
 if __name__ == '__main__':
