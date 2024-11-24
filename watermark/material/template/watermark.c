@@ -17,7 +17,7 @@ void close_image(bmp_image *bmp);
 bool save_image(bmp_image *bmp, char *file_name);
 
 
-// TODO: implement entire main funciton here in Task 3
+// TODO: implement entire main function here in Task 3
 
 // Loads a bmp image from the given "file_path"
 bmp_image* open_image(char *file_path)
