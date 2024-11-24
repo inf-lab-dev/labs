@@ -52,7 +52,7 @@ Achte zusätzlich darauf, dass das Programm keinen Speicher leckt (also keine Me
 
 Um das Programm auch mit Bildern aus dem Internet testen zu können, kann das mitgelieferte Skript `image.py` verwendet werden.
 Verwende dazu `python3 image.py`, du wirst nun dazu aufgefordert den Link zu einem Bild einzugeben, nach dem drücken von <kbd>Enter</kbd> wird das Bild heruntergeladen und als _BMP_ Datei gespeichert.
-Um das Skript zu verlassen, drücke einfach <kbd>Enter</kbd> ohne einn Link einzugeben.
+Um das Skript zu verlassen, drücke einfach <kbd>Enter</kbd> ohne einen Link einzugeben.
 
 Alternativ kannst du auch einfach die mitgelieferte `uni.bmp` Datei verwenden.
 
@@ -62,8 +62,11 @@ Alternativ kannst du auch einfach die mitgelieferte `uni.bmp` Datei verwenden.
 
 Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `check50` zu überprüfen.
 
+-   **Teilaufgabe 1:** _kein `check50` verfügbar_
 -   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/watermark/a2`
 -   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/watermark/a3`
+
+<div style="page-break-after: always"></div>
 
 ### Style
 
