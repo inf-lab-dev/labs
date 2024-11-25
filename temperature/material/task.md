@@ -5,7 +5,7 @@ pdf:
 
 # Temperatur
 
-> ℹ️ Diese Aufgabe basiertauf dem [Temps Practice Problem von CS50](https://cs50.harvard.edu/x/2024/practice/temps/).
+> ℹ️ Diese Aufgabe basiert auf dem [Temps Practice Problem von CS50](https://cs50.harvard.edu/x/2024/practice/temps/).
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 
@@ -34,16 +34,17 @@ In der ersten Teilaufgabe wollen wir die in der Tabelle gegebenen Daten entsprec
 Erstelle hierfür in einer Datei namens `temperature.c` eine `struct` mit dem Namen `avg_temp`, die den Namen einer Stadt und die entsprechende Temperatur im Juli speichert.
 Um die Tabellendaten nun im Programm verarbeiten zu können, soll eine Funktion `create_cities` erstellt werden, welche `avg_temp` `struct`s entsprechend der gegebenen Tabelle anlegt und in einem Array speichert.
 Die Funktion `create_cities` soll in der `main`-Funktion aufgerufen werden.
+Gebe das Array einmal auf der Konsole in folgendem Format aus: `Austin: 36`.
 
 ## Teilaufgabe 2
 
 Nun wollen wir das in [Teilaufgabe 1](#teilaufgabe-1) angelegte Array so sortieren, dass die `avg_temp` `struct` mit der höchsten Temperatur an erster Stelle steht.
 Implementiere hierfür einen Sortieralgorithmus in einer Funktion namens `sort_cities`.
 
-Der Inhalt des Arrays soll nach dem sortieren in folgendem Format auf der Konsole ausgegeben werden: `Austin: 97°C`.
+Der Inhalt des Arrays soll nach dem sortieren nun in der entsprechenden Reihenfolge und in folgendem Format auf der Konsole ausgegeben werden: `Austin: 36`.
 
 **Frage:** Wie lautet der Name der Stadt mit der höchsten Durchschnittstemperatur im Juli? 
-Gib den Namen auf der Konsole im folgenden Format aus: `Die höchste Temperatur im Juli herrscht in Austin` (Die Stadt _Austin_ wird hier nur als Beispiel genutzt. Das ist logischerweise nicht die wärmste Stadt, wie in der Tabelle ersichtlich).
+Gib den Namen auf der Konsole im folgenden Format aus: `The highest temperature in July is in Austin.` (Die Stadt _Austin_ wird hier nur als Beispiel genutzt. Das ist logischerweise nicht die wärmste Stadt, wie in der Tabelle ersichtlich).
 
 ## Testen
 
