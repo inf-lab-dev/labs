@@ -31,7 +31,7 @@ Der Juli ist in den meisten großen US-Städten der heißeste Monat des Jahres. 
 | San Francisco |                 66 |
 
 In der ersten Teilaufgabe wollen wir die in der Tabelle gegebenen Daten entsprechend aufbereiten, sodass wir sie in [Teilaufgabe 2](#teilaufgabe-2) weiterverwenden können.
-Erstelle dazu eine `struct` mit dem Namen `avg_temp`, die den Namen einer Stadt und die entsprechende Temperatur im Juli speichert.
+Erstelle hierfür in einer Datei namens `temperature.c` eine `struct` mit dem Namen `avg_temp`, die den Namen einer Stadt und die entsprechende Temperatur im Juli speichert.
 Um die Tabellendaten nun im Programm verarbeiten zu können, soll eine Funktion `create_cities` erstellt werden, welche `avg_temp` `struct`s entsprechend der gegebenen Tabelle anlegt und in einem Array speichert.
 Die Funktion `create_cities` soll in der `main`-Funktion aufgerufen werden.
 
@@ -45,13 +45,7 @@ Gib den Namen auf der Konsole im folgenden Format aus: `Die höchste Temperatur 
 
 ## Testen
 
-Um das Programm auch mit Bildern aus dem Internet testen zu können, kann das mitgelieferte Skript `image.py` verwendet werden.
-Verwende dazu `python3 image.py`. Du wirst nun dazu aufgefordert den Link zu einem Bild einzugeben. Nach dem drücken von <kbd>Enter</kbd> wird das Bild heruntergeladen und als _BMP_ Datei gespeichert.
-Um das Skript zu verlassen, drücke einfach <kbd>Enter</kbd> ohne einen Link einzugeben.
-
-Alternativ kannst du auch einfach die mitgelieferte `uni.bmp` Datei verwenden.
-
-> ℹ️ Wirf gerne einen Blick in das Python Skript nachdem wir in der Vorlesung Python erreicht haben!
+Teste zuerst manuell, ob die Städte in der korrekten Reihenfolge sortiert sind.
 
 ### Korrektheit
 
