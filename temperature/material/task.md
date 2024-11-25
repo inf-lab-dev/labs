@@ -30,10 +30,10 @@ Der Juli ist in den meisten großen US-Städten der heißeste Monat des Jahres. 
 | Phoenix       |                107 |
 | San Francisco |                 66 |
 
-In der ersten Teilaufgabe wollen wir die in der Tabelle gegebenen Daten entsprechend aufbereiten, sodass wir sie in [Teilaufgabe 2](#teilaufgabe-2) weiter verwenden können.
-Erstelle dazu eine `struct` namens `avg_temp`, die den Namen einer Stadt und die zugehörige Temperatur im Juli speichert.
-Um die Daten aus der Tabelle nun im Programm verarbeiten zu können, soll eine Funktion `create_cities` aufgerufen werden, welche `avg_temp` `struct`s entsprechend der gegebenen Tabelle anlegt und in einem Array speichert.
-`create_cities` soll in der `main` Funktion aufgerufen werden.
+In der ersten Teilaufgabe wollen wir die in der Tabelle gegebenen Daten entsprechend aufbereiten, sodass wir sie in [Teilaufgabe 2](#teilaufgabe-2) weiterverwenden können.
+Erstelle dazu eine `struct` mit dem Namen `avg_temp`, die den Namen einer Stadt und die entsprechende Temperatur im Juli speichert.
+Um die Tabellendaten nun im Programm verarbeiten zu können, soll eine Funktion `create_cities` erstellt werden, welche `avg_temp` `struct`s entsprechend der gegebenen Tabelle anlegt und in einem Array speichert.
+Die Funktion `create_cities` soll in der `main`-Funktion aufgerufen werden.
 
 ## Teilaufgabe 2
 
