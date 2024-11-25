@@ -37,10 +37,11 @@ Die Funktion `create_cities` soll in der `main`-Funktion aufgerufen werden.
 
 ## Teilaufgabe 2
 
-Nun wollen wir das in [Teilaufgabe 1](#teilaufgabe-1) angelegte Array so sortieren, dass die `avg_temp` `struct` mit der höchsten Temperatur zuerst im Array steht.
-Implementiere den Sortieralgorithmus in einer Funktion namens `sort_cities`.
+Nun wollen wir das in [Teilaufgabe 1](#teilaufgabe-1) angelegte Array so sortieren, dass die `avg_temp` `struct` mit der höchsten Temperatur an erster Stelle steht.
+Implementiere hierfür einen Sortieralgorithmus in einer Funktion namens `sort_cities`.
 
-Wie ist nun der Name der Stadt mit der höchsten Temperatur im Juli?
+**Frage:** Wie lautet der Name der Stadt mit der höchsten Durchschnittstemperatur im Juli? 
+Gib den Namen auf der Konsole im folgenden Format aus: `Die höchste Temperatur im Juli herrscht in Austin` (Die Stadt _Austin_ wird hier nur als Beispiel genutzt. Das ist logischerweise nicht die wärmste Stadt, wie in der Tabelle ersichtlich).
 
 ## Testen
 
