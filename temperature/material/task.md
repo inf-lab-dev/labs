@@ -57,8 +57,6 @@ Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `c
 -   **Teilaufgabe 1:** `check50 -l inf-lab-dev/check/temperature/a1`
 -   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/temperature/a2`
 
-<div style="page-break-after: always"></div>
-
 ### Style
 
 Führe den folgenden Befehl aus, um den Stil deines Codes mit `style50` zu analysieren:
