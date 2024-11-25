@@ -9,7 +9,8 @@ pdf:
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 
-Wir scheinen jedes Jahr Rekorde für das wärmste jemals aufgezeichnete Wetter zu brechen. Klimawissenschaftler verfolgen die so genannten _neuen Normalwerte_ über mehrere Jahre hinweg, damit wir die Bedingungen in der nahen Zukunft besser vorhersagen und uns darauf vorbereiten können. Die offiziellen Normalwerte werden für einen einheitlichen Zeitraum von 30 Jahren berechnet und bestehen aus jährlichen/saisonalen, monatlichen, täglichen und stündlichen Durchschnittswerten und Statistiken zu Temperatur, Niederschlag und anderen klimatologischen Variablen von fast 15.000 US-Wetterstationen.
+Wir scheinen jedes Jahr Rekorde für das wärmste jemals aufgezeichnete Wetter zu brechen. Klimawissenschaftler verfolgen die so genannten _neuen Normalwerte_ über mehrere Jahre hinweg, damit wir die Bedingungen in der nahen Zukunft besser vorhersagen und uns darauf vorbereiten können.
+Die offiziellen Normalwerte werden für einen einheitlichen Zeitraum von 30 Jahren berechnet und bestehen aus jährlichen/saisonalen, monatlichen, täglichen und stündlichen Durchschnittswerten und Statistiken zu Temperatur, Niederschlag und anderen klimatologischen Variablen von fast 15.000 US-Wetterstationen.
 
 Der Juli ist für die meisten großen US-Städte der heißeste Monat des Jahres. Tagestemperaturen über 80 Grad Fahrenheit treten fast überall regelmäßig auf.
 
@@ -28,9 +29,10 @@ Der Juli ist für die meisten großen US-Städte der heißeste Monat des Jahres.
 | Phoenix       |                107 |
 | San Francisco |                 66 |
 
--   struct `avg_temp` erstellen
--   Funktion create_cities die die daten aus table erstellt in strukt
--   Main Funktion, die create_cities aufruft
+In der ersten Teilaufgabe wollen wir die in der Tabelle gegebenen Daten entsprechend aufbereiten, sodass wir sie in [Teilaufgabe 2](#teilaufgabe-2) weiter verwenden können.
+Erstelle dazu eine `struct` namens `avg_temp`, die den Namen einer Stadt und die zugehörige Temperatur im Juli speichert.
+Um die Daten aus der Tabelle nun im Programm verarbeiten zu können, soll eine Funktion `create_cities` aufgerufen werden, welche `avg_temp` `struct`s entsprechend der gegebenen Tabelle anlegt und in einem Array speichert.
+`create_cities` soll in der `main` Funktion aufgerufen werden.
 
 ## Teilaufgabe 2
 
