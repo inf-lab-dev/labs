@@ -36,7 +36,10 @@ Um die Daten aus der Tabelle nun im Programm verarbeiten zu können, soll eine F
 
 ## Teilaufgabe 2
 
--   Funktion `sort_cities` erstellen die Städte nach temperatur sortiert, sodass höchste Temperatur zuerst kommt
+Nun wollen wir das in [Teilaufgabe 1](#teilaufgabe-1) angelegte Array so sortieren, dass die `avg_temp` `struct` mit der höchsten Temperatur zuerst im Array steht.
+Implementiere den Sortieralgorithmus in einer Funktion namens `sort_cities`.
+
+Wie ist nun der Name der Stadt mit der höchsten Temperatur im Juli?
 
 ## Testen
 
