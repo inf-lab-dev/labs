@@ -9,10 +9,11 @@ pdf:
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 
-Wir scheinen jedes Jahr Rekorde für das wärmste jemals aufgezeichnete Wetter zu brechen. Klimawissenschaftler verfolgen die so genannten _neuen Normalwerte_ über mehrere Jahre hinweg, damit wir die Bedingungen in der nahen Zukunft besser vorhersagen und uns darauf vorbereiten können.
-Die offiziellen Normalwerte werden für einen einheitlichen Zeitraum von 30 Jahren berechnet und bestehen aus jährlichen/saisonalen, monatlichen, täglichen und stündlichen Durchschnittswerten und Statistiken zu Temperatur, Niederschlag und anderen klimatologischen Variablen von fast 15.000 US-Wetterstationen.
-
-Der Juli ist für die meisten großen US-Städte der heißeste Monat des Jahres. Tagestemperaturen über 80 Grad Fahrenheit treten fast überall regelmäßig auf.
+Jedes Jahr brechen wir neue Rekorde für das wärmste jemals aufgezeichnete Wetter. 
+Klimawissenschaftler analysieren sogenannte _neue Normalwerte_ über mehrere Jahre hinweg, um zukünftige Bedingungen besser vorhersehen und geeignete Maßnahmen ergreifen zu können.
+Die offiziellen Normalwerte basieren auf einem einheitlichen Zeitraum von 30 Jahren. 
+Sie umfassen jährliche, saisonale, monatliche, tägliche und stündliche Durchschnittswerte sowie Statistiken zu Temperatur, Niederschlag und anderen klimatologischen Variablen, die von fast 15.000 Wetterstationen in den USA erhoben werden.
+Der Juli ist in den meisten großen US-Städten der heißeste Monat des Jahres. Tageshöchsttemperaturen von über 80 Grad Fahrenheit sind nahezu überall üblich.
 
 ## Teilaufgabe 1
 
