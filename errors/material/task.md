@@ -33,7 +33,7 @@ Beantworte hierzu insbesondere die folgenden Fragen:
 ## Teilaufgabe 2
 
 Nachdem wir uns in [Teilaufgabe 1](#teilaufgabe-1) einen groben Überblick über das Programm beschafft haben, ist es nun an der Zeit die Fehler zu beheben.
-Vergiss nicht, das Programm enthält sowohl syntaktische[^1] als auch logische[^2] Fehler enthält.
+Vergiss nicht, das Programm enthält sowohl syntaktische als auch logische Fehler enthält.
 
 ## Teilaufgabe 3
 
