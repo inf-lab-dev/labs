@@ -47,6 +47,13 @@ Teste zuerst manuell, ob sich das Programm mit den bereitgestellten Dateien wie 
 
 ### Korrektheit
 
+::: info
+Beachte, dass bei [Teilaufgabe 3](#teilaufgabe-3) lediglich die Funktionalität des Programms überprüft wird. Die Qualität des Codes jedoch nicht.
+Um Feedback zur Qualität deines Codes zu erhalten, kannst du `design50` in deinem Codespace verwenden. Klicke hierzu einfach auf `design50` oben rechts in VS-Code.
+
+**Beachte:** Bei `design50` handelt es sich um einen durch vorherige Prompts modifizierten ChatGPT. Deshalb ist die übliche Vorsicht bei KI generierten Inhalten geboten!
+:::
+
 Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `check50` zu überprüfen.
 
 -   **Teilaufgabe 1:** _kein `check50` verfügbar_
