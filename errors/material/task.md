@@ -43,7 +43,7 @@ Außerdem sollten wir einige Kommentare hinzufügen, um unseren Code verständli
 
 ## Testen
 
-Teste zuerst manuell, ob das Programm sich wie erwartet verhält.
+Teste zuerst manuell, ob sich das Programm mit den bereitgestellten Dateien wie erwartet verhält.
 
 ### Korrektheit
 
