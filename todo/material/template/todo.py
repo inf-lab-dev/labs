@@ -3,27 +3,27 @@ from cs50 import get_int, get_string
 
 def show():
     # TODO: Implement this function that lists all todos
-    print("ERROR: Not implemented, yet!")
+    raise NotImplementedError
 
 
 def create(task):
     # TODO: Implement this function that creates a todo
-    print("ERROR: Not implemented, yet!")
+    raise NotImplementedError
 
 
 def complete(index):
     # TODO: Implement this function that completes the todo at the given index
-    print("ERROR: Not implemented, yet!")
+    raise NotImplementedError
 
 
 def delete(index):
     # TODO: Implement this function that deletes the todo at the given index
-    print("ERROR: Not implemented, yet!")
+    raise NotImplementedError
 
 
 def update(index, new_task):
     # TODO: Implement this function that updates the todo at the given index with the given new_task
-    print("ERROR: Not implemented, yet!")
+    raise NotImplementedError
 
 
 def main():

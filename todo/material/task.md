@@ -13,7 +13,8 @@ Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich all
 Wie immer, wenn wir einen vorbereiteten Code bekommen, sollten wir diesen vorerst verstehen bevor wir Änderungen vornehmen können. Lies deshalb den Code in der Datei `todo.py` und beantworte insbesondere folgende Fragen. Wenn du noch etwas unsicher beim Python Syntax bist, kannst du die vorgegebene Datei `todo.c` zur hilfe nehmen. Diese enthält den selben Code - nur für die Programmiersprache C.
 
 -   Welche Funktionen müssen laut `TODO`-Kommentaren von uns implementiert werden? Was sind ihre Parameter?
--   Wie genau kann der Benutzer eine Aufgabe hinzufügen, nachdem er das Programm mit `python3 todo.py` gestartet hat?
+-   Wie genau kann der Benutzer eine Aufgabe hinzufügen, nachdem er das Programm mit `python todo.py` gestartet hat?
+-   Welche Aufgabe haben die `NotImplementedError`s, die bei verschiedenen Funktionen ausgelöst werden?
 
 ## Teilaufgabe 2
 
@@ -53,6 +54,19 @@ Achte bei allen Aufgaben darauf, dass du deine bereits erstellte Klasse `ToDo` b
 
 ## Teilaufgabe 4
 
+Nun ist das Programm eigentlich fertig. Jedoch sollten wir es auch noch testen. Um Tests einfach wiederholen zu können, empfiehlt es sich Code zum testen zu verwenden.
+
+Öffne deshalb die Datei `test_todo.py`, in welcher du die `ToDo` Klasse testest. In dieser Datei haben wir dir bereits einige Funktionen vorbereitet.
+Du solltest _alle Methoden der ToDo Klasse_ testen. Wie du sinnvolle Tests schreibst, liegt an dir!
+
+Um deine Tests schließlich auszuführen, kannst du folgenden Befehl verwenden.
+
+```bash
+pytest test_todo.py
+```
+
+## Teilaufgabe 5
+
 ::: info
 Diese Aufgabe ist eine **Bonusaufgabe**, welche wir nicht zusammen bearbeiten.
 Du kannst diese gerne zuhause bearbeiten und dich bei Problemen an deinen Tutor wenden.
@@ -85,6 +99,7 @@ Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `c
 -   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/todo/a2`
 -   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/todo/a3`
 -   **Teilaufgabe 4:** `check50 -l inf-lab-dev/check/todo/a4`
+-   **Teilaufgabe 5:** `check50 -l inf-lab-dev/check/todo/a5`
 
 ### Style
 
