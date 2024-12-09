@@ -6,4 +6,4 @@ if [ -f lab-todo.zip ]; then
 fi
 
 # And recreate
-zip -j lab-todo.zip ./template/todo.c ./template/todo.py
+zip -j lab-todo.zip ./template/todo.c ./template/todo.py ./template/test_todo.py

@@ -76,7 +76,7 @@ Du kannst diese gerne zuhause bearbeiten und dich bei Problemen an deinen Tutor 
 Diese Aufgabe ist relativ anspruchsvoll und sollte nur bearbeitet werden, wenn du auch mit dem Material zu C sicher genug bist, da man zur Bearbeitung dieser Aufgabe den gesamten Vorlesungsstoff zu C beherrschen muss.
 :::
 
-Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir diese auch in C implementieren. Bearbeite deshalb die gesamte Aufgabe erneut in der Datei `todo.c`. Halte dich hierbei nur grob an die Aufgabenstellung, da es z.B. in C keine Klassen gibt.
+Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir diese auch in C implementieren. Bearbeite deshalb die gesamte Aufgabe erneut in der Datei `todo.c`. Halte dich hierbei nur grob an die Aufgabenstellung, da es z.B. in C keine Klassen gibt. Auch [Teilaufgabe 4](#teilaufgabe-4) kann hierbei weggelassen werden.
 
 <details>
     <summary>Hinweise zur Lösung der Aufgabe</summary>
