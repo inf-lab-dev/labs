@@ -81,7 +81,7 @@ Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir
 <details>
     <summary>Hinweise zur Lösung der Aufgabe</summary>
 
--   statt bei Fehlerhaften `index` Werten einen `ValueError` auszulösen, kann hier einfach eine Fehlermeldung, welche mit `ERROR:` beginnt, auf der Konsole ausgegeben werden
+-   statt bei Fehlerhaften `index` Werten einen `ValueError` auszulösen, kann hier einfach eine Fehlermeldung, welche mit `INVALID:` beginnt, auf der Konsole ausgegeben werden
 -   Natürlich gibt es in C keine Klassen, überlege dir deshalb eine Sinnvolle andere Lösung.
 -   Wie können wir, ähnlich wie in Python, _unbegrenzt viele Elemente_ an einer Stelle speichern?
 
