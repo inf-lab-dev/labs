@@ -28,7 +28,7 @@ Beantworte hierzu insbesondere die folgenden Fragen:
 3. Wofür wird die Funktion `free_node` benötigt?
 
 [^1]: **Syntaktische Fehler** sind solche, die durch den Compiler erkannt werden können (z.B. ein fehlendes `;`). Wir können sie daran erkennen, dass sich das Programm nicht kompilieren lässt und `make solution-zone` einige Fehlermeldungen ausgibt.
-[^2]: **Logische Fehler** sind Fehler des Programmablaufes (z.B dass in einer Funktion `int add(int a, int b)`, statt zu addieren subtrahiert wird.). Wir können sie daran erkennen, dass sich unser Programm komisch/unerwartet verhält, wenn wir es ausführen.
+[^2]: **Logische Fehler** sind Fehler des Programmablaufes (z.B. dass in einer Funktion `int add(int a, int b)`, statt zu addieren subtrahiert wird.). Wir können sie daran erkennen, dass sich unser Programm komisch/unerwartet verhält, wenn wir es ausführen.
 
 ## Teilaufgabe 2
 
