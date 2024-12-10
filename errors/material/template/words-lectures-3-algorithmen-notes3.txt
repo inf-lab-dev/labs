@@ -80,7 +80,7 @@ zahlenpaare
 haben
 hinten
 programmierkonstrukte
-get_string
+getstring
 log
 pruefen
 dritten
@@ -142,7 +142,7 @@ lesbare
 solcher
 dir
 passt
-außerdem
+ausserdem
 implementieren
 suche
 finden
@@ -157,7 +157,7 @@ schraenken
 fragen
 linearer
 beiden
-get_int
+getint
 stammt
 willkommen
 prueft
@@ -201,12 +201,12 @@ unserem
 nein
 unserer
 nuetzlich
-groeßenordnung
+groessenordnung
 den
 found
 einzelnen
 ewig
-schließlich
+schliesslich
 auf
 namen
 unser
@@ -239,7 +239,7 @@ durchlaufen
 eigenen
 durchsuchen
 wenn
-groeße
+groesse
 sonderzeichen
 setzt
 ob
@@ -353,7 +353,7 @@ links
 keine
 sorgt
 ergebnis
-groeßten
+groessten
 glueck
 dieser
 sein
@@ -566,7 +566,7 @@ sonst
 nutzen
 zahl
 obigen
-groeßere
+groessere
 gleichheit
 warnt
 vergewissern
@@ -589,7 +589,7 @@ visualisierungen
 informatiker
 diese
 koennte
-aeußere
+aeussere
 grund
 einfacher
 sehen
