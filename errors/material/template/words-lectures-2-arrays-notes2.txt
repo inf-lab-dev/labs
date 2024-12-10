@@ -22,7 +22,7 @@ aenderung
 is
 score
 debuggen
-schließlich
+schliesslich
 wichtigsten
 koennten
 const
@@ -93,7 +93,7 @@ diese
 wie
 kleinbuchstabe
 wenn
-get_int
+getint
 vierte
 liegende
 obigen
@@ -104,7 +104,7 @@ folgt
 angesehen
 preprocessing
 ascii
-print_column
+printcolumn
 moechten
 vielleicht
 laut
@@ -246,7 +246,7 @@ speicherplatz
 fehlersuche
 step
 solche
-groß
+gross
 entschluesselung
 einf
 long
@@ -429,7 +429,7 @@ grundlagen
 pages
 menschen
 ersetzen
-string_length
+stringlength
 ihnen
 pdf
 lesbare
@@ -450,7 +450,7 @@ erzeugen
 macht
 aus
 bausteine
-weiß
+weiss
 drucker
 entschluesseln
 status
@@ -495,7 +495,7 @@ missing
 computers
 umfasst
 hinzuzufuegen
-großbuchstaben
+grossbuchstaben
 dargestellt
 a
 teile
@@ -518,7 +518,7 @@ kommandozeile
 roter
 einzelheiten
 kombiniert
-großbuchstabenversion
+grossbuchstabenversion
 geht
 ausfuehren
 eigentlichen
@@ -561,7 +561,7 @@ dargestellte
 noch
 jedes
 hineinzuschauen
-get_string
+getstring
 zeile
 zeichens
 gedanken
@@ -590,7 +590,7 @@ veranschaulichung
 mitteilen
 byte
 befehlszeilenargumente
-großgeschrieben
+grossgeschrieben
 nachdem
 zukunft
 auch
@@ -743,7 +743,7 @@ verstehen
 zwar
 bestimmte
 aktuell
-außerdem
+ausserdem
 merkt
 kompilierens
 tut
@@ -770,12 +770,12 @@ echo
 bibliothek
 namens
 i
-fließkommawert
+fliesskommawert
 abzieht
 haengt
 was
 menge
-einschließlich
+einschliesslich
 warum
 erhaelt
 aka
