@@ -107,12 +107,6 @@ void insert(char *word)
     {
         int j = tolower(word[i]) - 'a';
 
-        if (j < 0 || j >= 26)
-        {
-            printf("ERROR: Invalid character '%c' in word '%s'.\n", word[i], word);
-            return; // Skip this word
-        }
-
         if (cursor->children[j] == NULL)
         {
             cursor->children[j] = Create_Node();
@@ -133,12 +127,6 @@ bool CONTAINS(char *word)
     for (int i = 0; i < length; i++)
     {
         int j = tolower(word[i]) - 'a';
-
-        if (j < 0 || j >= 26)
-        {
-            printf("ERROR: Invalid character '%c' in word '%s'.\n", word[i], word);
-            return false; // Word cannot be contained
-        }
 
         if (cursor->children[j] == NULL)
         {
