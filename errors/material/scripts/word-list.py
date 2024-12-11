@@ -16,7 +16,9 @@ RESET = '\033[0m'
 SPECIAL_CHARS = {
     ord('ä'): 'ae',
     ord('ü'): 'ue',
-    ord('ö'): 'oe'
+    ord('ö'): 'oe',
+    ord('ß'): 'ss',
+    ord('_'): ''
 }
 
 # the maximum length for words, so they still can be loaded inside the C program
