@@ -1,4 +1,4 @@
-# Lösung für Errors
+# Lösung für Fehler
 
 Hier kann die Lösung gefunden werden, welche wir zusammen im Tutorium erarbeitet haben.
 
