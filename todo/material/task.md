@@ -10,7 +10,7 @@ Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich all
 
 ## Teilaufgabe 1
 
-Wie immer, wenn wir einen vorbereiteten Code bekommen, sollten wir diesen vorerst verstehen bevor wir Änderungen vornehmen können. Lies deshalb den Code in der Datei `todo.py` und beantworte insbesondere folgende Fragen. Wenn du noch etwas unsicher beim Python Syntax bist, kannst du die vorgegebene Datei `todo.c` zur hilfe nehmen. Diese enthält den selben Code - nur für die Programmiersprache C.
+Wie immer, wenn wir einen vorbereiteten Code bekommen, sollten wir diesen vorerst verstehen bevor wir Änderungen vornehmen können. Lies deshalb den Code in der Datei `todo.py` und beantworte insbesondere folgende Fragen. Wenn du noch etwas unsicher mit der Python Syntax bist, kannst du die vorgegebene Datei `todo.c` zur hilfe nehmen. Diese enthält den selben Code - nur für die Programmiersprache C.
 
 -   Welche Funktionen müssen laut `TODO`-Kommentaren von uns implementiert werden? Was sind ihre Parameter?
 -   Wie genau kann der Benutzer eine Aufgabe hinzufügen, nachdem er das Programm mit `python todo.py` gestartet hat?
@@ -41,7 +41,7 @@ Sollte noch keine Aufgabe existieren, soll statt der obigen Ausgabe die Nachrich
 
 ## Teilaufgabe 3
 
-Da die Grundfunktionalität des Programms nun funktioniert, ist es an der Zeit auch die verbleibenden Funktionen zu implementieren.
+Da die Grundfunktionalität des Programms nun gegen ist, ist es an der Zeit auch die verbleibenden Funktionen zu implementieren.
 
 Beginne daher damit, die Funktion `create` zu erstellen. Diese soll eine neue Aufgabe mit dem übergebenen `task` erstellen. Wenn das `ToDo` erfolgreich erstellt wurde, soll zusätzlich `ToDo created successfully!` auf der Konsole ausgegeben werden.
 
@@ -56,7 +56,7 @@ Achte bei allen Aufgaben darauf, dass du deine bereits erstellte Klasse `ToDo` b
 
 Nun ist das Programm eigentlich fertig. Jedoch sollten wir es auch noch testen. Um Tests einfach wiederholen zu können, empfiehlt es sich Code zum testen zu verwenden.
 
-Öffne deshalb die Datei `test_todo.py`, in welcher du die `ToDo` Klasse testest. In dieser Datei haben wir dir bereits einige Funktionen vorbereitet.
+Öffne deshalb die Datei `test_todo.py`, in welcher du die `ToDo` Klasse testest, in dieser Datei haben wir bereits einige Funktionen vorbereitet.
 Du solltest _alle Methoden der ToDo Klasse_ testen. Wie du sinnvolle Tests schreibst, liegt an dir!
 
 Um deine Tests schließlich auszuführen, kannst du folgenden Befehl verwenden.
