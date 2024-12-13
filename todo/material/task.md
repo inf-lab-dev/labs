@@ -41,7 +41,7 @@ Sollte noch keine Aufgabe existieren, soll statt der obigen Ausgabe die Nachrich
 
 ## Teilaufgabe 3
 
-Da die Grundfunktionalität des Programms nun gegen ist, ist es an der Zeit auch die verbleibenden Funktionen zu implementieren.
+Da die Grundfunktionalität des Programms nun gegeben ist, ist es an der Zeit auch die verbleibenden Funktionen zu implementieren.
 
 Beginne daher damit, die Funktion `create` zu erstellen. Diese soll eine neue Aufgabe mit dem übergebenen `task` erstellen. Wenn das `ToDo` erfolgreich erstellt wurde, soll zusätzlich `ToDo created successfully!` auf der Konsole ausgegeben werden.
 
