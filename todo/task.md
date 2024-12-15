@@ -8,6 +8,17 @@ Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 
 Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich alle seine Aufgaben zu merken. Daher wollen wir in dieser Aufgabe eine ToDo-Liste entwickeln, welche uns erlaubt unsere Aufgaben über die Konsole zu verwalten.
 
+<details>
+<summary>Aufgabenmaterial herunterladen</summary>
+
+Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
+
+```bash
+wget -O - https://inf-lab.dev/todo/material/scripts/setup.sh | bash
+```
+
+</details>
+
 ## Teilaufgabe 1
 
 Wie immer, wenn wir einen vorbereiteten Code bekommen, sollten wir diesen vorerst verstehen bevor wir Änderungen vornehmen können. Lies deshalb den Code in der Datei `todo.py` und beantworte insbesondere folgende Fragen. Wenn du noch etwas unsicher mit der Python Syntax bist, kannst du die vorgegebene Datei `todo.c` zur hilfe nehmen. Diese enthält den selben Code - nur für die Programmiersprache C.
