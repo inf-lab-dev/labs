@@ -76,28 +76,6 @@ Um deine Tests schließlich auszuführen, kannst du folgenden Befehl verwenden.
 pytest test_todo.py
 ```
 
-## Teilaufgabe 5
-
-::: info
-Diese Aufgabe ist eine **Bonusaufgabe**, welche wir nicht zusammen bearbeiten.
-Du kannst diese gerne zuhause bearbeiten und dich bei Problemen an deinen Tutor wenden.
-:::
-
-::: warning
-Diese Aufgabe ist relativ anspruchsvoll und sollte nur bearbeitet werden, wenn du auch mit dem Material zu C sicher genug bist, da man zur Bearbeitung dieser Aufgabe den gesamten Vorlesungsstoff zu C beherrschen muss.
-:::
-
-Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir diese auch in C implementieren. Bearbeite deshalb die gesamte Aufgabe erneut in der Datei `todo.c`. Halte dich hierbei nur grob an die Aufgabenstellung, da es z.B. in C keine Klassen gibt. Auch [Teilaufgabe 4](#teilaufgabe-4) kann hierbei weggelassen werden.
-
-<details>
-    <summary>Hinweise zur Lösung der Aufgabe</summary>
-
--   statt bei Fehlerhaften `index` Werten einen `ValueError` auszulösen, kann hier einfach eine Fehlermeldung, welche mit `INVALID:` beginnt, auf der Konsole ausgegeben werden
--   natürlich gibt es in C keine Klassen, überlege dir deshalb eine sinnvolle andere Lösung.
--   Wie können wir, ähnlich wie in Python, _unbegrenzt viele Elemente_ an einer Stelle speichern?
-
-</details>
-
 ## Testen
 
 Teste zuerst manuell, ob sich das Programm wie erwartet verhält.
@@ -110,7 +88,6 @@ Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `c
 -   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/todo/a2`
 -   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/todo/a3`
 -   **Teilaufgabe 4:** `check50 -l inf-lab-dev/check/todo/a4`
--   **Teilaufgabe 5:** `check50 -l inf-lab-dev/check/todo/a5`
 
 ### Style
 

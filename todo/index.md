@@ -6,3 +6,4 @@ Du findest den Befehl nun in der Aufgabenstellung.
 :::
 
 -   [Aufgabenstellung](./task)
+-   [Bonusaufgaben](./bonus)
