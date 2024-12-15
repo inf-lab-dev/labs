@@ -6,7 +6,7 @@ Diese Aufgabe ist relativ anspruchsvoll und sollte nur bearbeitet werden, wenn d
 
 Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir diese auch in C implementieren. Bearbeite deshalb die gesamte Aufgabe erneut in der Datei `todo.c`. Halte dich hierbei nur grob an die Aufgabenstellung, da es z.B. in C keine Klassen gibt. Auch [Teilaufgabe 4](../task#teilaufgabe-4) kann hierbei weggelassen werden.
 
-## Hinweise zur Lösung der Aufgabe
+## Hinweise zum Lösen der Aufgabe
 
 -   statt bei Fehlerhaften `index` Werten einen `ValueError` auszulösen, kann hier einfach eine Fehlermeldung, welche mit `INVALID:` beginnt, auf der Konsole ausgegeben werden
 -   natürlich gibt es in C keine Klassen, überlege dir deshalb eine sinnvolle andere Lösung.
