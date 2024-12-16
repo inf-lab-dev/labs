@@ -6,7 +6,7 @@ Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 :::
 
-Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich alle seine Aufgaben zu merken. Daher wollen wir in dieser Aufgabe eine ToDo-Liste entwickeln, welche uns erlaubt unsere Aufgaben über die Konsole zu verwalten.
+Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich alle seine Aufgaben zu merken. Daher wollen wir in dieser Aufgabe eine ToDo-Liste entwickeln, welche es uns erlaubt unsere Aufgaben über die Konsole zu verwalten.
 
 ## Aufgabenmaterial herunterladen
 
