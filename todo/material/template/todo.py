@@ -67,7 +67,7 @@ def main():
             try:
                 complete(index)
             except ValueError as e:
-                print(f'INVALID: {str(e)}')
+                print(f"INVALID: {str(e)}")
 
         elif option == 4:
             # Ask the user for the todos index
@@ -76,7 +76,7 @@ def main():
             try:
                 delete(index)
             except ValueError as e:
-                print(f'INVALID: {str(e)}')
+                print(f"INVALID: {str(e)}")
 
         elif option == 5:
             # Ask the user for the todos index and task
@@ -86,7 +86,7 @@ def main():
             try:
                 update(index, new_task)
             except ValueError as e:
-                print(f'INVALID: {str(e)}')
+                print(f"INVALID: {str(e)}")
         else:
             # Tell the user that his selection was wrong
             print("ERROR: Invalid selection, try again!")
