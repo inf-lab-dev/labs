@@ -126,3 +126,13 @@ Die dritte Subklasse ist die `ConditionFilter`, mit der Städte nach bestimmten 
 - Methode `evaluate`: Diese Methode prüft, ob das Wetter-Symbol des übergebenen `CityWeather`-Objekts mit dem gewünschten Symbol übereinstimmt.
     - Stimmen die Symbole überein, gibt die Methode `True` zurück.
     - Andernfalls gibt sie `False` zurück.
+
+## Teilaufgabe 7
+
+In dieser Teilaufgabe kombinierst du die Filterlogik und wendest die implementierten Filter auf die Liste `cities_weather` an. Ziel ist es, die Liste so zu filtern, dass nur die Städte übrig bleiben, die den angegebenen Kriterien entsprechen. Diese Städte werden anschließend auf der Konsole ausgegeben. Die gesamte Logik wird in den Block `if __name__ == "__main__":` eingebettet.
+
+Zunächst legst du die Filter an, indem du Instanzen der Klassen `TempRangeFilter`, `WindRangeFilter` und `ConditionFilter` mit beliebigen Kriterien erstellst. Zum Beispiel könnten die Kriterien so aussehen: Ein _Temperaturbereich von 5°C bis 25°C_, eine _Windgeschwindigkeit zwischen 0 km/h und 15 km/h_ sowie ein _bestimmtes Wetter-Symbol, beispielsweise "☀️"_ für sonniges Wetter.
+
+Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob alle definierten Filterkriterien erfüllt sind. Wenn eine Stadt alle Filter erfüllt, wird sie der gefilterten Liste hinzugefügt.
+
+Abschließend gibst du die Namen der Städte, die die Kriterien erfüllen, auf der Konsole aus.
