@@ -44,21 +44,65 @@ Mache dich zunächst mit der [requests](https://pypi.org/project/requests/)-Bibl
 
 ## Teilaufgabe 3
 
-Als nächstes wollen wir eine Klasse `Weather` erstellen, welche `city_name`, `temperature`, `wind` und `condition` erhält. Außerdem soll es `timestamp` geben, welcher automatisch auf die aktuelle Uhrzeit beim erstellen der Klasse gesetzt wird.
+In dieser Teilaufgabe sollst du eine Klasse `CityWeather` erstellen, die für eine bestimmte Stadt die Wetterdaten speichert. Die Klasse soll folgende Attribute erhalten:
+
+- `city_name`: Der Name der Stadt, für die das Wetter abgerufen wird
+- `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - in unserem Beispiel "🌫".
+- `temperature`: Die aktuelle Temperatur in der Stadt.
+- `wind`: Die Windgeschwindigkeit.
+
+`temperature` und `wind` sollen den Datentyp `int` haben.
+
+Die Klasse `CityWeather` soll in der Datei `city_weather.py` implementiert werden.
 
 ## Teilaufgabe 4
+
+In dieser Teilaufgabe solltest du eine Funktion namens `extract_data` implementieren, die das Ergebnis der Funktion `fetch_weather` (aus [Teilaufgabe 2](#teilaufgabe-2)) entgegennimmt und die relevanten Daten, wie Ort, Temperatur, Windstärke und Symbol extrahiert.
+
+Die Funktion `extract_data` erwartet einen String als Eingabe, der das Ergebnis der `fetch_weather`-Funktion ist, also eine Wetterbeschreibung im Format:
+
+```bash
+Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
+```
+
+Die extrahierten Informationen, wie stadtname, das Symbol, die Temperatur und die Windgeschwindigkeit, werden dann genutzt, um ein Objekt der `CityWeather`-Klasse zu erstellen. Diese Klasse wurde in der [vorherigen Teilaufgabe](#teilaufgabe-3) definiert. Beim Erstellen des `CityWeather`-Objekts wird der Stadtname, das Wettericon, die Temperatur und die Windgeschwindigkeit übergeben. Die Funktion `extract_data` gibt also nun ein Objekt des Typs `CityWeather` zurück.
 
 Schreibe nun eine Funktion `extract_data`, welche als Eingabe das Resultat aus [Teilaufgabe 2](#teilaufgabe-2) erhält und so auflöst, das die Temperatur, die Windstärke und das Icon einzeln zurückgegeben werden. Erstelle aus den erhaltenen Parametern nun eine `Weather`-Klasse. Füge die Klasse der Liste `weather_data` hinzu.
 
 ## Teilaufgabe 5
 
-Rufe nun das aktuelle Wetter für die folgenden Städte ab:
-- Munich
-- Bamberg
-- Amsterdam
-- Nuremberg
-- Rom
+In dieser Teilaufgabe werden wir nun die gesamte Funktionalität der vorherigen Teilaufgaben nutzen.
+
+Im bestehenden Codegerüst ist bereits eine Liste mit Städtenamen namens `CITIES_LIST` vorhanden. Du sollst nun eine Schleife erstellen, die über diese Liste iteriert und für jede Stadt das Wetter abruft. Dazu wird die Funktion `fetch_weather` verwendet, die das Wetter für eine Stadt abruft und im Format eines Strings zurückgibt.
+
+Sobald du das Wetter für eine Stadt abgerufen hast, musst du die Daten mit der Funktion `extract_data` extrahieren. Diese Funktion liefert dir die relevanten Wetterinformationen wie die Temperatur, die Windgeschwindigkeit und das Symbol. Die extrahierten Daten nutzt du, um ein neues `CityWeather`-Objekt zu erstellen, das du dann der Liste `cities_weather` hinzufügst.
+
+Am Ende dieser Aufgabe enthält die Liste `cities_weather` für jede Stadt ein `CityWeather`-Objekt mit den entsprechenden Wetterinformationen.
 
 ## Teilaufgabe 6
 
-Implementiere Filter Klassen, um nach der Temperatur und nach der Windstärke zu filtern (Wert größer als oder kleiner als). Nur die Orte, die nach dem filtern übrig bleiben, sollen ausgegeben werden.
+In dieser Aufgabe geht es darum, die Liste `cities_weather` zu filtern und zu prüfen, welche Städte den angegebenen Filterkriterien entsprechen. Die Filterlogik soll in der Datei `filter.py` implementiert werden. Du kannst dabei auf der bereits vorhandene Klasse `Filter` aufbauen, die du nicht verändern musst. Stattdessen wirst du Subklassen der `Filter`-Klasse erstellen, die die spezifische Filterlogik implementieren.
+
+### TempRangeFilter
+
+Die erste Subklasse, die du implementieren sollst, ist die `TempRangeFilter`-Klasse. Diese Klasse wird von der `Filter`-Klasse erben und ermöglicht es, Städte anhand ihrer Temperatur zu filtern. Beim Erstellen der `TempRangeFilter`-Klasse werden zwei Parameter, `min_temp` und `max_temp`, übergeben. Diese definieren den Temperaturbereich, innerhalb dessen die Städte überprüft werden sollen.
+
+Die `evaluate`-Methode der `TempRangeFilter`-Klasse soll ein Objekt des Typs `CityWeather` entgegennimmt, das die Wetterdaten einer Stadt enthält. Die Methode wird dann prüfen, ob die Temperatur der Stadt innerhalb des angegebenen Bereichs (`min_temp` bis `max_temp`) liegt.
+
+Wenn die Temperatur des `CityWeather`-Objekts innerhalb des Bereichs liegt, gibt die Methode `True` zurück, andernfalls `False`.
+
+### WindRangeFilter
+
+Die zweite Subklasse, die du implementieren sollst, ist die `WindRangeFilter`-Klasse. Diese Klasse wird von der `Filter`-Klasse erben und ermöglicht es, Städte anhand ihrer Windstärke zu filtern. Beim Erstellen der `WindRangeFilter`-Klasse werden zwei Parameter, `min_wind` und `max_wind`, übergeben. Diese definieren den Windstärkebereich, innerhalb dessen die Städte überprüft werden sollen.
+
+Die `evaluate`-Methode der `WindRangeFilter`-Klasse soll ein Objekt des Typs `CityWeather` entgegennimmt, das die Wetterdaten einer Stadt enthält. Die Methode wird dann prüfen, ob die Windstärke der Stadt innerhalb des angegebenen Bereichs (`min_wind` bis `max_wind`) liegt.
+
+Wenn die Windstärke des `CityWeather`-Objekts innerhalb des Bereichs liegt, gibt die Methode `True` zurück, andernfalls `False`.
+
+### ConditionFilter
+
+Die dritte Subklasse, die du implementieren sollst, ist die `ConditionFilter`-Klasse. Diese erbt von der `Filter`-Klasse und ermöglicht es, Städte anhand ihres Wetter-Symbols zu filtern. Beim Erstellen der `ConditionFilter`-Klasse wird ein Parameter übergeben: `condition`. Dieser definiert das Wetter-Symbol, das die Stadt erfüllen soll.
+
+Die `evaluate`-Methode der `ConditionFilter`-Klasse erhält ein Objekt des Typs `CityWeather`, das die Wetterdaten einer Stadt enthält. Die Methode prüft dann, ob das Wetter-Symbol der Stadt dem übergebenen `condition`-Wert entspricht.
+
+Stimmt das Wetter-Symbol des `CityWeather`-Objekts mit dem übergebenen Wert überein, gibt die Methode `True` zurück, andernfalls `False`.
