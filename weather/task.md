@@ -32,7 +32,15 @@ Um diese reduzierte Darstellung von [wttr.in](https://wttr.in) abzurufen, musst 
 
 ## Teilaufgabe 2
 
-Nun wollen wir eine Python Funktion `fetch_weather` schreiben, mit der wir die Wetterdaten für einen bestimmten Ort `city_name`, welchen die Funktion als Parameter enthält, abrufen möchten. Die Funktion soll einfach den String, z.B. `Nuremberg: 🌫  🌡️+0°C 🌬️→6km/h` zurückgeben. Dieser soll zunächst einfach auf der Konsole ausgegeben werden.
+In dieser Teilaufgabe sollst du eine Funktion namens `fetch_weather` implementieren, mit der die Wetterdaten für einen angegebenen Ort abgerufen werden. Der Name der Stadt wird der Funktion als Parameter `city_name` übergeben. Ziel ist es, die relevanten Wetterinformationen als Textzeichenkette im folgenden Format zurückzugeben:
+
+```bash
+Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
+```
+
+Deine Aufgabe besteht darin, die Funktion `fetch_weather` zu implementieren. Sie soll eine HTTP-Anfrage an die API von [wttr.in](https://wttr.in) senden, um die Wetterdaten im richtigen Format zu erhalten. Um die Anfrage zu stellen, wirst du die Bibliothek [requests](https://pypi.org/project/requests/) verwenden. Die Funktion soll dann die erhaltenen Daten als Text zurückgeben, der das Wetter, die Temperatur und die Windgeschwindigkeit für die angegebene Stadt enthält.
+
+Mache dich zunächst mit der [requests](https://pypi.org/project/requests/)-Bibliothek vertraut.
 
 ## Teilaufgabe 3
 
