@@ -6,7 +6,7 @@ Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 :::
 
-TODO: write introduction
+Das Wetter kann entscheidend sein – sei es für die Wahl des nächsten Urlaubsziels oder die Planung von Aktivitäten. Aber wie findet man gezielt Orte, die den eigenen Wettervorstellungen entsprechen? Um dies zu erleichtern, entwickeln wir ein Python-Programm, das genau diese Aufgabe übernimmt.
 
 ## Aufgabenmaterial herunterladen
 
