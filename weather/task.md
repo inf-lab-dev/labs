@@ -20,6 +20,13 @@ wget -O - https://inf-lab.dev/weather/material/scripts/setup.sh | bash
 
 Nachdem du das Aufgabenmaterial heruntergeladen hast, beginne damit, dich mit den bereitgestellten Dateien vertraut zu machen. Im Projekt findest du die Dateien `main.py`, `filter.py` und `city_weather.py`. Nimm dir etwas Zeit, um alle Dateien zu öffnen und ihren Aufbau sowie ihre grundlegende Funktionalität zu verstehen.
 
+In der Datei `city_weather.py` ist bereits eine Klasse namens `CityWeather` gegeben. Darin werden die folgenden Inhalte gespeichert:
+
+- `city_name`: Der Name der Stadt.
+- `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - in unten stehenden Beispiel "🌫".
+- `temperature`: Die aktuelle Temperatur in der Stadt als Ganzzahl.
+- `wind`: Die Windgeschwindigkeit ebenfalls als Ganzzahl.
+
 Ein zentraler Bestandteil dieser Aufgabe ist der Wetterdienst [wttr.in](https://wttr.in). Besuche die [Website](https://wttr.in) zunächst im Browser und rufe dort die Wetterinformationen für Bamberg ab, um ein Gefühl dafür zu bekommen, wie die Daten dargestellt werden. Lies dir anschließend die [Dokumentation](https://github.com/chubin/wttr.in) durch, um die verschiedenen Konfigurationsmöglichkeiten und Ausgabeformate zu verstehen.
 
 Für die kommenden Schritte benötigen wir nicht alle Informationen, die der Dienst bereitstellt. Von Interesse sind lediglich die aktuelle _Temperatur_, die _Windgeschwindigkeit_ sowie das _Wetter-Symbol_, das das Wetter veranschaulicht. Ein Beispiel für eine solche reduzierte Ausgabe könnte wie folgt aussehen:
@@ -48,21 +55,6 @@ Falls du die [requests](https://pypi.org/project/requests/)-Bibliothek noch nich
 
 ## Teilaufgabe 3
 
-Um die Verwaltung der Wetterdaten zu erleichtern, erstellen wir eine Klasse, die diese strukturiert speichert und handhabbar macht.
-
-In dieser Teilaufgabe sollst du eine Klasse `CityWeather` erstellen, die für eine bestimmte Stadt die Wetterdaten speichert. Die Klasse soll folgende Attribute erhalten:
-
-- `city_name`: Der Name der Stadt, für die das Wetter abgerufen wird
-- `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - in unserem Beispiel "🌫".
-- `temperature`: Die aktuelle Temperatur in der Stadt als Ganzzahl.
-- `wind`: Die Windgeschwindigkeit ebenfalls als Ganzzahl.
-
-Ziel ist es, die Wetterdaten übersichtlich und einheitlich zu speichern, sodass sie in späteren Schritten leichter verarbeitet werden können.
-
-Implementiere die Klasse `CityWeather` in der Datei `city_weather.py`.
-
-## Teilaufgabe 4
-
 In dieser Teilaufgabe sollst du eine Funktion namens `extract_data` implementieren, die das Ergebnis der Funktion `fetch_weather` (aus [Teilaufgabe 2](#teilaufgabe-2)) entgegennimmt und die relevanten Informationen extrahiert: _Stadtname_, _Wetter-Symbol_, _Temperatur_ und _Windgeschwindigkeit_.
 
 Die Funktion `extract_data` erwartet einen String als Eingabe. Dieser entspricht der Wetterbeschreibung im Format:
@@ -71,13 +63,13 @@ Die Funktion `extract_data` erwartet einen String als Eingabe. Dieser entspricht
 Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
 ```
 
-Aus diesem String sollen die relevanten Daten – _Stadtname_, _Symbol_, _Temperatur_ und _Windgeschwindigkeit_ – extrahiert und verwendet werden, um ein Objekt der `CityWeather`-Klasse zu erstellen. Die Klasse `CityWeather` wurde bereits in [Teilaufgabe 3](#teilaufgabe-3) definiert. Beim Erstellen eines `CityWeather`-Objekts werden die extrahierten Werte als Parameter übergeben.
+Aus diesem String sollen die relevanten Daten – _Stadtname_, _Symbol_, _Temperatur_ und _Windgeschwindigkeit_ – extrahiert und verwendet werden, um ein Objekt der `CityWeather`-Klasse zu erstellen. Die Klasse `CityWeather` ist bereits in der Code Vorlage gegeben. Beim Erstellen eines `CityWeather`-Objekts werden die extrahierten Werte als Parameter übergeben.
 
 Die Funktion `extract_data` gibt ein `CityWeather`-Objekt zurück, das die aufbereiteten Wetterinformationen enthält. Zusätzlich kannst du dieses Objekt einer Liste `weather_data` hinzufügen, die alle Wetterdaten speichert.
 
 Implementiere die Funktion `extract_data`, um den String aus [Teilaufgabe 2](#teilaufgabe-2) zu analysieren, den _Stadtnamen_, die _Temperatur_, die _Windgeschwindigkeit_ und das _Wetter-Symbol_ zu extrahieren und daraus ein strukturiertes `CityWeather`-Objekt zu erstellen.
 
-## Teilaufgabe 5
+## Teilaufgabe 4
 
 In dieser Teilaufgabe nutzen wir die gesamte Funktionalität der vorherigen Schritte, um eine vollständige Verarbeitungskette zu implementieren.
 
@@ -96,43 +88,29 @@ Zusammengefasst:
 
 Am Ende enthält die Liste `cities_weather` alle Wetterinformationen für die Städte in `CITIES_LIST`.
 
-## Teilaufgabe 6
+## Teilaufgabe 5
 
-In dieser Aufgabe geht es darum, die Liste `cities_weather` anhand spezifischer Filterkriterien zu durchsuchen und nur die Städte auszuwählen, die diesen Kriterien entsprechen. Die Filterlogik wird in der Datei `filter.py` implementiert. Hierfür nutzt du die bereits vorhandene Klasse `Filter`, die unverändert bleibt. Deine Aufgabe besteht darin, Subklassen der `Filter`-Klasse zu erstellen, die jeweils eine spezifische Filterlogik implementieren.
+In dieser Aufgabe geht es darum, die Liste `cities_weather` anhand spezifischer Filterkriterien zu durchsuchen und nur die Städte auszuwählen, die diesen Kriterien entsprechen. Die Filterlogik wird in der Datei `filter.py` implementiert. Hierfür nutzt du die bereits vorhandene Klasse `Filter`, die unverändert bleibt. Deine Aufgabe besteht darin, eine Subklasse der `Filter`-Klasse zu erstellen, die jeweils eine spezifische Filterlogik implementieren.
 
 ### TempRangeFilter - Filtern nach Temperaturbereich
 
-Die erste Subklasse, die du erstellen sollst, ist die `TempRangeFilter`. Diese Klasse erbt von `Filter` und ermöglicht es, Städte anhand eines definierten Temperaturbereichs zu filtern.
+Die Subklasse, die du erstellen sollst, ist die `TempRangeFilter`. Diese Klasse erbt von `Filter` und ermöglicht es, Städte anhand eines definierten Temperaturbereichs zu filtern.
 
 - Initialisierung: Beim Erstellen der `TempRangeFilter`-Klasse werden zwei Parameter, `min_temp` und `max_temp`, übergeben. Diese geben den Temperaturbereich an, innerhalb dessen die Städte überprüft werden sollen.
 - Methode `evaluate`: Diese Methode nimmt ein `CityWeather`-Objekt entgegen und prüft, ob die Temperatur der Stadt innerhalb des angegebenen Bereichs liegt.
     - Liegt die Temperatur innerhalb des Bereichs, gibt die Methode `True` zurück.
     - Andernfalls gibt sie `False` zurück.
 
-### WindRangeFilter – Filtern nach Windgeschwindigkeit
+::: info
+Anweisungen um weitere Filter zu implementieren, findest du in den Bonusaufgaben.
+:::
 
-Die zweite Subklasse, die du implementieren sollst, ist die `WindRangeFilter`. Diese Klasse erlaubt es, Städte anhand ihrer Windgeschwindigkeit zu filtern.
-
-- Initialisierung: Beim Erstellen der `WindRangeFilter`-Klasse werden zwei Parameter, `min_wind` und `max_wind`, übergeben. Diese definieren den Bereich der Windgeschwindigkeit, innerhalb dessen eine Stadt überprüft werden soll.
-- Methode `evaluate`: Die Methode nimmt ein `CityWeather`-Objekt entgegen und prüft, ob die Windgeschwindigkeit der Stadt innerhalb des angegebenen Bereichs liegt.
-    - Liegt die Windgeschwindigkeit im Bereich, gibt die Methode `True` zurück.
-    - Andernfalls gibt sie `False` zurück.
-
-### ConditionFilter – Filtern nach Wetter-Symbol
-
-Die dritte Subklasse ist die `ConditionFilter`, mit der Städte nach bestimmten Wetter-Symbolen gefiltert werden können.
-
-- Initialisierung: Beim Erstellen der `ConditionFilter`-Klasse wird ein Parameter `condition` übergeben, der das gesuchte Wetter-Symbol angibt (z. B. "🌫").
-- Methode `evaluate`: Diese Methode prüft, ob das Wetter-Symbol des übergebenen `CityWeather`-Objekts mit dem gewünschten Symbol übereinstimmt.
-    - Stimmen die Symbole überein, gibt die Methode `True` zurück.
-    - Andernfalls gibt sie `False` zurück.
-
-## Teilaufgabe 7
+## Teilaufgabe 6
 
 In dieser Teilaufgabe kombinierst du die Filterlogik und wendest die implementierten Filter auf die Liste `cities_weather` an. Ziel ist es, die Liste so zu filtern, dass nur die Städte übrig bleiben, die den angegebenen Kriterien entsprechen. Diese Städte werden anschließend auf der Konsole ausgegeben. Die gesamte Logik wird in den Block `if __name__ == "__main__":` eingebettet.
 
-Zunächst legst du die Filter an, indem du Instanzen der Klassen `TempRangeFilter`, `WindRangeFilter` und `ConditionFilter` mit beliebigen Kriterien erstellst. Zum Beispiel könnten die Kriterien so aussehen: Ein _Temperaturbereich von 5°C bis 25°C_, eine _Windgeschwindigkeit zwischen 0 km/h und 15 km/h_ sowie ein _bestimmtes Wetter-Symbol, beispielsweise "☀️"_ für sonniges Wetter.
+Zunächst legst du die Filter an, indem du eine Instanzen der Klassen `TempRangeFilter` mit beliebigen Kriterien erstellst. Zum Beispiel könnten die Kriterien so aussehen: Ein _Temperaturbereich von 5°C bis 25°C_.
 
-Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob alle definierten Filterkriterien erfüllt sind. Wenn eine Stadt alle Filter erfüllt, wird sie der gefilterten Liste hinzugefügt.
+Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob das definierte Filterkriterium erfüllt ist. Wenn eine Stadt den Filter erfüllt, wird sie der gefilterten Liste hinzugefügt.
 
 Abschließend gibst du die Namen der Städte, die die Kriterien erfüllen, auf der Konsole aus.
