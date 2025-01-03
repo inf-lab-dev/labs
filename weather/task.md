@@ -6,7 +6,7 @@ Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 :::
 
-Das Wetter kann entscheidend sein – sei es für die Wahl des nächsten Urlaubsziels oder die Planung von Aktivitäten. Aber wie findet man gezielt Orte, die den eigenen Wettervorstellungen entsprechen? Um dies zu erleichtern, entwickeln wir ein Python-Programm, das genau diese Aufgabe übernimmt.
+Das Wetter kann entscheidend sein – sei es für die Wahl des nächsten Urlaubsziels oder die Planung von Aktivitäten. Aber wie findet man gezielt Orte, die den eigenen Wettervorstellungen entsprechen? Um dies zu erleichtern, entwickeln wir ein Python-Programm, das genau diese Aufgabe übernimmt. Unser Programm wird letztendlich in der Lage sein, Orte abhängig von den lokalen Wettergegebenheiten zu filtern.
 
 ## Aufgabenmaterial herunterladen
 
@@ -23,17 +23,24 @@ Nachdem du das Aufgabenmaterial heruntergeladen hast, beginne damit, dich mit de
 In der Datei `city_weather.py` ist bereits eine Klasse namens `CityWeather` gegeben. Darin werden die folgenden Inhalte gespeichert:
 
 - `city_name`: Der Name der Stadt.
-- `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - in unten stehenden Beispiel "🌫".
+- `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - im unten stehenden Beispiel "🌫".
 - `temperature`: Die aktuelle Temperatur in der Stadt als Ganzzahl.
 - `wind`: Die Windgeschwindigkeit ebenfalls als Ganzzahl.
 
 Ein zentraler Bestandteil dieser Aufgabe ist der Wetterdienst [wttr.in](https://wttr.in). Besuche die [Website](https://wttr.in) zunächst im Browser und rufe dort die Wetterinformationen für Bamberg ab, um ein Gefühl dafür zu bekommen, wie die Daten dargestellt werden. Lies dir anschließend die [Dokumentation](https://github.com/chubin/wttr.in) durch, um die verschiedenen Konfigurationsmöglichkeiten und Ausgabeformate zu verstehen.
 
-Für die kommenden Schritte benötigen wir nicht alle Informationen, die der Dienst bereitstellt. Von Interesse sind lediglich die aktuelle _Temperatur_, die _Windgeschwindigkeit_ sowie das _Wetter-Symbol_, das das Wetter veranschaulicht. Ein Beispiel für eine solche reduzierte Ausgabe könnte wie folgt aussehen:
+Für die kommenden Teilaufgaben benötigen wir nicht alle Informationen, die der Dienst bereitstellt. Von Interesse sind lediglich die folgenden Daten für einen bestimmten Ort: 
+- Temperatur
+- Windgeschwindigkeit
+- Wetter-Symbol, das das Wetter veranschaulicht. 
+
+Ein Beispiel für eine solche reduzierte Ausgabe könnte wie folgt aussehen:
 
 ```bash
 Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
 ```
+
+Hier wurde das Wetter für Bamberg abgefragt.
 
 Um diese reduzierte Darstellung von [wttr.in](https://wttr.in) abzurufen, musst du spezifische Parameter in der URL verwenden. Diese Parameter legen fest, welche Informationen zurückgegeben werden. Passe die URL so an, dass nur die gewünschten Daten – das _Wetter-Symbol_, die _Temperatur_ und die _Windgeschwindigkeit_ – angezeigt werden.
 
@@ -107,10 +114,8 @@ Anweisungen um weitere Filter zu implementieren, findest du in den Bonusaufgaben
 
 ## Teilaufgabe 6
 
-In dieser Teilaufgabe kombinierst du die Filterlogik und wendest die implementierten Filter auf die Liste `cities_weather` an. Ziel ist es, die Liste so zu filtern, dass nur die Städte übrig bleiben, die den angegebenen Kriterien entsprechen. Diese Städte werden anschließend auf der Konsole ausgegeben. Die gesamte Logik wird in den Block `if __name__ == "__main__":` eingebettet.
+In dieser Teilaufgabe kombinierst du die Filterlogik aus [Teilaufgabe 5](#teilaufgabe-5) und wendest die implementierten Filter auf die Liste `cities_weather` an. Ziel ist es, die Liste so zu filtern, dass nur die Städte übrig bleiben, die den angegebenen Kriterien entsprechen. Diese Städte werden anschließend auf der Konsole ausgegeben. Die gesamte Logik wird in den Block `if __name__ == "__main__":` eingebettet.
 
 Zunächst legst du die Filter an, indem du eine Instanzen der Klassen `TempRangeFilter` mit beliebigen Kriterien erstellst. Zum Beispiel könnten die Kriterien so aussehen: Ein _Temperaturbereich von 5°C bis 25°C_.
 
-Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob das definierte Filterkriterium erfüllt ist. Wenn eine Stadt den Filter erfüllt, wird sie der gefilterten Liste hinzugefügt.
-
-Abschließend gibst du die Namen der Städte, die die Kriterien erfüllen, auf der Konsole aus.
+Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob das definierte Filterkriterium erfüllt ist. Wenn eine Stadt den Filter erfüllt, soll `<city_name> matches all filter criteria!` ausgeben werden. `<city_name>` soll entsprechend durch den Namen der Stadt ersetzt werden. Erfüllt eine Stadt nicht alle Kriterien, soll `<city_name> does not match all filter criteria!`.
