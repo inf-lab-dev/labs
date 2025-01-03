@@ -1,6 +1,3 @@
-from city_weather import CityWeather
-
-
 CITIES_LIST = [
     "Bamberg",
     "Paris",
