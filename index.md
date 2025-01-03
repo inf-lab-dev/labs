@@ -19,3 +19,4 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 -   [Wasserzeichen](./watermark)
 -   [Fehler](./errors)
 -   [Aufgabenliste](./todo)
+-   [Wetter](./weather)
