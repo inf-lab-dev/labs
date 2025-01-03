@@ -32,3 +32,4 @@ def extract_data(weather):
 
 if __name__ == "__main__":
     # TODO: implement the main logic as explained in the instructions
+    pass
