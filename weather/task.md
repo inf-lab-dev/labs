@@ -13,7 +13,7 @@ Das Wetter kann entscheidend sein – sei es für die Wahl des nächsten Urlaubs
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
 ```bash
-wget -O - https://inf-lab.dev/weather/material/scripts/setup.sh | bash
+wget -O - https://inf-lab.dev/weather/material/lab-weather.zip.sh | bash
 ```
 
 ## Teilaufgabe 1
