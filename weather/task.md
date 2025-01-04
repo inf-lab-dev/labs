@@ -18,7 +18,11 @@ wget -O - https://inf-lab.dev/weather/material/lab-weather.zip.sh | bash
 
 ## Teilaufgabe 1
 
-Nachdem du das Aufgabenmaterial heruntergeladen hast, beginne damit, dich mit den bereitgestellten Dateien vertraut zu machen. Im Projekt findest du die Dateien `main.py`, `filter.py` und `city_weather.py`. Nimm dir etwas Zeit, um alle Dateien zu öffnen und ihren Aufbau sowie ihre grundlegende Funktionalität zu verstehen.
+Nachdem du das Aufgabenmaterial heruntergeladen hast, beginne damit, dich mit den bereitgestellten Dateien vertraut zu machen. Im Projekt findest du die Dateien `main.py`, `filter.py`, `city_weather.py` und `weather_service.py`. Nimm dir etwas Zeit, um alle Dateien zu öffnen und ihren Aufbau sowie ihre grundlegende Funktionalität zu verstehen.
+
+::: info
+Die Datei `weather_service.py` wirst du nur benötigen, falls etwas mit der [wttr.in](https://wttr.in)-API, welche wir in den folgenden Teilaufgaben nutzen wollen, schief läuft. Du kannst den Flask-Server, welcher die gleiche Funktionalität wie [wttr.in](https://wttr.in) bereitstellt, mit `python weather_service.py` ausführen. Schaue dir das Skript gerne noch einmal an, sobald Flask in der Vorlesung behandelt wird.
+:::
 
 In der Datei `city_weather.py` ist bereits eine Klasse namens `CityWeather` gegeben. Darin werden die folgenden Inhalte gespeichert:
 
