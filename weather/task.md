@@ -1,7 +1,7 @@
 # Wetter
 
 ::: info
-Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
+Diese Aufgabe basiert auf _keinem CS50 Practice Problem_. Jedoch wurde sie von einem ehemaligen Modul des PSI-Lehrstuhl inspiriert.
 
 **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 :::
@@ -36,7 +36,7 @@ Für die kommenden Teilaufgaben benötigen wir nicht alle Informationen, die der
 
 Ein Beispiel für eine solche reduzierte Ausgabe könnte wie folgt aussehen:
 
-```bash
+```
 Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
 ```
 
@@ -50,7 +50,7 @@ In dieser Teilaufgabe automatisieren wir den Aufruf der zuvor im Browser verwend
 
 Hierfür sollst du eine Funktion namens `fetch_weather` implementieren, die die Wetterdaten für einen angegebenen Ort abruft. Der Name der Stadt wird der Funktion als Parameter `city_name` übergeben. Ziel ist es, die relevanten Wetterinformationen in folgendem Textformat zurückzugeben:
 
-```bash
+```
 Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
 ```
 
@@ -66,7 +66,7 @@ In dieser Teilaufgabe sollst du eine Funktion namens `extract_data` implementier
 
 Die Funktion `extract_data` erwartet einen String als Eingabe. Dieser entspricht der Wetterbeschreibung im Format:
 
-```bash
+```
 Bamberg: 🌫  🌡️+0°C 🌬️→6km/h
 ```
 
@@ -84,7 +84,7 @@ Im bestehenden Codegerüst gibt es bereits eine Liste von Städtenamen namens `C
 
 Anschließend werden die Wetterdaten mit der Funktion `extract_data` verarbeitet. Diese Funktion extrahiert die relevanten Informationen – wie Temperatur, Windgeschwindigkeit und Wetter-Symbol – und gibt ein `CityWeather`-Objekt zurück. Dieses Objekt speicherst du in der Liste `cities_weather`, die am Ende der Schleife für jede Stadt ein vollständiges `CityWeather`-Objekt mit den entsprechenden Wetterinformationen enthält.
 
-Die gesamte Logik soll innerhalb des Blocks `if __name__ == "__main__":` implementiert werden, um sicherzustellen, dass der Code nur ausgeführt wird, wenn das Skript direkt gestartet wird.
+Die gesamte Logik soll innerhalb der `main`-Funktion implementiert werden, um sicherzustellen, dass der Code nur ausgeführt wird, wenn das Skript direkt gestartet wird.
 
 Zusammengefasst:
 
@@ -103,19 +103,19 @@ In dieser Aufgabe geht es darum, die Liste `cities_weather` anhand spezifischer 
 
 Die Subklasse, die du erstellen sollst, ist die `TempRangeFilter`. Diese Klasse erbt von `Filter` und ermöglicht es, Städte anhand eines definierten Temperaturbereichs zu filtern.
 
-- Initialisierung: Beim Erstellen der `TempRangeFilter`-Klasse werden zwei Parameter, `min_temp` und `max_temp`, übergeben. Diese geben den Temperaturbereich an, innerhalb dessen die Städte überprüft werden sollen.
-- Methode `evaluate`: Diese Methode nimmt ein `CityWeather`-Objekt entgegen und prüft, ob die Temperatur der Stadt innerhalb des angegebenen Bereichs liegt.
+- **Initialisierung:** Beim Erstellen der `TempRangeFilter`-Klasse werden zwei Parameter, `min_temp` und `max_temp`, übergeben. Diese geben den Temperaturbereich an, innerhalb dessen die Städte überprüft werden sollen.
+- **Methode `evaluate`:** Diese Methode nimmt ein `CityWeather`-Objekt entgegen und prüft, ob die Temperatur der Stadt innerhalb des angegebenen Bereichs liegt.
     - Liegt die Temperatur innerhalb des Bereichs, gibt die Methode `True` zurück.
     - Andernfalls gibt sie `False` zurück.
 
 ::: info
-Anweisungen um weitere Filter zu implementieren, findest du in den Bonusaufgaben.
+Aufgaben um weitere Filter zu implementieren, findest du in den Bonusaufgaben.
 :::
 
 ## Teilaufgabe 6
 
-In dieser Teilaufgabe kombinierst du die Filterlogik aus [Teilaufgabe 5](#teilaufgabe-5) und wendest die implementierten Filter auf die Liste `cities_weather` an. Ziel ist es, die Liste so zu filtern, dass nur die Städte übrig bleiben, die den angegebenen Kriterien entsprechen. Diese Städte werden anschließend auf der Konsole ausgegeben. Die gesamte Logik wird in den Block `if __name__ == "__main__":` eingebettet.
+In dieser Teilaufgabe kombinierst du die Filterlogik aus [Teilaufgabe 5](#teilaufgabe-5) und wendest die implementierten Filter auf die Liste `cities_weather` an. Ziel ist es, die Liste so zu filtern, dass nur die Städte übrig bleiben, die den angegebenen Kriterien entsprechen. Diese Städte werden anschließend auf der Konsole ausgegeben. Die gesamte Logik wird in der `main`-Funktion eingebettet.
 
 Zunächst legst du die Filter an, indem du eine Instanzen der Klassen `TempRangeFilter` mit beliebigen Kriterien erstellst. Zum Beispiel könnten die Kriterien so aussehen: Ein _Temperaturbereich von 5°C bis 25°C_.
 
-Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob das definierte Filterkriterium erfüllt ist. Wenn eine Stadt den Filter erfüllt, soll `<city_name> matches all filter criteria!` ausgeben werden. `<city_name>` soll entsprechend durch den Namen der Stadt ersetzt werden. Erfüllt eine Stadt nicht alle Kriterien, soll `<city_name> does not match all filter criteria!`.
+Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob das definierte Filterkriterium erfüllt ist. Wenn eine Stadt den Filter erfüllt, soll `<city_name> matches all filter criteria!` ausgeben werden. `<city_name>` soll entsprechend durch den Namen der Stadt ersetzt werden. Erfüllt eine Stadt nicht alle Kriterien, soll `<city_name> does not match all filter criteria!` ausgeben werden.

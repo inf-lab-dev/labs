@@ -1,8 +1,8 @@
 # Bonusaufgaben zu Wetter
 
 ::: info
-Hier können weitere Aufgaben zum [Aufgabenliste Lab](../) gefunden werden.
-Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Aufgabenliste Labs](../) bearbeitet zu werden.
+Hier können weitere Aufgaben zum [Wetter Lab](../) gefunden werden.
+Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Wetter Labs](../) bearbeitet zu werden.
 
 Diese werden im Tutorium nicht gemeinsam bearbeitet und können zur eigenen Bearbeitung genutzt werden, jedoch gibt es bei einigen dieser Aufgaben Bearbeitungshinweise und Tipps hier auf der Seite.
 Bei Fragen kannst du dich dennoch an deinen Tutor wenden!
