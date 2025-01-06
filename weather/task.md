@@ -26,17 +26,18 @@ Die Datei `weather_service.py` wird nur benötigt, falls es Probleme mit der [wt
 
 In der Datei `city_weather.py` ist bereits eine Klasse namens `CityWeather` gegeben. Darin werden die folgenden Inhalte gespeichert:
 
-- `city_name`: Der Name der Stadt.
-- `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - im unten stehenden Beispiel "🌫".
-- `temperature`: Die aktuelle Temperatur in der Stadt als Ganzzahl.
-- `wind`: Die Windgeschwindigkeit ebenfalls als Ganzzahl.
+-   `city_name`: Der Name der Stadt.
+-   `condition`: Das Symbol, welches anzeigt, wie das Wetter momentan ist - im unten stehenden Beispiel "🌫".
+-   `temperature`: Die aktuelle Temperatur in der Stadt als Ganzzahl.
+-   `wind`: Die Windgeschwindigkeit ebenfalls als Ganzzahl.
 
 Ein zentraler Bestandteil dieser Aufgabe ist der Wetterdienst [wttr.in](https://wttr.in). Besuche die [Website](https://wttr.in) zunächst im Browser und rufe dort die Wetterinformationen für Bamberg ab, um ein Gefühl dafür zu bekommen, wie die Daten dargestellt werden. Lies dir anschließend die [Dokumentation](https://github.com/chubin/wttr.in) durch, um die verschiedenen Konfigurationsmöglichkeiten und Ausgabeformate zu verstehen.
 
-Für die kommenden Teilaufgaben benötigen wir nicht alle Informationen, die der Dienst bereitstellt. Von Interesse sind lediglich die folgenden Daten für einen bestimmten Ort: 
-- Temperatur
-- Windgeschwindigkeit
-- Wetter-Symbol, das das Wetter veranschaulicht. 
+Für die kommenden Teilaufgaben benötigen wir nicht alle Informationen, die der Dienst bereitstellt. Von Interesse sind lediglich die folgenden Daten für einen bestimmten Ort:
+
+-   Temperatur
+-   Windgeschwindigkeit
+-   Wetter-Symbol, das das Wetter veranschaulicht.
 
 Ein Beispiel für eine solche reduzierte Ausgabe könnte wie folgt aussehen:
 
@@ -107,13 +108,13 @@ In dieser Aufgabe geht es darum, die Liste `cities_weather` anhand spezifischer 
 
 Die Subklasse, die du erstellen sollst, ist die `TempRangeFilter`. Diese Klasse erbt von `Filter` und ermöglicht es, Städte anhand eines definierten Temperaturbereichs zu filtern.
 
-- **Initialisierung:** Beim Erstellen der `TempRangeFilter`-Klasse werden zwei Parameter, `min_temp` und `max_temp`, übergeben. Diese geben den Temperaturbereich an, innerhalb dessen die Städte überprüft werden sollen.
-- **Methode `evaluate`:** Diese Methode nimmt ein `CityWeather`-Objekt entgegen und prüft, ob die Temperatur der Stadt innerhalb des angegebenen Bereichs liegt.
-    - Liegt die Temperatur innerhalb des Bereichs, gibt die Methode `True` zurück.
-    - Andernfalls gibt sie `False` zurück.
+-   **Initialisierung:** Beim Erstellen der `TempRangeFilter`-Klasse werden zwei Parameter, `min_temp` und `max_temp`, übergeben. Diese geben den Temperaturbereich an, innerhalb dessen die Städte überprüft werden sollen.
+-   **Methode `evaluate`:** Diese Methode nimmt ein `CityWeather`-Objekt entgegen und prüft, ob die Temperatur der Stadt innerhalb des angegebenen Bereichs liegt.
+    -   Liegt die Temperatur innerhalb des Bereichs, gibt die Methode `True` zurück.
+    -   Andernfalls gibt sie `False` zurück.
 
 ::: info
-Aufgaben um weitere Filter zu implementieren, findest du in den Bonusaufgaben.
+Aufgaben um weitere Filter zu implementieren, findest du in den [Bonusaufgaben](./bonus).
 :::
 
 ## Teilaufgabe 6
@@ -123,3 +124,26 @@ In dieser Teilaufgabe kombinierst du die Filterlogik aus [Teilaufgabe 5](#teilau
 Zunächst legst du die Filter an, indem du eine Instanzen der Klassen `TempRangeFilter` mit beliebigen Kriterien erstellst. Zum Beispiel könnten die Kriterien so aussehen: Ein _Temperaturbereich von 5°C bis 25°C_.
 
 Anschließend iterierst du über die Liste `cities_weather`, die die Wetterdaten der Städte enthält. Für jede Stadt überprüfst du, ob das definierte Filterkriterium erfüllt ist. Wenn eine Stadt den Filter erfüllt, soll `<city_name> matches all filter criteria!` ausgeben werden. `<city_name>` soll entsprechend durch den Namen der Stadt ersetzt werden. Erfüllt eine Stadt nicht alle Kriterien, soll `<city_name> does not match all filter criteria!` ausgeben werden.
+
+## Testen
+
+Teste zuerst manuell, ob sich das Programm wie erwartet verhält.
+
+### Korrektheit
+
+Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `check50` zu überprüfen.
+
+-   **Teilaufgabe 1:** _kein `check50` verfügbar_
+-   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/weather/a2`
+-   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/weather/a3`
+-   **Teilaufgabe 4:** `check50 -l inf-lab-dev/check/weather/a4`
+-   **Teilaufgabe 5:** `check50 -l inf-lab-dev/check/weather/a5`
+-   **Teilaufgabe 6:** `check50 -l inf-lab-dev/check/weather/a6`
+
+### Style
+
+Führe den folgenden Befehl aus, um den Stil deines Codes mit `style50` zu analysieren:
+
+```bash
+style50 main.py && style50 filter.py
+```
