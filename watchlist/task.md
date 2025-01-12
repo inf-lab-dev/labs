@@ -20,6 +20,14 @@ wget -O - https://inf-lab.dev/watchlist/material/lab-watchlist.zip.sh | bash
 
 ## Teilaufgabe 1
 
+Nachdem du das Aufgabenmaterial heruntergeladen hast, beginne damit, dir die bereitgestellte `index.html` Datei anzusehen.
+Beantworte hierzu insbesondere die folgenden Fragen:
+
+1. In welcher Sprache (_nicht Programmiersprache!_) ist der Inhalt des Dokuments laut seinen Elementen?
+2. Wie lautet der Titel des HTML-Dokuments, wenn es im Browser angesehen wird?
+
+## Teilaufgabe 2
+
 Um überhaupt einträge auf unserer Merkliste speichern zu können, benötigen wir ein Formular um diese hinzuzufügen.
 Erstelle daher ein HTML-Formular, welches uns erlaubt Einträge auf unsere Merkliste hinzuzufügen.
 
@@ -38,7 +46,7 @@ Hierzu wurde das `<fieldset>` Element verwendet, weitere Informationen zu diesem
 
 </details>
 
-## Teilaufgabe 2
+## Teilaufgabe 3
 
 Nachdem wir nun das Formular erstellt haben, ist es an der Zeit den zugehörigen JavaScript Code zu schreiben.
 
@@ -69,7 +77,7 @@ person = {
 
 </details>
 
-## Teilaufgabe 3
+## Teilaufgabe 4
 
 Da wir nun Filme auf unsere Merkliste setzen können, sollten wir diese auch anzeigen.
 
@@ -78,7 +86,7 @@ Zuerst sollte diese Funktion alle bereits bestehenden Listenelemente löschen, s
 Iteriere dann in dieser Funktion über alle `movies` und erstelle für jeden Eintrag ein neues Listenelement gemäß dem Format `<title> (at <provider>)`, wobei `<title>` und `<provider>` natürlich durch die jeweiligen Daten ersetzt werden sollen.
 Füge schließlich die erstellen Listenelemente in die Liste ein.
 
-Ändere nun deinen Code aus [Teilaufgabe 2](#teilaufgabe-2) so ab, dass dieser nach erfolgreichem Einfügen in die `movies` Liste auch die Funktion `render` aufruft um die Liste darzustellen.
+Ändere nun deinen Code aus [Teilaufgabe 3](#teilaufgabe-3) so ab, dass dieser nach erfolgreichem Einfügen in die `movies` Liste auch die Funktion `render` aufruft um die Liste darzustellen.
 
 Wenn du alles richtig gemacht hast, könnte deine fertige Liste (je nach Eingaben im Formular) wie im folgenden Bild aussehen.
 
@@ -93,7 +101,7 @@ Um in JavaScript HTML-Elemente _zu erstellen_ kann die Funktion `document.create
 
 </details>
 
-## Teilaufgabe 4
+## Teilaufgabe 5
 
 Nun können wir Filme auf unsere Liste hinzufügen und diese auch ansehen. Jetzt fehlt nur noch eine Funktion bereits angesehene Filme auch wieder zu löschen.
 
