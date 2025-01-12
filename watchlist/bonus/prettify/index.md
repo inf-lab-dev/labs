@@ -8,7 +8,7 @@ Schreibe den gesamten CSS-Code in einer neuen Datei namens `style.css`, welche d
 ## Aufgabe
 
 ::: warning
-Verwende nicht zu viel Zeit darauf, das Bild perfekt nachzubauen, vielmehr geht es darum, die verschiedenen Möglichkeiten die CSS bietet auszuprobieren und zu sehen.
+Verbringe nicht zu viel Zeit damit, das Bild perfekt nachzubauen. Vielmehr geht es darum, die verschiedenen Möglichkeiten, die CSS bietet auszuprobieren und zu sehen.
 :::
 
 Im folgenden findest du ein Bild der fertigen, nun mit CSS verschönerten, Website. Versuche soweit möglich, dass deine Website so ähnlich aussieht!

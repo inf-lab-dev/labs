@@ -6,9 +6,9 @@ Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
 :::
 
-Wir alle verwenden verschiedene Streamingdienste um uns Filme oder Serien anzusehen. Die meisten dieser Dienste haben auch eine sogenannte Merkliste, eine Möglichkeit sich Filme oder Serien zu markieren um sie später anzusehen.
+Wir alle verwenden verschiedene Streamingdienste um uns Filme oder Serien anzusehen. Die meisten dieser Dienste haben auch eine sogenannte Merkliste. Diese bietet eine Möglichkeit, Filme oder Serien zu markieren, um sie später anzusehen.
 
-Nun hat jedoch leider jede dieser Streamingplatformen ihre eigene Merkliste. Das wollen wir in dieser Aufgabe ändern indem wir eine universelle Merkliste als Website programmieren.
+Leider hat jede Streamingplattform ihre eigene Merkliste. In dieser Aufgabe möchten wir das ändern, indem wir eine universelle Merkliste als Website programmieren.
 
 ## Aufgabenmaterial herunterladen
 
@@ -23,13 +23,13 @@ wget -O - https://inf-lab.dev/watchlist/material/lab-watchlist.zip.sh | bash
 Nachdem du das Aufgabenmaterial heruntergeladen hast, beginne damit, dir die bereitgestellte `index.html` Datei anzusehen.
 Beantworte hierzu insbesondere die folgenden Fragen:
 
-1. In welcher Sprache (_nicht Programmiersprache!_) ist der Inhalt des Dokuments laut seinen Elementen?
+1. In welcher Sprache (gemeint ist die _natürliche_ Sprache, _nicht die Programmiersprache_) ist der Inhalt des Dokuments laut seinen Elementen?
 2. Wie lautet der Titel des HTML-Dokuments, wenn es im Browser angesehen wird?
 
 ## Teilaufgabe 2
 
-Um überhaupt einträge auf unserer Merkliste speichern zu können, benötigen wir ein Formular um diese hinzuzufügen.
-Erstelle daher ein HTML-Formular, welches uns erlaubt Einträge auf unsere Merkliste hinzuzufügen.
+Um überhaupt Einträge auf unserer Merkliste speichern zu können, benötigen wir ein Formular um diese hinzuzufügen.
+Erstelle daher ein HTML-Formular, welches es uns erlaubt Einträge auf unsere Merkliste hinzuzufügen.
 
 Dieses Formular soll über zwei Eingabefelder verfügen. Erstens ein Feld für den Titel `title` des Films und zweitens eine Auswahlmöglichkeit für die Plattform `provider`, auf der der Film verfügbar ist. Schließlich benötigt unser Formular noch einen Button, um es _abzusenden_ (also zu speichern).
 
@@ -52,7 +52,7 @@ Nachdem wir nun das Formular erstellt haben, ist es an der Zeit den zugehörigen
 
 Sobald das Formular abgesendet wurde, soll überprüft werden, ob sowohl `title` als auch `provider` einen validen Wert enthalten. Sollte dies nicht der Fall sein, kannst du einfach mit der [`alert`](https://developer.mozilla.org/de/docs/Web/API/Window/alert) Funktion eine Fehlermeldung ausgeben.
 
-Erstelle nun eine globale Variable `movies`, in welcher du alle Filme auf der Merkliste speicherst und füge den Code hinzu, sodass nach der Validierung der Film aus dem Formular auf die Merkliste eingefügt wird. Stelle zudem sicher, dass nach erfolgreichem Einfügen, das Formular automatisch wieder geleert wird, sodass ein weiterer Eintrag eingefügt werden kann.
+Erstelle eine globale Variable `movies`, in der alle Filme der Merkliste gespeichert werden. Ergänze deinen Code so, dass der Film aus dem Formular nach erfolgreicher Validierung zur Merkliste hinzugefügt wird. Sorge außerdem dafür, dass das Formular nach dem Hinzufügen automatisch zurückgesetzt wird, damit ein weiterer Eintrag bequem eingefügt werden kann.
 
 ::: info
 Natürlich macht es in der Praxis wenig Sinn Formulardaten nur in einer JavaScript Liste zu speichern, da diese mit jedem Neuladen der Seite wieder _gelöscht_ wird.
@@ -64,8 +64,8 @@ Solltest du deine Einträge jedoch beibehalten wollen, wenn du die Seite neu lä
 <details>
     <summary>Du bist dir nicht sicher wie du sowohl den Titel als auch die Platform in einer Liste speichern kannst?</summary>
 
-Um mehrere Elemente an einer Stelle zu speichern, haben wir in C `stuct`s verwendet, in Python `dict`s. In JavaScript existieren _Objekte_ als ein ähnliches konzept.
-Um also beispielsweise eine Person, mit Vor- und Nachnamen zu darzustellen, kann folgender Code verwendet werden. Dieser Code funktioniert sogar in Python!
+Um mehrere Elemente an einer Stelle zu speichern, haben wir in C `stuct`s verwendet, in Python `dict`s. In JavaScript existieren _Objekte_ als ein ähnliches Konzept.
+Um beispielsweise eine Person mit Vor- und Nachnamen darzustellen, kann folgender Code verwendet werden.
 
 <!-- prettier-ignore -->
 ```js
@@ -103,19 +103,19 @@ Um in JavaScript HTML-Elemente _zu erstellen_ kann die Funktion `document.create
 
 ## Teilaufgabe 5
 
-Nun können wir Filme auf unsere Liste hinzufügen und diese auch ansehen. Jetzt fehlt nur noch eine Funktion bereits angesehene Filme auch wieder zu löschen.
+Nun können wir Filme auf unsere Liste einfügen und diese auch ansehen. Jetzt fehlt nur noch eine Funktion bereits angesehene Filme auch wieder zu löschen.
 
-Passe daher den Code der `render` Funktion so an, dass diese zusätzlich zum Text für jeden Eintrag einen `<button>` mit dem Text `Watched!` erstellt, welcher es beim anklicken ermöglicht das bestehende Element aus der Liste zu löschen.
+Passe den Code der `render`-Funktion so an, dass für jeden Eintrag neben dem Text zusätzlich ein `<button>` mit dem Text `Watched!` erstellt wird. Beim Anklicken dieses Buttons soll das entsprechende Element aus der Liste gelöscht werden.
 Vergiss nicht, nach dem Löschen auch wieder deine `render` Funktion aufzurufen, sonst wirst du vom Löschen nichts sehen!
 
-Das könnte dan wie im folgenden Bild aussehen.
+Das könnte dann wie im folgenden Bild aussehen.
 
 ![Beispiel der Liste mit Löschen-Funktion](./material/image/list-with-remove.jpg)
 
 <details>
     <summary>Du bist dir nicht sicher, wie du in JavaScript einen Eintrag aus einer Liste löschen kannst?</summary>
 
-Hierfür gibt es in JavaScript mehrere Möglichkeiten, weit verbreitet ist jedoch die Verwendung von [`splice(start, deleteCount)`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/splice). Ein Beispiel, um das Obst `Apfel` aus der Liste zu entfernen, kann folgenden Code entnommen werden.
+Hierfür gibt es in JavaScript mehrere Möglichkeiten. Weit verbreitet ist jedoch die Verwendung von [`splice(start, deleteCount)`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/splice). Ein Beispiel, um das Obst `Apfel` aus der Liste zu entfernen, kann folgenden Code entnommen werden.
 
 ```js
 let fruit = ['Banane', 'Apfel', 'Melone'];
@@ -133,11 +133,11 @@ Starte `http-server` in einem Terminal, während du dich im Verzeichnis `lab-wat
 
 ### Einträge dauerhaft speichern
 
-Bisher ist es so, das die `movies` bei jedem Laden der Website wieder _vergessen_ wurden. Für unser Testen kann es jedoch hilfreich sein, wenn diese dauerhaft gespeichert werden.
+Bisher ist es so, dass die `movies` bei jedem Laden der Website wieder _vergessen_ wurden. Für unser Testen kann es jedoch hilfreich sein, wenn diese dauerhaft gespeichert werden.
 
 Hierfür haben wir etwas Code vorbereitet, den du nicht verstehen musst.[^1] Füge einfach folgenden HTML-Code **vor deinem eigenen `<script>` Element** ein und kommentiere das erstellen deiner `movies` Variable aus. Diese wird dir von unserem Code erstellt.
 
-Nun sollte deine `movies`-Liste solange gespeichert bleiben, bist du die Website wirklich schließt.
+Nun sollte deine `movies`-Liste solange gespeichert bleiben, bis du die Website wirklich schließt.
 
 ```html
 <script src="https://inf-lab.dev/watchlist/material/persistent-movies.js"></script>
