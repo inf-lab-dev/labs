@@ -8,4 +8,7 @@
 
     window.addEventListener('unload', () => saveMovies());
     window.movies = loadMovies();
+
+    // Call render initially
+    render?.();
 }
