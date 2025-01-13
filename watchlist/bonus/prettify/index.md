@@ -1,7 +1,7 @@
 # Verschönerung
 
 Bisher sieht unsere Merkliste noch nicht sonderlich gut aus. Wir verwenden _Times New Roman_ als Schriftart und auch sonst ist die Website eher eintönig.
-Verschönere Daher die folgenden Elemente der Seite mit CSS. Schreibe hierbei guten CSS Code, welcher auch die _Vererbung von Eigenschaften_ ausnutzt.
+Verschönere daher die folgenden Elemente der Seite mit CSS. Schreibe hierbei guten CSS Code, welcher auch die _Vererbung von Eigenschaften_ ausnutzt.
 
 Schreibe den gesamten CSS-Code in einer neuen Datei namens `style.css`, welche du schließlich in `index.html` einbindest.
 
