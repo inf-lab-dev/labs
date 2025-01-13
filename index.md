@@ -20,3 +20,4 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 -   [Fehler](./errors)
 -   [Aufgabenliste](./todo)
 -   [Wetter](./weather)
+-   [Merkliste](./watchlist)
