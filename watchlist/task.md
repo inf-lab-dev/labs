@@ -140,7 +140,7 @@ Hierfür haben wir etwas Code vorbereitet, den du nicht verstehen musst.[^1] Fü
 Nun sollte deine `movies`-Liste solange gespeichert bleiben, bis du die Website wirklich schließt.
 
 ```html
-<script src="https://inf-lab.dev/watchlist/material/persistent-movies.js"></script>
+<script src="https://inf-lab.dev/watchlist/material/persistent-movies.hosted.js"></script>
 ```
 
 Vergiss nicht, die `movies` Variable wieder normal zu erstellen, wenn du das Skript entfernst!
