@@ -81,7 +81,7 @@ Erstelle hierzu eine neue Datei `index.html` an der passenden Stelle, erweitere 
 Das Formular soll, sobald es abgesendet wird, eine `POST` Anfrage an den `/submit` Pfad (welche wir später in Python definieren werden) senden.
 
 Im Formular muss der Benutzer die Möglichkeit haben, seinen Namen `name`, seine E-Mail `email`, einen Betreff `subject` und eine eigentliche Nachricht `text` einzugeben.
-Wähle für jedes dieser Felder ein sinnvolles HTML-Element mit gut gewählten Attributen und achte darauf, dass der Benutzer immer weiß in welchem Feld er sich gerade befindet.
+Wähle für jedes dieser Felder ein sinnvolles HTML-Element mit gut gewählten Attributen und achte darauf, dass der Benutzer immer weiß in welchem Feld er sich gerade befindet. Vergiss nicht, auch einen `Send` Button hinzuzufügen.
 
 Füge schließlich noch einen Button hinzu, um das Formular abzusenden.
 
