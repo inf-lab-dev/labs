@@ -16,3 +16,5 @@ class ContactRequest:
     @property
     def id(self):
         return self._id
+
+# TODO: Write the remaining code
