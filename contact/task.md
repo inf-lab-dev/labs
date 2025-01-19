@@ -16,7 +16,7 @@ Hierzu verwenden wir Flask auf der Server-Seite und Bootstrap auf der Client-Sei
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
 ```bash
-wget -O - https://inf-lab.dev/watchlist/material/lab-contact.zip.sh | bash
+wget -O - https://inf-lab.dev/contact/material/lab-contact.zip.sh | bash
 ```
 
 ## Teilaufgabe 1
