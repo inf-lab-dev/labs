@@ -21,7 +21,7 @@ wget -O - https://inf-lab.dev/watchlist/material/lab-contact.zip.sh | bash
 
 ## Teilaufgabe 1
 
-Wie immer, wenn wir einen vorgegebenen Code haben, sollten wir diesen verstehen. Betrachte deshalb den gegebenen Code in `app.py`, `error.html` und `layout.html` und beantworte folgende Fragen.
+Wie immer, wenn wir einen vorgegebenen Code haben, sollten wir diesen zuerst verstehen. Betrachte deshalb den gegebenen Code in `app.py`, `error.html` und `layout.html` und beantworte folgende Fragen.
 
 1. In der Datei `app.py` ist eine Klasse `ContactRequest` gegeben. Diese hat ein Attribut `id` welches _automatisch_ einen eindeutigen String enthält um diese Anfrage zu identifizieren[^1].
 
@@ -77,7 +77,7 @@ Für die Zwecke von Inf-Einf reicht das aber aus.
 
 Da wir nun die Grundstruktur unserer Website verstanden und erweitert haben, ist es an der Zeit das eigentliche Kontaktformular zu erstellen.
 
-Erstelle hierzu eine neue Datei `index.html` an der passenden Stelle, erweitere in dieser das `layout.html` und erstelle ein Formular.
+Erstelle hierzu eine neue Datei `index.html` an der passenden Stelle. Erweitere in dieser das `layout.html` und erstelle ein Formular.
 Das Formular soll, sobald es abgesendet wird, eine `POST` Anfrage an den `/submit` Pfad (welche wir später in Python definieren werden) senden.
 
 Im Formular muss der Benutzer die Möglichkeit haben, seinen Namen `name`, seine E-Mail `email`, einen Betreff `subject` und eine eigentliche Nachricht `text` einzugeben.
@@ -85,7 +85,7 @@ Wähle für jedes dieser Felder ein sinnvolles HTML-Element mit gut gewählten A
 
 Füge schließlich noch einen Button hinzu, um das Formular abzusenden.
 
-Sodass unser Kontaktformular auch gut aussieht, soll [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) für das Styling verwendet werden. Achte deshalb darauf, allen Elementen passende Bootstrap Klassen zuzuweisen.
+Dass unser Kontaktformular auch gut aussieht, soll [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) für das Styling verwendet werden. Achte deshalb darauf, allen Elementen passende Bootstrap Klassen zuzuweisen.
 
 Das fertige Formular, inklusive des Layouts, könnte wie im folgenden Bild aussehen.
 
@@ -119,7 +119,7 @@ Da wir nun unsere `index.html` Datei fertig geschrieben haben, sollten wir diese
 Erstelle hierzu in der Datei `app.py` deinen Flask Server.
 
 Beginne damit, deine `app` zu erstellen und definiere schließlich eine `route` für den `/` Pfad.
-Der `/` Pfad soll `GET` anfragen akzeptieren und das Template `index.html` ausgeben.
+Der `/` Pfad soll `GET` Anfragen akzeptieren und das Template `index.html` ausgeben.
 
 Wenn du alles richtig gemacht hast, solltest du nun deinen Server starten können, und direkt mit deinem Formular begrüßt werden!
 
@@ -127,7 +127,7 @@ Wenn du alles richtig gemacht hast, solltest du nun deinen Server starten könne
     <summary>Du weißt nicht genau wie du ein Template aus einer Flask Funktion zurückgeben kannst?</summary>
 
 Um Templates auszugeben (zu "rendern"), kann die Funktion `render_template` verwendet werden.
-Folgender Beispielcode würde beispielsweise das Template `todos.html` ausgeben. Nach dem Namen des Templates können optional weitere, benannte, Parameter folgen um einzelne Variablen im Template verfügbar zu machen.
+Folgender Beispielcode würde beispielsweise das Template `todos.html` ausgeben. Nach dem Namen des Templates können optional weitere benannte Parameter folgen um einzelne Variablen im Template verfügbar zu machen.
 
 ```python
 from flask import render_template
@@ -143,8 +143,8 @@ render_template("todos.html", count=4)
 
 Nun haben wir schon einen Flask Server, welcher unsere `index.html` mit Formular darstellt. Nun möchten wir noch die Eingaben des Formulars verarbeiten.
 
-Erstelle hierzu eine weitere Flask `route` für den Pfad, welchen wir in [Teilaufgabe 2](#teilaufgabe-2) im `<form>` angegeben haben. Diese URL soll nur `POST` anfragen akzeptieren.
-Lies dann in dieser Funktion die per Formular übermittelten Parameter aus, und prüfe ob diese überhaupt angegeben wurden. Sollte ein Parameter fehlen, kannst du das Template `error.html` verwenden um eine Fehlermeldung auszugeben.
+Erstelle hierzu eine weitere Flask `route` für den Pfad, welchen wir in [Teilaufgabe 2](#teilaufgabe-2) im `<form>` angegeben haben. Diese URL soll nur `POST` Anfragen akzeptieren.
+Lies dann in dieser Funktion die per Formular übermittelten Parameter aus und prüfe, ob diese überhaupt angegeben wurden. Sollte ein Parameter fehlen, kannst du das Template `error.html` verwenden um eine Fehlermeldung auszugeben.
 
 Im folgenden findest du ein Beispielbild, wie Fehlermeldungen mit dem `error.html` Template aussehen können.
 
@@ -155,7 +155,7 @@ Gib im Erfolgsfall zusätzlich einen `Success!` Text zurück.
 
 ::: info
 Da wir die `ContactRequest`s nur in einer Variable speichern bedeutet das, dass Kontaktanfragen nur gespeichert werden, solange der Server auch läuft.
-Dies wäre in der Praxis eher unpraktisch, für die Zwecke dieser Übung ist das aber vollkommen ausreichend.
+Dies wäre in der Praxis eher unpraktisch. Für die Zwecke dieser Übung ist das aber vollkommen ausreichend.
 :::
 
 Achte darauf, dass deine Funktionen auch korrekte [HTTP-Antwortstatuscodes](https://developer.mozilla.org/de/docs/Web/HTTP/Status) verwenden.
@@ -164,7 +164,7 @@ Achte darauf, dass deine Funktionen auch korrekte [HTTP-Antwortstatuscodes](http
     <summary>Du bist dir nicht sicher, wie du den Wert eines Formularfeldes in Flask auslesen kannst?</summary>
 
 Um den Wert eines übermittelten Formularfeldes auszulesen, kann die `request.form.get(name)` Funktion verwendet werden.
-Im folgenden findest du ein informelles Beispiel um das im HTML dargestellte Feld auszulesen.
+Im folgenden findest du ein informelles Beispiel, um das im HTML dargestellte Feld auszulesen.
 
 ```html
 <label for="task_field">Task</label>
@@ -188,7 +188,7 @@ task = request.form.get("task")
 
 Nun können Benutzer uns schon ihre Kontaktanfragen zusenden und diese werden auch gespeichert. Jedoch sollten wir Benutzern auch die Möglichkeit geben, ihre bereits gesendeten Anfragen anzusehen.
 
-Erstelle deshalb eine neue _Route_ `/view`, welche nur `GET` Anfragen akteptiert. Diese soll dann die als _Query-Parameter_ übergebene `id` auslesen, und überprüfen ob es eine `ContactRequest` mit dieser `id` gibt. Ist dies der Fall, soll das Template `view.html` ausgegeben werden, welches wir gleich erstellen werden.
+Erstelle deshalb eine neue _Route_ `/view`, welche nur `GET` Anfragen akteptiert. Diese soll dann die als _Query-Parameter_ übergebene `id` auslesen, und überprüfen, ob es eine `ContactRequest` mit dieser `id` gibt. Ist dies der Fall, soll das Template `view.html` ausgegeben werden, welches wir gleich erstellen werden.
 Sollte keine `ContactRequest` für die übergebene `id` existieren, kann wieder das Template `error.html` verwendet werden.
 
 Erstelle deshalb auch noch ein weiteres Template `view.html` im passenden Verzeichnis, welches eine `ContactRequest` übergeben bekommt.
@@ -198,7 +198,7 @@ Im folgenden ist ein Bild gegeben, wie diese Auflistung aussehen könnte.
 
 ![Beispiel der Auflistung der Formulareingaben](./material/image/view.jpg)
 
-Dass dem Benutzer die `id` nach der Erstellung auch bekannt ist, müssen wir noch unsere `/submit` _Route_ anpassen.
+Damit dem Benutzer die `id` nach der Erstellung auch bekannt ist, müssen wir noch unsere `/submit` _Route_ anpassen.
 Sorge hierbei dafür, dass statt dem Text `Success!` eine Weiterleitung auf die passende `/view?id=<id>` Seite erfolgt.
 Hierbei muss `<id>` natürlich durch die `id` des `ContactRequest`s ersetzt werden.
 
@@ -234,7 +234,7 @@ from flask import redirect
 redirect("/todos")
 ```
 
-**Wichtig:** Vergiss nicht, den Rückgabewert von `redirect` auch zu `return`en, sonst wird die Weiterleitung nicht ausgeführt!
+**Wichtig:** Vergiss nicht den Rückgabewert von `redirect` auch zu `return`en, sonst wird die Weiterleitung nicht ausgeführt!
 
 ::: tip
 Natürlich kannst du `redirect` auch _f-Strings_ übergeben!
