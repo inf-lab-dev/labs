@@ -1,0 +1,16 @@
+{
+    "include": [
+        "template/backend/server.py",
+        "template/backend/stock.py",
+        "template/index.html",
+        { "src": "template/backend/static.py", "dest": "assets/static.py" },
+        { "src": "template/backend/watcher.py", "dest": "assets/watcher.py" },
+        {
+            "src": "template/frontend/dist/frontend-provided.js",
+            "dest": "assets/frontend-provided.js"
+        }
+    ],
+    "self_extraction": {
+        "post_user_commands": ["cd lab-shop", "code index.html"]
+    }
+}
