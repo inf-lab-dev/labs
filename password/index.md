@@ -1,4 +1,4 @@
 # Passwort
 
--   [Aufgabenstellung](./material/public/task)
+-   [Aufgabenstellung](./task)
 -   [Material herunterladen](./material)
