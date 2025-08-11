@@ -1,4 +1,4 @@
 # Passwort
 
 -   [Aufgabenstellung](./task)
--   [Material herunterladen](./material)
+-   [Bonusaufgaben](./bonus)

@@ -34,8 +34,6 @@ Somit sollte folgender Aufruf des Programms auch funktionieren und das Passwort 
 ./password 5uper_s3cret
 ```
 
-<div style="page-break-after: always"></div>
-
 ## Teilaufgabe 3
 
 Auch wenn das Passwort `!1Ab` alle bisherigen Richtlinien erfüllt, ist es nicht besonders sicher. Deshalb sollst du in dieser Aufgabe das Programm aus [Teilaufgabe 2](#teilaufgabe-2) so anpassen, dass ein Passwort mindestens `10` Zeichen lang sein muss. Passe auch die Fehlermeldung für den Benutzer entsprechend an.
@@ -46,63 +44,48 @@ Obwohl das Programm nun Passwörter wie `!1Abc` ablehnt, akzeptiert es immer noc
 Passe nun die Funktion `valid` so an, dass auch keine Passwörter mehr akzeptiert werden, in denen die gleichen Zeichen aufeinander folgen.
 Passe auch die Fehlermeldung entsprechend an.
 
-## Teilaufgabe 5
-
-Obwohl das Programm auch Passwörter wie `123456` oder `password` ablehnt, ist es besser, den Benutzer darauf hinzuweisen, dass es sich bei seiner Wahl um eines der [100 häufigsten Passwörter](https://en.wikipedia.org/wiki/Wikipedia:10,000_most_common_passwords#Top_100) handelt. Solche Passwörter sollten schließlich auch nicht erlaubt werden.
-
-Implementiere daher eine Funktion `is_common_password`, die prüft, ob ein übergebenes Passwort in der Liste der _10 häufigsten Passwörter_ vorkommt.
-Auch hier sollte der Benutzer über das Ergebnis der Prüfung informiert werden. Überlege dir eine sinnvolle Nachricht und finde eine geeignete Stelle, um diese Prüfung in dein Programm zu integrieren.
-
 ## Testen
+
+### Korrektheit
 
 > [!INFO]
 > Du kannst auch `check50` zum Testen verwenden, siehe [Befehlszeile](#befehlszeile) weiter unten.
 
 Dein Programm sollte sich, je nach Teilaufgabe, wie in den folgenden Beispielen verhalten.
 
-| Eingabe           | Aufgabe 1 | Aufgabe 2 | Aufgabe 3 | Aufgabe 4 | Aufgabe 5 |
-| ----------------- | :-------: | :-------: | :-------: | :-------: | :-------: |
-| hello             |    ❌     |    ❌     |    ❌     |    ❌     |    ❌     |
-| H3!lo             |    ✅     |    ✅     |    ❌     |    ❌     |    ❌     |
-| Pas123456!        |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| P@ssw0rd          |    ✅     |    ✅     |    ❌     |    ❌     |    ❌     |
-| 1234abcd          |    ❌     |    ❌     |    ❌     |    ❌     |    ❌     |
-| !@#ABC123def      |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| 1111aAaa!!!!      |    ✅     |    ✅     |    ✅     |    ❌     |    ❌     |
-| QwErTy123!@       |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| !!AAaa11bb        |    ✅     |    ✅     |    ✅     |    ❌     |    ❌     |
-| AbC!123xyz@       |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| admin             |    ❌     |    ❌     |    ❌     |    ❌     |    ❌     |
-| letMein123!       |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| pas5word!23A      |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| abcDE!ghi1234     |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| P@\$W0rD12345     |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| ABCabc123         |    ❌     |    ❌     |    ❌     |    ❌     |    ❌     |
-| Abc@1233Abc\_     |    ✅     |    ✅     |    ✅     |    ❌     |    ❌     |
-| 12abc!XYZ         |    ✅     |    ✅     |    ❌     |    ❌     |    ❌     |
-| mySecret2021!     |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| qwerty!@123ABC    |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| dragon!@123ABC    |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| Hello123!!        |    ✅     |    ✅     |    ✅     |    ❌     |    ❌     |
-| Zyx!9876lmNOP     |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| Test@123          |    ✅     |    ✅     |    ❌     |    ❌     |    ❌     |
-| R@nd0mPasw0rd     |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| \$up3r\$trongP@s5 |    ✅     |    ✅     |    ✅     |    ✅     |    ✅     |
-| abc123def!        |    ❌     |    ❌     |    ❌     |    ❌     |    ❌     |
-| 123456            |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| password          |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| 12345678          |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| qwerty            |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| 123456789         |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| 12345             |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| 1234              |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| 111111            |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| 1234567           |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
-| dragon            |    🚫     |    🚫     |    🚫     |    🚫     |    ❌     |
+| Eingabe           | Aufgabe 1 | Aufgabe 2 | Aufgabe 3 | Aufgabe 4 |
+| ----------------- | :-------: | :-------: | :-------: | :-------: |
+| hello             |    ❌     |    ❌     |    ❌     |    ❌     |
+| H3!lo             |    ✅     |    ✅     |    ❌     |    ❌     |
+| Pas123456!        |    ✅     |    ✅     |    ✅     |    ✅     |
+| P@ssw0rd          |    ✅     |    ✅     |    ❌     |    ❌     |
+| 1234abcd          |    ❌     |    ❌     |    ❌     |    ❌     |
+| !@#ABC123def      |    ✅     |    ✅     |    ✅     |    ✅     |
+| 1111aAaa!!!!      |    ✅     |    ✅     |    ✅     |    ❌     |
+| QwErTy123!@       |    ✅     |    ✅     |    ✅     |    ✅     |
+| !!AAaa11bb        |    ✅     |    ✅     |    ✅     |    ❌     |
+| AbC!123xyz@       |    ✅     |    ✅     |    ✅     |    ✅     |
+| admin             |    ❌     |    ❌     |    ❌     |    ❌     |
+| letMein123!       |    ✅     |    ✅     |    ✅     |    ✅     |
+| pas5word!23A      |    ✅     |    ✅     |    ✅     |    ✅     |
+| abcDE!ghi1234     |    ✅     |    ✅     |    ✅     |    ✅     |
+| P@\$W0rD12345     |    ✅     |    ✅     |    ✅     |    ✅     |
+| ABCabc123         |    ❌     |    ❌     |    ❌     |    ❌     |
+| Abc@1233Abc\_     |    ✅     |    ✅     |    ✅     |    ❌     |
+| 12abc!XYZ         |    ✅     |    ✅     |    ❌     |    ❌     |
+| mySecret2021!     |    ✅     |    ✅     |    ✅     |    ✅     |
+| qwerty!@123ABC    |    ✅     |    ✅     |    ✅     |    ✅     |
+| dragon!@123ABC    |    ✅     |    ✅     |    ✅     |    ✅     |
+| Hello123!!        |    ✅     |    ✅     |    ✅     |    ❌     |
+| Zyx!9876lmNOP     |    ✅     |    ✅     |    ✅     |    ✅     |
+| Test@123          |    ✅     |    ✅     |    ❌     |    ❌     |
+| R@nd0mPasw0rd     |    ✅     |    ✅     |    ✅     |    ✅     |
+| \$up3r\$trongP@s5 |    ✅     |    ✅     |    ✅     |    ✅     |
+| abc123def!        |    ❌     |    ❌     |    ❌     |    ❌     |
 
-✅ = Passwort akzeptiert; ❌ = Passwort nicht akzeptiert; 🚫 = Test nicht verfügbar
+✅ = Passwort akzeptiert; ❌ = Passwort nicht akzeptiert
 
-### Befehlszeile
+#### Befehlszeile
 
 Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `check50` zu überprüfen.
 
@@ -110,9 +93,8 @@ Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `c
 -   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/password/a2`
 -   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/password/a3`
 -   **Teilaufgabe 4:** `check50 -l inf-lab-dev/check/password/a4`
--   **Teilaufgabe 5:** `check50 -l inf-lab-dev/check/password/a5`
 
-### Webbrowser
+#### Webbrowser
 
 Um das Testen interaktiver zu gestalten, kannst du das mitgelieferte Skript `server.py` verwenden.
 Verwende dazu `python3 server.py` nachdem du dein Programm mit `make password` kompiliert hast. Es sollte sich nun automatisch eine Webseite öffnen, auf der du verschiedene Passwörter zum Testen in das Eingabefeld eingeben kannst. Um das Programm wieder zu verlassen, drücke <kbd>Strg</kbd> + <kbd>C</kbd> in dem Terminal, in dem du das Skript gestartet hast.
@@ -120,7 +102,7 @@ Verwende dazu `python3 server.py` nachdem du dein Programm mit `make password` k
 > [!TIP]
 > Wirf gerne einen Blick in das Python Skript nachdem wir in der Vorlesung Python erreicht haben!
 
-## Style
+### Style
 
 Führe den folgenden Befehl aus, um den Stil Ihres Codes mit `style50` zu analysieren.
 
