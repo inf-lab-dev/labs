@@ -7,6 +7,9 @@ Obwohl das Programm nach [Teilaufgabe 4](../task#teilaufgabe-4) auch Passwörter
 Implementiere daher eine Funktion `is_common_password`, die prüft, ob ein übergebenes Passwort in der Liste der _10 häufigsten Passwörter_ vorkommt.
 Auch hier sollte der Benutzer über das Ergebnis der Prüfung informiert werden. Überlege dir eine sinnvolle Nachricht und finde eine geeignete Stelle, um diese Prüfung in dein Programm zu integrieren.
 
+> [!TIP]
+> Wieso wurde festgelegt, dass es nur um die 10 häufigsten Passwörter geht?
+
 ## Testen
 
 ### Korrektheit
@@ -14,7 +17,7 @@ Auch hier sollte der Benutzer über das Ergebnis der Prüfung informiert werden.
 Führe in deinem Terminal den folgenden Befehl aus, um die Korrektheit deiner Arbeit zu überprüfen.
 
 ```bash
-check50 -l inf-lab-dev/check/password/a5
+check50 -l inf-lab-dev/check/password/bonus/common
 ```
 
 ### Style
