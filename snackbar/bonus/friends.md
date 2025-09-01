@@ -3,6 +3,9 @@
 Nach [Teilaufgabe 3](../task#teilaufgabe-3) erlaubt unser Programm die Bestellung einzelner Gerichte.
 
 Jedoch bestellen Kunden erfahrungsgemäß nicht nur ein Gericht für sich selbst, sondern auch mehrere Portionen desselben Gerichts für Freunde oder Familie.
+
+## Aufgabe
+
 Erweitere die `main`-Funktion, sodass der Nutzer neben dem Namen des Gerichts auch die gewünschte Anzahl (`amount`) eingeben kann. Übergib den `amount` anschließend an die `purchase`-Funktion, die überprüfen soll, ob die gewünschte Menge vorrätig ist.
 
 Die `purchase`-Funktion muss dabei folgende Schritte durchführen:

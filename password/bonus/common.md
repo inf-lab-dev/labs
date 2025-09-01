@@ -4,6 +4,8 @@ Obwohl das Programm nach [Teilaufgabe 4](../task#teilaufgabe-4) auch Passwörter
 
 [^1]: Wir verwenden hier die Liste des Anbieters _NordPass_, da diese innerhalb von Wikipedia am übersichtlichsten ist.
 
+## Aufgabe
+
 Implementiere daher eine Funktion `is_common_password`, die prüft, ob ein übergebenes Passwort in der Liste der _10 häufigsten Passwörter_ vorkommt.
 Auch hier sollte der Benutzer über das Ergebnis der Prüfung informiert werden. Überlege dir eine sinnvolle Nachricht und finde eine geeignete Stelle, um diese Prüfung in dein Programm zu integrieren.
 
