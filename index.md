@@ -15,6 +15,8 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 
 -   [Passwort](./password)
 -   [Kiosk](./snackbar)
+
+<!--
 -   [Temperatur](./temperature)
 -   [Wasserzeichen](./watermark)
 -   [Fehler](./errors)
@@ -22,3 +24,4 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 -   [Wetter](./weather)
 -   [Merkliste](./watchlist)
 -   [Kontakt](./contact)
+-->

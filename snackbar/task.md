@@ -1,13 +1,9 @@
----
-pdf:
-    title: 'Inf-Einf-B Übung: Kiosk'
----
-
 # Kiosk
 
-> ℹ️ Diese Aufgabe ist eine abgewandelte Version des [Snackbar Practice Problems von CS50](https://cs50.harvard.edu/x/2024/practice/snackbar/).
+> [!INFO]
+> Diese Aufgabe ist eine abgewandelte Version des [Snackbar Practice Problems von CS50](https://cs50.harvard.edu/x/2025/practice/snackbar/).
 >
-> **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
+> **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
 
 Stell dir vor, du bist am Strand und möchtest eine Reihe von Gerichten am Kiosk bestellen. Du hast nur eine begrenzte Menge Bargeld bei dir und möchtest vor der Bestellung den Gesamtpreis deiner Gerichte wissen.
 
@@ -26,6 +22,9 @@ Wir sind Informatiker! Somit würden wir ein solches Problem grundsätzlich mith
 ## Teilaufgabe 1
 
 Implementiere diesen in einer C-Datei namens `snackbar.c`. In `snackbar.c` wirst du unter anderem zwei Funktionen und eine `struct` implementieren.
+
+> [!TIP]
+> Du kannst die Datei auch über das Terminal erstellen, nutze hierfür `touch snackbar.c`.
 
 Deine Aufgabe besteht darin, eine `struct` namens `menu_item` zu erstellen, die den Namen eines Gerichts (`name`) sowie dessen Preis (`price`) speichert.
 Zusätzlich musst du noch die Funktion `add_items` erstellen, welche die `menu_item`s _erstellt_.
@@ -66,15 +65,11 @@ Deine Aufgabe ist es nun eine `struct` und drei Funktionen, wie oben spezifizier
 
 Warum ist ein Array von `struct`s hier besser geeignet als mehrere Arrays?
 
-<div style="page-break-after: always"></div>
-
 ## Teilaufgabe 2
 
-Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer angegeben. In dieser Teilaufgabe sollst du die Berechnung der Mehrwertsteuer in die Funktionalität integrieren. Die Mehrwertsteuer beträgt **19%** und soll mithilfe einer Konstante `VAT_RATE` definiert werden.
+Die angegeben Preise in der vorherigen Teilaufgabe waren ohne Mehrwertsteuer angegeben. In dieser Teilaufgabe sollst du die Berechnung der Mehrwertsteuer in die Funktionalität integrieren. Die Mehrwertsteuer beträgt _19%_ und soll mithilfe einer Konstante `VAT_RATE` definiert werden.
 
-### Aufgabe
-
-Erweitere die Funktionalität des existierenden Programms, sodass der letztendlich ausgegebene Preis inklusive **19%** Mehrwertsteuer ist.
+Erweitere daher die Funktionalität des existierenden Programms, sodass der letztendlich ausgegebene Preis inklusive _19%_ Mehrwertsteuer ist.
 
 ### Hinweise
 
@@ -95,27 +90,13 @@ In dieser Teilaufgabe sollst du die `struct` und die Funktionen erweitern, um di
 | 🍟 Fries  | 2,99 € |       7 |
 | 🥤 Soda   | 1,99 € |      16 |
 
-### Aufgabe
+Passe deshalb dein Programm gemäß folgenden Schritten an:
 
 1. Ergänze die bestehende `struct` um eine Möglichkeit, die verfügbare Menge der Gerichte zu speichern. Passe hierbei auch die `add_items` Funktion an.
 2. Implementiere eine Funktion, die es ermöglicht, ein Gericht anhand seines Namens zu finden und den _Array-Index_ dieses Gerichts in der Liste zurückzugeben. _Wie könnte man den Fall, dass ein Gericht nicht gefunden wird entsprechend behandeln?_ _Warum benötigen wir diese Funktion?_
 3. Überarbeite die bestehende `purchase`-Funktion so, dass sie den `index` des Gerichts verwendet und basierend darauf prüft, ob genügend Gerichte vorrätig sind.
 
 Falls genügend Gerichte vorrätig sind, wird die gewünschte Anzahl (in unserem Fall hier `-1`) von den verfügbaren Gerichten abgezogen und der Preis entsprechend berechnet. Achte darauf, dass die Logik sauber implementiert ist und der Nutzer bei fehlenden Gerichten mit der Meldung `Not enough dishes available.` informiert wird.
-
-## Teilaufgabe 4
-
-Kunden bestellen erfahrungsgemäß nicht nur ein Gericht für sich selbst, sondern auch mehrere Portionen desselben Gerichts für Freunde oder Familie.
-Erweitere die `main`-Funktion, sodass der Nutzer neben dem Namen des Gerichts auch die gewünschte Anzahl (`amount`) eingeben kann. Übergib den `amount` anschließend an die `purchase`-Funktion, die überprüfen soll, ob die gewünschte Menge vorrätig ist.
-
-Die `purchase`-Funktion muss dabei folgende Schritte durchführen:
-
-1. **Verfügbare Menge prüfen:** Wenn die verfügbare Menge (`quantity`) des gewählten Gerichts ausreicht, wird die gewünschte Anzahl abgezogen, und der Preis wird basierend auf der eingegebenen Menge berechnet.
-2. **Nicht ausreichende Menge behandeln:** Falls die gewünschte Menge die Verfügbarkeit übersteigt, sollen alle noch vorrätigen Gerichte verkauft werden, und der Preis für die verbleibende Anzahl wird berechnet. Zusätzlich soll die Meldung für den Nutzer angepasst werden, sodass `Not enough dishes available. X dishes were sold.` ausgegeben wird. Hierbei soll `X` durch die tatsächlich verkauften Gerichte ersetzt werden.
-
-Der von `purchase` zurückgegebene Preis (einschließlich der korrekt berücksichtigten Menge) wird anschließend in der `main`-Funktion verarbeitet und zum Gesamtpreis addiert. Achte darauf, dass die Logik sauber implementiert ist und fehlerhafte Eingaben, wie negative oder nicht-numerische Werte, entsprechend behandelt werden.
-
-<div style="page-break-after: always"></div>
 
 ## Testen
 
@@ -126,7 +107,6 @@ Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `c
 -   **Teilaufgabe 1:** `check50 -l inf-lab-dev/check/snackbar/a1`
 -   **Teilaufgabe 2:** `check50 -l inf-lab-dev/check/snackbar/a2`
 -   **Teilaufgabe 3:** `check50 -l inf-lab-dev/check/snackbar/a3`
--   **Teilaufgabe 4:** `check50 -l inf-lab-dev/check/snackbar/a4`
 
 ### Style
 
