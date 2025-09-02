@@ -21,7 +21,7 @@ Um diese einfachere Suche zu ermöglichen, hat ein ungenannter Tutor bereits ver
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
 ```bash-vue
-wget -O - {{ $url('../material/lab-errors.zip.sh') }} | bash
+wget -O - {{ $url('material/lab-errors.zip.sh') }} | bash
 ```
 
 ## Teilaufgabe 1

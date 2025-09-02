@@ -1,0 +1,6 @@
+{
+    "include": ["c/*"],
+    "self_extraction": {
+        "post_user_commands": ["cd c-again", "code todo.c"]
+    }
+}

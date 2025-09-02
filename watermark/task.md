@@ -15,7 +15,7 @@ Um diesem Problem entgegenzuwirken, entwickeln wir ein Tool, das automatisch Was
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
 ```bash-vue
-wget -O - {{ $url('../material/lab-watermark.zip.sh') }} | bash
+wget -O - {{ $url('material/lab-watermark.zip.sh') }} | bash
 ```
 
 ## Teilaufgabe 1

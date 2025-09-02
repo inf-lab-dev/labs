@@ -12,7 +12,7 @@ Wie wir inzwischen alle wissen, ist es wichtig, Passwörter zu verwenden, die ni
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
 ```bash-vue
-wget -O - {{ $url('../material/lab-password.zip.sh') }} | bash
+wget -O - {{ $url('material/lab-password.zip.sh') }} | bash
 ```
 
 ## Teilaufgabe 1
