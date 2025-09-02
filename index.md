@@ -17,8 +17,8 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 -   [Kiosk](./snackbar)
 -   [Temperatur](./temperature)
 -   [Wasserzeichen](./watermark)
-<!--
 -   [Fehler](./errors)
+<!--
 -   [Aufgabenliste](./todo)
 -   [Wetter](./weather)
 -   [Merkliste](./watchlist)

@@ -8,8 +8,7 @@
 > es bei einigen dieser Aufgaben Bearbeitungshinweise und Tipps hier auf der Seite.
 > Bei Fragen kannst du dich dennoch an deinen Tutor wenden!
 >
-> **Disclaimer:** Diese Aufgaben wurden nicht vom Lehrstuhl herausgegeben und können Fehler enthalten. Sie dienen,
-> wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
+> **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
 
 ## Aufgaben
 

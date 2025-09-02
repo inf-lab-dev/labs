@@ -1,8 +1,8 @@
-# Bonusaufgaben zu Passwort
+# Bonusaufgaben zu Fehler
 
 > [!INFO]
-> Hier können weitere Aufgaben zum [Passwort Lab](../) gefunden werden.
-> Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Passwort Labs](../) bearbeitet zu werden.
+> Hier können weitere Aufgaben zum [Fehler Lab](../) gefunden werden.
+> Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Fehler Labs](../) bearbeitet zu werden.
 >
 > Diese werden im Tutorium nicht gemeinsam bearbeitet und können zur eigenen Bearbeitung genutzt werden, jedoch gibt
 > es bei einigen dieser Aufgaben Bearbeitungshinweise und Tipps hier auf der Seite.
@@ -12,4 +12,4 @@
 
 ## Aufgaben
 
--   [Häufig](./common)
+-   [Design](./design)
