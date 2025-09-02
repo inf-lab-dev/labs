@@ -1,4 +1,4 @@
-# Freunde
+# Bonusaufgabe zu Kiosk: Freunde
 
 Nach [Teilaufgabe 3](../task#teilaufgabe-3) erlaubt unser Programm die Bestellung einzelner Gerichte.
 

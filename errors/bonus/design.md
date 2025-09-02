@@ -1,4 +1,4 @@
-# Design
+# Bonusaufgabe zu Fehler: Design
 
 Obwohl das Programm dank [Teilaufgabe 2](../task#teilaufgabe-2) nun endlich funktioniert, könnten wir den Code noch verbessern.
 

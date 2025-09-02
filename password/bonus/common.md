@@ -1,4 +1,4 @@
-# Häufig
+# Bonusaufgabe zu Passwort: Häufig
 
 Obwohl das Programm nach [Teilaufgabe 4](../task#teilaufgabe-4) auch Passwörter wie `123456` oder `password` ablehnt, ist es besser, den Benutzer darauf hinzuweisen, dass es sich bei seiner Wahl um eines der [100 häufigsten Passwörter](https://en.wikipedia.org/wiki/List_of_the_most_common_passwords#NordPass) handelt[^1]. Solche Passwörter sollten schließlich auch nicht erlaubt werden.
 
