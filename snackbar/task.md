@@ -1,4 +1,4 @@
-# Kiosk
+# Aufgabenstellung zu Kiosk
 
 > [!INFO]
 > Diese Aufgabe ist eine abgewandelte Version des [Snackbar Practice Problems von CS50](https://cs50.harvard.edu/x/2025/practice/snackbar/).
