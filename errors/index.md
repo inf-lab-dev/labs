@@ -2,6 +2,7 @@
 
 -   [Aufgabenstellung](./task)
 -   [Bonusaufgaben](./bonus)
+-   [Trie visualisieren](./trie-visualizer)
 
 <RequirePrivateKey>
 
