@@ -1,4 +1,9 @@
 # Wasserzeichen
 
--   [Aufgabenstellung](./material/task)
--   [Material herunterladen](./material)
+-   [Aufgabenstellung](./task)
+
+<RequirePrivateKey>
+
+-   [Anleitung](./guide)
+
+</RequirePrivateKey>
