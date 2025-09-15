@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Aufgabenliste
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!

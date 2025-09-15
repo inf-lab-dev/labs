@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Fehler
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe basiert auf der Idee des [Trie Practice Problems von CS50](https://cs50.harvard.edu/x/2025/practice/trie/).
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
@@ -55,7 +55,7 @@ Verwende dazu je nach Teilaufgabe die folgenden Befehle, um dein Programm mit `c
 
 ### Style
 
-> [!INFO]
+> [!NOTE]
 > Da in dieser Aufgabe ein _schlechter Code_ verbessert wird, schlägt `style50` bis zum Abschluss der Bonusaufgabe [Bonusaufgabe Design](bonus/design) sehr viele Verbesserungen vor.
 
 Führe den folgenden Befehl aus, um den Stil deines Codes mit `style50` zu analysieren:

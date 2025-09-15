@@ -3,7 +3,7 @@
 Bisher sieht unsere Merkliste noch nicht sonderlich gut aus. Wir verwenden _Times New Roman_ als Schriftart und auch sonst ist die Website eher eintönig.
 Verschönere daher die folgenden Elemente der Seite mit CSS. Schreibe hierbei guten CSS Code, welcher auch die _Vererbung von Eigenschaften_ ausnutzt.
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe geht davon aus, dass die Bonusaufgabe [Gesehen](../watched) bereits bearbeitet wurde. Du kannst die [Gesehen](../watched) Aufgabe natürlich auch weglassen. Ignoriere dann einfach den `Watched!` Knopf in dieser Aufgabe.
 
 Schreibe den gesamten CSS-Code in einer neuen Datei namens `style.css`, welche du schließlich in `index.html` einbindest.
@@ -34,7 +34,7 @@ Du musst nicht alles perfekt nachbauen, jedoch sollten die wesentlichen Merkmale
 
 ### Korrektheit
 
-> [!INFO]
+> [!NOTE]
 > Für diese Aufgabe gibt es keine `check50` Überprüfungen, da hier die Ergebnisse sehr individuell ausfallen.
 
 ### Style

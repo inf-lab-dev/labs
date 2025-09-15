@@ -1,6 +1,6 @@
 # Bonusaufgaben zu Fehler
 
-> [!INFO]
+> [!NOTE]
 > Hier können weitere Aufgaben zum [Fehler Lab](../) gefunden werden.
 > Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Fehler Labs](../) bearbeitet zu werden.
 >

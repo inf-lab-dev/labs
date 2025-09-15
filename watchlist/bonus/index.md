@@ -1,6 +1,6 @@
 # Bonusaufgaben zu Merkliste
 
-> [!INFO]
+> [!NOTE]
 > Hier können weitere Aufgaben zum [Merkliste Lab](../) gefunden werden.
 > Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Merkliste Labs](../) bearbeitet zu werden.
 >

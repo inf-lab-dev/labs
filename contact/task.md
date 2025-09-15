@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Kontakt
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
@@ -141,7 +141,7 @@ Im folgenden findest du ein Beispielbild, wie Fehlermeldungen mit dem `error.htm
 Sollten alle Daten korrekt übermittelt worden sein, soll aus diesen eine neue `ContactRequest` erstellt werden. Speichere diese `ContactRequest` schließlich in einer Datenstruktur deiner Wahl. Beachte hierbei, dass wir die `ContactRequest` später anhand ihrer `id` finden wollen.
 Gib im Erfolgsfall zusätzlich einen `Success!` Text zurück.
 
-> [!INFO]
+> [!NOTE]
 > Da wir die `ContactRequest`s nur in einer Variable speichern bedeutet das, dass Kontaktanfragen nur gespeichert werden, solange der Server auch läuft.
 > Dies wäre in der Praxis eher unpraktisch. Für die Zwecke dieser Übung ist das aber vollkommen ausreichend.
 

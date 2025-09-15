@@ -18,7 +18,7 @@ Verbessere daher den Code aus [Teilaufgabe 2](../task#teilaufgabe-2) in den folg
 
 Führe in deinem Terminal den folgenden Befehl aus, um die Korrektheit deiner Arbeit zu überprüfen.
 
-> [!INFO]
+> [!NOTE]
 > Beachte, dass lediglich die Funktionalität des Programms überprüft wird. Die Qualität des Codes jedoch nicht.
 > Um Feedback zur Qualität deines Codes zu erhalten, kannst du `design50` in deinem Codespace verwenden. Klicke hierzu einfach auf `design50` oben rechts in VS-Code.
 >

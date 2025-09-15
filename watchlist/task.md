@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Merkliste
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
@@ -53,7 +53,7 @@ Sobald das Formular abgesendet wurde, soll überprüft werden, ob sowohl `title`
 
 Erstelle eine globale Variable `movies`, in der alle Filme der Merkliste gespeichert werden. Ergänze deinen Code so, dass der Film aus dem Formular nach erfolgreicher Validierung zur Merkliste hinzugefügt wird. Sorge außerdem dafür, dass das Formular nach dem Hinzufügen automatisch zurückgesetzt wird, damit ein weiterer Eintrag bequem eingefügt werden kann.
 
-> [!INFO]
+> [!NOTE]
 > Natürlich macht es in der Praxis wenig Sinn Formulardaten nur in einer JavaScript Liste zu speichern, da diese mit jedem Neuladen der Seite wieder _gelöscht_ wird.
 > Für die Zwecke dieser Übung ist das allerdings vollkommen ausreichend!
 >

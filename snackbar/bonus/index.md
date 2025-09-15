@@ -1,6 +1,6 @@
 # Bonusaufgaben zu Kiosk
 
-> [!INFO]
+> [!NOTE]
 > Hier können weitere Aufgaben zum [Kiosk Lab](../) gefunden werden.
 > Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Kiosk Labs](../) bearbeitet zu werden.
 >

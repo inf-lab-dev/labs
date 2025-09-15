@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Kiosk
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe ist eine abgewandelte Version des [Snackbar Practice Problems von CS50](https://cs50.harvard.edu/x/2025/practice/snackbar/).
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!

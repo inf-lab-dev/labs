@@ -1,6 +1,6 @@
 # Bonusaufgaben zu Aufgabenliste
 
-> [!INFO]
+> [!NOTE]
 > Hier können weitere Aufgaben zum [Aufgabenliste Lab](../) gefunden werden.
 > Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Aufgabenliste Labs](../) bearbeitet zu werden.
 >

@@ -1,6 +1,6 @@
 # Bonusaufgaben zu Kontakt
 
-> [!INFO]
+> [!NOTE]
 > Hier können weitere Aufgaben zum [Kontakt Lab](../) gefunden werden.
 > Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Kontakt Labs](../) bearbeitet zu werden.
 >

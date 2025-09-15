@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Wasserzeichen
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe basiert waage auf dem [Bottomup Practice Problem von CS50](https://cs50.harvard.edu/x/2025/practice/bottomup/).
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
@@ -62,7 +62,7 @@ Um das Skript zu verlassen, drücke einfach <kbd>Enter</kbd> ohne einen Link ein
 
 Alternativ kannst du auch einfach die mitgelieferte `uni.bmp` Datei verwenden.
 
-> [!INFO]
+> [!NOTE]
 > Wirf gerne einen Blick in das Python Skript nachdem wir in der Vorlesung Python erreicht haben!
 
 ### Korrektheit

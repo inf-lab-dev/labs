@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Passwort
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe ist eine abgewandelte Version des [Password Practice Problems von CS50](https://cs50.harvard.edu/x/2025/practice/password/).
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
@@ -48,7 +48,7 @@ Passe auch die Fehlermeldung entsprechend an.
 
 ### Korrektheit
 
-> [!INFO]
+> [!NOTE]
 > Du kannst auch `check50` zum Testen verwenden, siehe [Befehlszeile](#befehlszeile) weiter unten.
 
 Dein Programm sollte sich, je nach Teilaufgabe, wie in den folgenden Beispielen verhalten.

@@ -1,6 +1,6 @@
 # Aufgabenstellung zu Temperatur
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe ist eine abgewandelte Version des [Temps Practice Problem von CS50](https://cs50.harvard.edu/x/2025/practice/temps/).
 >
 > **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!

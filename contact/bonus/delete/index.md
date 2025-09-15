@@ -3,7 +3,7 @@
 Bisher können Benutzer uns Kontaktanfragen schicken und diese auch wieder ansehen. Jedoch haben sie keine Möglichkeit ihre Kontaktanfragen auch wieder zu löschen.
 Das wollen wir in dieser Aufgabe ändern.
 
-> [!INFO]
+> [!NOTE]
 > Diese Aufgabe geht davon aus, dass die Bonusaufgabe [Betrachten](../view) bereits bearbeitet wurde. Du kannst die [Betrachten](../view) Aufgabe natürlich auch weglassen. Erstelle dann in der `index.html` Datei ein weiteres Formular mit einem Eingabefeld für die `id` einer `ContactRequest` un diese zu löschen.
 
 ## Aufgabe
@@ -25,7 +25,7 @@ Denke auch hier daran, dass deine Funktion korrekte [HTTP-Antwortstatuscodes](ht
 
 ### Korrektheit
 
-> [!INFO]
+> [!NOTE]
 > Für diese Aufgabe gibt es keine `check50` Überprüfungen, da hier die Ergebnisse sehr individuell ausfallen.
 
 ### Style

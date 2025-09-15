@@ -1,6 +1,6 @@
 # Bonusaufgaben zu Passwort
 
-> [!INFO]
+> [!NOTE]
 > Hier können weitere Aufgaben zum [Passwort Lab](../) gefunden werden.
 > Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Passwort Labs](../) bearbeitet zu werden.
 >

@@ -62,7 +62,7 @@ Natürlich kannst du `redirect` auch _f-Strings_ übergeben!
 
 ### Korrektheit
 
-> [!INFO]
+> [!NOTE]
 > Für diese Aufgabe gibt es keine `check50` Überprüfungen, da hier die Ergebnisse sehr individuell ausfallen.
 
 ### Style

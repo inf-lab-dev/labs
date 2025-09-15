@@ -33,7 +33,7 @@ fruit.splice(1, 1);
 
 ### Korrektheit
 
-> [!INFO]
+> [!NOTE]
 > Für diese Aufgabe gibt es kein `check50`, da die Implementierungen sehr unterschiedlich ausfallen können.
 
 ### Style
