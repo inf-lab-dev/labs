@@ -21,6 +21,8 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 -   [Aufgabenliste](./todo)
 <!--
 -   [Wetter](./weather)
+    -->
 -   [Merkliste](./watchlist)
+<!--
 -   [Kontakt](./contact)
     -->

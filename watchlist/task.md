@@ -1,10 +1,9 @@
 # Merkliste
 
-::: info
-Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
-
-**Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
-:::
+> [!INFO]
+> Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
+>
+> **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
 
 Wir alle verwenden verschiedene Streamingdienste um uns Filme oder Serien anzusehen. Die meisten dieser Dienste haben auch eine sogenannte Merkliste. Diese bietet eine Möglichkeit, Filme oder Serien zu markieren, um sie später anzusehen.
 
@@ -14,8 +13,8 @@ Leider hat jede Streamingplattform ihre eigene Merkliste. In dieser Aufgabe möc
 
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
-```bash
-wget -O - https://inf-lab.dev/watchlist/material/lab-watchlist.zip.sh | bash
+```bash-vue
+wget -O - {{ $url('material/lab-watchlist.zip.sh') }} | bash
 ```
 
 ## Teilaufgabe 1
@@ -54,12 +53,11 @@ Sobald das Formular abgesendet wurde, soll überprüft werden, ob sowohl `title`
 
 Erstelle eine globale Variable `movies`, in der alle Filme der Merkliste gespeichert werden. Ergänze deinen Code so, dass der Film aus dem Formular nach erfolgreicher Validierung zur Merkliste hinzugefügt wird. Sorge außerdem dafür, dass das Formular nach dem Hinzufügen automatisch zurückgesetzt wird, damit ein weiterer Eintrag bequem eingefügt werden kann.
 
-::: info
-Natürlich macht es in der Praxis wenig Sinn Formulardaten nur in einer JavaScript Liste zu speichern, da diese mit jedem Neuladen der Seite wieder _gelöscht_ wird.
-Für die Zwecke dieser Übung ist das allerdings vollkommen ausreichend!
-
-Solltest du deine Einträge jedoch beibehalten wollen, wenn du die Seite neu lädst, findest du unter [Einträge dauerhaft speichern](#einträge-dauerhaft-speichern) einige Hinweise.
-:::
+> [!INFO]
+> Natürlich macht es in der Praxis wenig Sinn Formulardaten nur in einer JavaScript Liste zu speichern, da diese mit jedem Neuladen der Seite wieder _gelöscht_ wird.
+> Für die Zwecke dieser Übung ist das allerdings vollkommen ausreichend!
+>
+> Solltest du deine Einträge jedoch beibehalten wollen, wenn du die Seite neu lädst, findest du unter [Einträge dauerhaft speichern](#einträge-dauerhaft-speichern) einige Hinweise.
 
 <details>
     <summary>Du bist dir nicht sicher wie du sowohl den Titel als auch die Platform in einer Liste speichern kannst?</summary>
@@ -101,32 +99,6 @@ Um in JavaScript HTML-Elemente _zu erstellen_ kann die Funktion `document.create
 
 </details>
 
-## Teilaufgabe 5
-
-Nun können wir Filme auf unsere Liste einfügen und diese auch ansehen. Jetzt fehlt nur noch eine Funktion bereits angesehene Filme auch wieder zu löschen.
-
-Passe den Code der `render`-Funktion so an, dass für jeden Eintrag neben dem Text zusätzlich ein `<button>` mit dem Text `Watched!` erstellt wird. Beim Anklicken dieses Buttons soll das entsprechende Element aus der Liste gelöscht werden.
-Vergiss nicht, nach dem Löschen auch wieder deine `render` Funktion aufzurufen, sonst wirst du vom Löschen nichts sehen!
-
-Das könnte dann wie im folgenden Bild aussehen.
-
-![Beispiel der Liste mit Löschen-Funktion](./material/image/list-with-remove.jpg)
-
-<details>
-    <summary>Du bist dir nicht sicher, wie du in JavaScript einen Eintrag aus einer Liste löschen kannst?</summary>
-
-Hierfür gibt es in JavaScript mehrere Möglichkeiten. Weit verbreitet ist jedoch die Verwendung von [`splice(start, deleteCount)`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/splice). Ein Beispiel, um das Obst `Apfel` aus der Liste zu entfernen, kann folgenden Code entnommen werden.
-
-```js
-let fruit = ['Banane', 'Apfel', 'Melone'];
-
-fruit.splice(1, 1);
-```
-
-**Wichtig:** Achte darauf, dass `deleteCount` (der zweite Parameter) immer `1` ist, da sonst mehr als ein Element entfernt wird.
-
-</details>
-
 ## Testen
 
 Starte `http-server` in einem Terminal, während du dich im Verzeichnis `lab-watchlist` befindest, um einen Webserver zu starten, der die Webseite bereitstellt.
@@ -137,10 +109,19 @@ Bisher ist es so, dass die `movies` bei jedem Laden der Website wieder _vergesse
 
 Hierfür haben wir etwas Code vorbereitet, den du nicht verstehen musst.[^1] Füge einfach folgenden HTML-Code **vor deinem eigenen `<script>` Element** ein und kommentiere das erstellen deiner `movies` Variable aus. Diese wird dir von unserem Code erstellt.
 
-Nun sollte deine `movies`-Liste solange gespeichert bleiben, bis du die Website wirklich schließt.
+Nun sollte deine `movies`-Liste solange gespeichert bleiben, bis du die Website wirklich schließt. Vergiss nicht, deine `render` Funktion gleich nach dem laden der Seite aufzurufen!
 
 ```html
-<script src="https://inf-lab.dev/watchlist/material/persistent-movies.hosted.js"></script>
+<script>
+    {
+        const STORAGE_KEY = 'inflabs-watchlist-movies';
+
+        window.movies = JSON.parse(sessionStorage.getItem(STORAGE_KEY) ?? '[]');
+        window.addEventListener('unload', () =>
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(window.movies)),
+        );
+    }
+</script>
 ```
 
 Vergiss nicht, die `movies` Variable wieder normal zu erstellen, wenn du das Skript entfernst!
