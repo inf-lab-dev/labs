@@ -12,4 +12,5 @@
 
 ## Aufgaben
 
--   [Weitere Filter](./more-filter)
+-   [Wind](./wind)
+-   [Symbol](./symbol)
