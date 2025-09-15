@@ -23,6 +23,4 @@ Diese Seite enthält verschiedene Materialien für die Inf-Einf-Labs.
 -   [Wetter](./weather)
     -->
 -   [Merkliste](./watchlist)
-<!--
 -   [Kontakt](./contact)
-    -->

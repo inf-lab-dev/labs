@@ -1,10 +1,9 @@
-# Kontakt
+# Aufgabenstellung zu Kontakt
 
-::: info
-Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
-
-**Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
-:::
+> [!INFO]
+> Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
+>
+> **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
 
 Kontaktformulare sind ein zentraler Bestandteil fast jeder Website. Sie bieten eine einfache und strukturierte Möglichkeit, Informationen zwischen Nutzern und Website-Betreibern auszutauschen, sei es für Support-Anfragen, Feedback oder Geschäftsanfragen.
 
@@ -15,8 +14,8 @@ Hierzu verwenden wir Flask auf der Server-Seite und Bootstrap auf der Client-Sei
 
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
-```bash
-wget -O - https://inf-lab.dev/contact/material/lab-contact.zip.sh | bash
+```bash-vue
+wget -O - {{ $url('material/lab-contact.zip.sh') }} | bash
 ```
 
 ## Teilaufgabe 1
@@ -68,10 +67,9 @@ Im folgenden findet sich ein einfaches Beispiel, welches in abgewandelter Versio
 
 </details>
 
-::: warning
-Viele unserer Implementierungen in dieser Aufgabe sind anfällig für diverse Angriffe und sollten in der Praxis anders umgesetzt werden.
-Für die Zwecke von Inf-Einf reicht das aber aus.
-:::
+> [!WARNING]
+> Viele unserer Implementierungen in dieser Aufgabe sind anfällig für diverse Angriffe und sollten in der Praxis anders umgesetzt werden.
+> Für die Zwecke von Inf-Einf reicht das aber aus.
 
 ## Teilaufgabe 2
 
@@ -97,18 +95,8 @@ Das fertige Formular, inklusive des Layouts, könnte wie im folgenden Bild ausse
 Folgender Code ist ein leicht abgeändertes Beispiel aus der [Bootstrap Dokumentation zu Formularen](https://getbootstrap.com/docs/5.3/forms/form-control/).
 
 ```html
-<label
-    for="title"
-    class="form-label"
->
-    Titel
-</label>
-<input
-    type="text"
-    class="form-control"
-    id="title"
-    name="title"
-/>
+<label for="title" class="form-label"> Titel </label>
+<input type="text" class="form-control" id="title" name="title" />
 ```
 
 </details>
@@ -153,10 +141,9 @@ Im folgenden findest du ein Beispielbild, wie Fehlermeldungen mit dem `error.htm
 Sollten alle Daten korrekt übermittelt worden sein, soll aus diesen eine neue `ContactRequest` erstellt werden. Speichere diese `ContactRequest` schließlich in einer Datenstruktur deiner Wahl. Beachte hierbei, dass wir die `ContactRequest` später anhand ihrer `id` finden wollen.
 Gib im Erfolgsfall zusätzlich einen `Success!` Text zurück.
 
-::: info
-Da wir die `ContactRequest`s nur in einer Variable speichern bedeutet das, dass Kontaktanfragen nur gespeichert werden, solange der Server auch läuft.
-Dies wäre in der Praxis eher unpraktisch. Für die Zwecke dieser Übung ist das aber vollkommen ausreichend.
-:::
+> [!INFO]
+> Da wir die `ContactRequest`s nur in einer Variable speichern bedeutet das, dass Kontaktanfragen nur gespeichert werden, solange der Server auch läuft.
+> Dies wäre in der Praxis eher unpraktisch. Für die Zwecke dieser Übung ist das aber vollkommen ausreichend.
 
 Achte darauf, dass deine Funktionen auch korrekte [HTTP-Antwortstatuscodes](https://developer.mozilla.org/de/docs/Web/HTTP/Status) verwenden.
 
@@ -167,11 +154,7 @@ Um den Wert eines übermittelten Formularfeldes auszulesen, kann die `request.fo
 Im folgenden findest du ein informelles Beispiel, um das im HTML dargestellte Feld auszulesen.
 
 ```html
-<label for="task_field">Task</label>
-<input
-    name="task"
-    id="task_field"
-/>
+<label for="task_field">Task</label> <input name="task" id="task_field" />
 ```
 
 ```python
@@ -181,64 +164,6 @@ task = request.form.get("task")
 ```
 
 **Wichtig:** Dass du ein Feld im HTML-Formular erstellt hast, bedeutet nicht zwingend, dass es auch an den Server übermittelt wird. Prüfe deshalb immer erst ob das Feld nicht `None` ist.
-
-</details>
-
-## Teilaufgabe 5
-
-Nun können Benutzer uns schon ihre Kontaktanfragen zusenden und diese werden auch gespeichert. Jedoch sollten wir Benutzern auch die Möglichkeit geben, ihre bereits gesendeten Anfragen anzusehen.
-
-Erstelle deshalb eine neue _Route_ `/view`, welche nur `GET` Anfragen akteptiert. Diese soll dann die als _Query-Parameter_ übergebene `id` auslesen, und überprüfen, ob es eine `ContactRequest` mit dieser `id` gibt. Ist dies der Fall, soll das Template `view.html` ausgegeben werden, welches wir gleich erstellen werden.
-Sollte keine `ContactRequest` für die übergebene `id` existieren, kann wieder das Template `error.html` verwendet werden.
-
-Erstelle deshalb auch noch ein weiteres Template `view.html` im passenden Verzeichnis, welches eine `ContactRequest` übergeben bekommt.
-Dieses Template soll dann alle Eingaben des Benutzers auflisten.
-
-Im folgenden ist ein Bild gegeben, wie diese Auflistung aussehen könnte.
-
-![Beispiel der Auflistung der Formulareingaben](./material/image/view.jpg)
-
-Damit dem Benutzer die `id` nach der Erstellung auch bekannt ist, müssen wir noch unsere `/submit` _Route_ anpassen.
-Sorge hierbei dafür, dass statt dem Text `Success!` eine Weiterleitung auf die passende `/view?id=<id>` Seite erfolgt.
-Hierbei muss `<id>` natürlich durch die `id` des `ContactRequest`s ersetzt werden.
-
-Achte auch hier darauf, dass deine Funktion korrekte [HTTP-Antwortstatuscodes](https://developer.mozilla.org/de/docs/Web/HTTP/Status) verwendet.
-
-<details>
-    <summary>Was ist ein Query-Parameter?</summary>
-
-_Query_ oder auch _Get-Parameter_ sind Eingaben, welche über die URL übermittelt werden. Diese folgen nach einem `?` in der URL.
-
-Beispielsweise hat die URL `https://www.google.com/search?q=Hallo` den _Query-Parameter_ `q` mit dem Wert `Hallo`.
-
-Diese Parameter können in Flask in etwa wie im folgenden Beispiel ausgelesen werden.
-
-```python
-from flask import request
-
-q = request.args.get("q")
-```
-
-**Wichtig:** Vergiss nicht zu prüfen ob das Feld nicht `None` ist!
-
-</details>
-<details>
-    <summary>Du weißt nicht genau wie du in Flask auf eine andere Seite weiterleiten kannst?</summary>
-
-Um den Benutzer auf eine andere Seite weiterzuleiten, kann die `redirect(url)` Funktion benutzt werden.
-Im folgenden informellen Beispiel wird der Benutzer auf die `/todos` Seite weitergeleitet.
-
-```python
-from flask import redirect
-
-redirect("/todos")
-```
-
-**Wichtig:** Vergiss nicht den Rückgabewert von `redirect` auch zu `return`en, sonst wird die Weiterleitung nicht ausgeführt!
-
-::: tip
-Natürlich kannst du `redirect` auch _f-Strings_ übergeben!
-:::
 
 </details>
 
