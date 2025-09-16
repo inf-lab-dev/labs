@@ -17,10 +17,14 @@ Typische Operationen in einem Trie sind das Einfügen neuer Wörter und das Such
 
 In der [Visualisierung](#visualisierung) unten, sind die Bestandteile des Tries wie folgt eingefärbt:
 
-<Legend />
+<ClientOnly>
+    <Legend />
+</ClientOnly>
 
 ## Visualisierung
 
 Die Visualisierung zeigt dir, wie ein Trie aufgebaut ist, und wie in diesem gesucht wird.
 
-<Visualizer />
+<ClientOnly>
+    <Visualizer />
+</ClientOnly>
