@@ -35,7 +35,7 @@ from flask import request
 q = request.args.get("q")
 ```
 
-**Wichtig:** Vergiss nicht zu prüfen ob das Feld nicht `None` ist!
+**Wichtig:** Vergiss nicht zu prüfen, ob das Feld nicht `None` ist!
 
 </details>
 <details>
