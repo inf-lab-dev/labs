@@ -1,0 +1,6 @@
+{
+    "include": ["template/search-zone.c", "words/*.txt"],
+    "self_extraction": {
+        "post_user_commands": ["cd lab-errors", "code search-zone.c"]
+    }
+}

@@ -1,10 +1,9 @@
-# Aufgabenliste
+# Aufgabenstellung zu Aufgabenliste
 
-::: info
-Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
-
-**Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient, wie das gesamte Material von [inf-lab.dev](https://inf-lab.dev), lediglich zu Übungszwecken!
-:::
+> [!NOTE]
+> Diese Aufgabe basiert auf _keinem CS50 Practice Problem_.
+>
+> **Disclaimer:** Diese Aufgabe wurde nicht vom Lehrstuhl herausgegeben und kann Fehler enthalten. Sie dient lediglich zu Übungszwecken!
 
 Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich alle seine Aufgaben zu merken. Daher wollen wir in dieser Aufgabe eine ToDo-Liste entwickeln, welche es uns erlaubt unsere Aufgaben über die Konsole zu verwalten.
 
@@ -12,8 +11,8 @@ Wir alle haben verschiedene Aufgaben, jedoch ist es nicht immer einfach sich all
 
 Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
 
-```bash
-wget -O - https://inf-lab.dev/todo/material/scripts/setup.sh | bash
+```bash-vue
+wget -O - {{ $url('material/lab-todo.zip.sh') }} | bash
 ```
 
 ## Teilaufgabe 1

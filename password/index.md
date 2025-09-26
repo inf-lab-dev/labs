@@ -1,4 +1,10 @@
 # Passwort
 
--   [Aufgabenstellung](./material/public/task)
--   [Material herunterladen](./material)
+-   [Aufgabenstellung](./task)
+-   [Bonusaufgaben](./bonus)
+
+<RequirePrivateKey>
+
+-   [Anleitung](./guide)
+
+</RequirePrivateKey>

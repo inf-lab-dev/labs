@@ -1,4 +1,11 @@
 # Fehler
 
--   [Aufgabenstellung](./material/task)
--   [Material herunterladen](./material)
+-   [Aufgabenstellung](./task)
+-   [Bonusaufgaben](./bonus)
+-   [Trie visualisieren](./trie-visualizer)
+
+<RequirePrivateKey>
+
+-   [Anleitung](./guide)
+
+</RequirePrivateKey>

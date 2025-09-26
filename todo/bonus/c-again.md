@@ -1,12 +1,26 @@
-# Schon wieder C
+# Bonusaufgabe zu Aufgabenliste: Schon wieder C
 
-::: warning
-Diese Aufgabe ist relativ anspruchsvoll und sollte nur bearbeitet werden, wenn du auch mit dem Material zu C sicher genug bist, da man zur Bearbeitung dieser Aufgabe den gesamten Vorlesungsstoff zu C beherrschen muss.
-:::
+> [!WARNING]
+> Diese Aufgabe ist relativ anspruchsvoll und sollte nur bearbeitet werden, wenn du auch mit dem Material zu C sicher genug bist, da man zur Bearbeitung dieser Aufgabe den gesamten Vorlesungsstoff zu C beherrschen muss.
 
-Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir diese auch in C implementieren. Bearbeite deshalb die gesamte Aufgabe erneut in der Datei `todo.c`. Halte dich hierbei nur grob an die Aufgabenstellung, da es z.B. in C keine Klassen gibt. Auch [Teilaufgabe 4](../task#teilaufgabe-4) kann hierbei weggelassen werden.
+Nachdem wir unsere Aufgabenliste nun in Python implementiert haben, könnten wir diese auch in C implementieren.
 
-## Hinweise zum Lösen der Aufgabe
+## Aufgabenmaterial herunterladen
+
+> [!TIP]
+> Statt unser vorgegebenes Codegerüst herunterzuladen, kannst du natürlich auch komplett von vorne beginnen!
+
+Um das Aufgabenmeterial herunterzuladen, gib folgenden Befehl in _ein neues Terminal_ in deinem Codespace ein:
+
+```bash-vue
+wget -O - {{ $url('../material/c-again.zip.sh') }} | bash
+```
+
+## Aufgabe
+
+Bearbeite deshalb die gesamte Aufgabe erneut in der Datei `todo.c`. Halte dich hierbei nur grob an die Aufgabenstellung, da es z.B. in C keine Klassen gibt. Auch [Teilaufgabe 4](../task#teilaufgabe-4) kann hierbei weggelassen werden.
+
+### Hinweise
 
 -   statt bei Fehlerhaften `index` Werten einen `ValueError` auszulösen, kann hier einfach eine Fehlermeldung, welche mit `INVALID:` beginnt, auf der Konsole ausgegeben werden
 -   natürlich gibt es in C keine Klassen, überlege dir deshalb eine sinnvolle andere Lösung.

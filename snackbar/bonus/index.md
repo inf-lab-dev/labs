@@ -1,8 +1,8 @@
-# Bonusaufgaben zu Aufgabenliste
+# Bonusaufgaben zu Kiosk
 
 > [!NOTE]
-> Hier können weitere Aufgaben zum [Aufgabenliste Lab](../) gefunden werden.
-> Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Aufgabenliste Labs](../) bearbeitet zu werden.
+> Hier können weitere Aufgaben zum [Kiosk Lab](../) gefunden werden.
+> Alle Aufgaben sind darauf ausgelegt, nach vollständiger Bearbeitung des [Kiosk Labs](../) bearbeitet zu werden.
 >
 > Diese werden im Tutorium nicht gemeinsam bearbeitet und können zur eigenen Bearbeitung genutzt werden, jedoch gibt
 > es bei einigen dieser Aufgaben Bearbeitungshinweise und Tipps hier auf der Seite.
@@ -12,4 +12,4 @@
 
 ## Aufgaben
 
--   [Schon wieder C](./c-again)
+-   [Freunde](./friends)

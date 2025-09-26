@@ -1,0 +1,6 @@
+{
+    "include": ["python/*"],
+    "self_extraction": {
+        "post_user_commands": ["cd lab-todo", "code todo.py"]
+    }
+}
